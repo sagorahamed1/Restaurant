@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:restaurent_kookbags/utils/app_colors.dart';
 
 ThemeData dark = ThemeData(
-  scaffoldBackgroundColor: AppColors.bgColor,
+  scaffoldBackgroundColor: AppColors.bgWhite,
 
 
 
