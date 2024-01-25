@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:restaurent_kookbags/utils/app_colors.dart';
 
 ThemeData dark = ThemeData(
-  scaffoldBackgroundColor: AppColors.bgColor,
   fontFamily: "Poppins",
   primarySwatch : Colors.deepOrange,
   brightness: Brightness.dark,
@@ -13,6 +12,7 @@ ThemeData dark = ThemeData(
     displaySmall : TextStyle(fontSize: 36.0, fontWeight: FontWeight.bold, color: Colors.white),
     displayMedium : TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold, color: Colors.white),
     displayLarge : TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white),
+
 
   ),
   buttonTheme: const ButtonThemeData(
