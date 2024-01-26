@@ -4,6 +4,7 @@ import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import '../category/category_screen.dart';
 import '../fruits_screen/fruits_screen.dart';
+import '../stores/stores_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
 
@@ -17,7 +18,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _currentIndex == 1 ? HomeScreen() :  FruitsScreen(),
+      body: _currentIndex == 1 ? HomeScreen() : StoresScreen(),
         bottomNavigationBar: SalomonBottomBar(
           currentIndex: _currentIndex,
           onTap: (i) => setState(() => _currentIndex = i),

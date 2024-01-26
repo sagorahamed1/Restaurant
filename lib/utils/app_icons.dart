@@ -19,5 +19,7 @@ class AppIcons{
   ///-----------------------fruits screen--------------------------->
   static  const String cardIcon = "$basePath/cardIcon.svg";
   static  const String search = "$basePath/search.svg";
+  static  const String plusIcon = "$basePath/plus.svg";
+  static  const String minusIcon = "$basePath/minusIcon.svg";
 
 }

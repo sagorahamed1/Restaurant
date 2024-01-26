@@ -30,28 +30,32 @@ class _HeaderSliderState extends State<HeaderSlider> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Column(
       children: [
+
         CarouselSlider.builder(
           carouselController: _carouselController,
           itemCount: images.length,
           options: CarouselOptions(
             autoPlay: true,
-            // height: 88,
+            enlargeCenterPage: true,
+            aspectRatio: 8,
+            enableInfiniteScroll: true,
+            height: 400,
             onPageChanged: (index, reason) {
               setState(() {
                 currentIndex = index;
               });
             },
-            aspectRatio: 1.3.w,
+
             autoPlayAnimationDuration: Duration(seconds: 1),
             reverse: false,
           ),
           itemBuilder: (context, index, realIndex) {
             return Container(
+              width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.only(right: 50),
-              height: 172.h,
-              width: 333.w,
               decoration: BoxDecoration(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(16),

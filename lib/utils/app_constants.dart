@@ -27,4 +27,5 @@ class AppConstants{
 
   ///------------------------Fruits screen------------------------------->
   static const String Fruits = "Fruits";
+  static const String addtocart = "Add to cart";
 }
