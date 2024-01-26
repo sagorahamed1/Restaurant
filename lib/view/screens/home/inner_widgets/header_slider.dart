@@ -8,23 +8,23 @@ import 'package:restaurent_kookbags/utils/dimensions.dart';
 import 'package:restaurent_kookbags/view/widgets/custom_text.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class KookbagsSlider extends StatefulWidget {
-  KookbagsSlider({super.key});
+class HeaderSlider extends StatefulWidget {
+  HeaderSlider({super.key});
 
   @override
-  State<KookbagsSlider> createState() => _KookbagsSliderState();
+  State<HeaderSlider> createState() => _HeaderSliderState();
 }
 
-class _KookbagsSliderState extends State<KookbagsSlider> {
+class _HeaderSliderState extends State<HeaderSlider> {
   int currentIndex = 0;
 
   CarouselController _carouselController = CarouselController();
 
   List<String> images = [
-    "${AppImages.appel}",
-    "${AppImages.appel}",
-    "${AppImages.appel}",
-    "${AppImages.appel}",
+    "${AppImages.headerSlider1}",
+    "${AppImages.headerSlider2}",
+    "${AppImages.headerSlider1}",
+    "${AppImages.headerSlider2}",
   ];
 
 
@@ -43,18 +43,21 @@ class _KookbagsSliderState extends State<KookbagsSlider> {
                 currentIndex = index;
               });
             },
-             aspectRatio: 4,
+            aspectRatio: 1.3.w,
             autoPlayAnimationDuration: Duration(seconds: 1),
             reverse: false,
           ),
           itemBuilder: (context, index, realIndex) {
             return Container(
               margin: EdgeInsets.only(right: 50),
-              height: 88.h,
+              height: 172.h,
               width: 333.w,
               decoration: BoxDecoration(
-                  color: AppColors.white,
-                  borderRadius: BorderRadius.circular(16),
+                color: AppColors.white,
+                borderRadius: BorderRadius.circular(16),
+                image: DecorationImage(
+                  image: AssetImage(images[index],),fit: BoxFit.cover
+                ),
                 boxShadow: const [
                   BoxShadow(
                     color: Color(0x33000000),
@@ -65,59 +68,59 @@ class _KookbagsSliderState extends State<KookbagsSlider> {
                 ],
               ),
 
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      height: 82.h,
-                      width: 88.w,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(8),
-                          topLeft: Radius.circular(8)
-                        ),
-                        color: AppColors.red,
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+
+                    SizedBox(height: 16.h,),
+                    Container(
+                      height: 34.h,
+                      width: 50.w,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50.r),
+                        color: AppColors.redAccent,
                       ),
-                      margin: EdgeInsets.only(right: 20.w),
-                      child: Image.asset(images[index]),
+                      child: Center(
+                        child: CustomText(text: "New", fontsize: Dimensions.fontSizeSmall,fontWeight: FontWeight.w600,color: AppColors.white,),
+                      ),
                     ),
-                  ),
-                  Expanded(
-                    flex: 2,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        CustomText(
-                          text: AppConstants.buyGet,
-                          fontWeight: FontWeight.w500,
-                          fontsize: Dimensions.fontSizeLarge,
-                        ),
 
-                        CustomText(
-                          text: AppConstants.mypromocode2020,
-                          fontWeight: FontWeight.w400,
-                          fontsize: Dimensions.fontSizeSmall,
-                        ),
+                    SizedBox(height: 53.h,),
+                    CustomText(
+                      text: AppConstants.freshVegetables,
+                      fontWeight: FontWeight.w500,
+                      fontsize: Dimensions.fontSizeLarge,
+                      color: AppColors.white,
+                    ),
 
-                        CustomText(
-                          text: AppConstants.daysRemaining,
+                    SizedBox(height: 12.h,),
+                    Container(
+                      height: 24.h,
+                      width: 86.w,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8.r),
+                        color: AppColors.white
+                      ),
+                      child: Center(
+                        child: CustomText(
+                          text: AppConstants.buynow,
                           fontWeight: FontWeight.w400,
                           fontsize: Dimensions.fontSizeSmall,
                           color: AppColors.white200,
-                        )
-                      ],
-                    ),
-                  )
-                ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             );
           },
 
         ),
 
-         SizedBox(height: 24.h,),
+        SizedBox(height: 24.h,),
         ///-----------------indicator section-------------------->
         AnimatedSmoothIndicator(
           activeIndex: currentIndex,

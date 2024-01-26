@@ -8,4 +8,16 @@ class AppIcons{
   static  const String loveRed = "$basePath/loveRed.svg";
   static  const String loveRedwithBorder = "$basePath/loveRedwithBorder.svg";
   static  const String tomato = "$basePath/tomatoIcon.svg";
+  static  const String Location = "$basePath/nocationIcon.svg";
+  static  const String notificationBell = "$basePath/notificationBell.svg";
+
+
+  ///----------------------cetegory screen------------------------->
+  static  const String backArrow = "$basePath/backArrow.svg";
+
+
+  ///-----------------------fruits screen--------------------------->
+  static  const String cardIcon = "$basePath/cardIcon.svg";
+  static  const String search = "$basePath/search.svg";
+
 }

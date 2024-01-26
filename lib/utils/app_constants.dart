@@ -17,4 +17,14 @@ class AppConstants{
   static const String kgWeight = "   (5kg)";
   static const String price = "945 Tk";
   static const String offprice = "   1500 Tk";
+  static const String freshVegetables = "Fresh Vegetables";
+  static const String buynow = "Buy now!";
+
+
+  ///------------------------cetegory screen------------------------------->
+  static const String categories = "Categories";
+
+
+  ///------------------------Fruits screen------------------------------->
+  static const String Fruits = "Fruits";
 }
