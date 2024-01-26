@@ -8,12 +8,7 @@ class CategoryScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          Text("this is category screen"),
-          Text("this is category screen",style: TextStyle(fontFamily: "TrajanPro"),),
-          Text(
-            "this is category screen",
-            style: TextStyle(fontFamily: "Poppins"),
-          ),
+          Text("this is text for theme colors and font")
         ],
       ),
     );

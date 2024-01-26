@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:restaurent_kookbags/view/screens/home/home_screen.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -13,6 +14,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: _currentIndex == 1 ? HomeScreen() : HomeScreen(),
         bottomNavigationBar: SalomonBottomBar(
           currentIndex: _currentIndex,
           onTap: (i) => setState(() => _currentIndex = i),
