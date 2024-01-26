@@ -22,9 +22,9 @@ class TwoBotton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 40.h,
-      width: 164.w,
+      width: 160.w,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(8.r),
           color: bottonColor,
           border: Border.all(color: AppColors.red)),
       child: Center(
