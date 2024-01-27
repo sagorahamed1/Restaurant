@@ -13,9 +13,16 @@ class AppImages{
   static  const String kookbagsLogo = "$basePath/kookbagsLogo.png";
   static  const String bglogo = "$basePath/bglogo.png";
   static  const String patternBg = "$basePath/patternbg.png";
+  static  const String appel2 = "$basePath/appel_slils.png";
+  static  const String kookbagsTrivia_slider1 = "$basePath/kookbageSlider1.png";
 
 
   ///-------------------cetegory screen ------------------------->
   static const String vegetables = "$basePath/Vegetables.png";
+
+
+
+  ///----------------------------stores details screen ------------------------
+  static const String bgImageForbottomsheet = "$basePath/bgImageForbottomsheet.png";
 
 }

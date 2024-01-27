@@ -24,7 +24,7 @@ class ProductContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Obx(() => GridView.builder(
       itemCount: controller.friutsList.length,
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,crossAxisSpacing: 8,mainAxisSpacing: 8,childAspectRatio: 0.5),
+      gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,crossAxisSpacing: 8.h,mainAxisSpacing: 8,childAspectRatio: 0.7),
       itemBuilder: (context, index) {
         var productInfo = controller.friutsList[index];
         itemQty.value = productInfo['qty'];
@@ -62,8 +62,8 @@ class ProductContainer extends StatelessWidget {
                           // padding: EdgeInsets.all(5),
                             height: 28.h,
                             width: 35.w,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(50),
+                            decoration: const BoxDecoration(
+                                shape: BoxShape.circle,
                                 color: AppColors.white10),
                             child: IconButton(onPressed: (){
                               if(controller.favoriteItemsList.contains(index)){
@@ -90,7 +90,7 @@ class ProductContainer extends StatelessWidget {
 
                     ///--------------------image of product------------------>
                     Container(
-                      height: 78.w,
+                      height: 78.h,
                       width: 100.w,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50.r),
@@ -108,13 +108,13 @@ class ProductContainer extends StatelessWidget {
                       height: 15.h,
                       width: 34.w,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(2),
+                        borderRadius: BorderRadius.circular(2.r),
                         border: Border.all(color: AppColors.red),
                       ),child: Center(
                       child: Row(
                         children: [
-                          CustomText(text: " ${productInfo["rating"]}",fontsize: Dimensions.fontSizeExtraSmall,fontWeight: FontWeight.w500,color: AppColors.red,),
-                          Icon(Icons.star,color: Colors.red,size: 10,)
+                          CustomText(text: " ${productInfo["rating"]}",fontsize: Dimensions.fontSizeExtraSmall.h,fontWeight: FontWeight.w500,color: AppColors.red,),
+                          Icon(Icons.star,color: Colors.red,size: 10.h,)
                         ],
                       ),
                     ),
@@ -125,7 +125,7 @@ class ProductContainer extends StatelessWidget {
                       children: [
                         CustomText(
                           text: productInfo["productName"],
-                          fontsize: Dimensions.fontSizeDefault,
+                          fontsize: Dimensions.fontSizeDefault.sp,
                           fontWeight: FontWeight.w500,
                           color: AppColors.black,
                         ),
@@ -135,29 +135,29 @@ class ProductContainer extends StatelessWidget {
                       children: [
                         CustomText(
                           text: "${productInfo["price"]}   ",
-                          fontsize: Dimensions.fontSizeSmall,
+                          fontsize: Dimensions.fontSizeSmall.sp,
                           fontWeight: FontWeight.w500,
                           color: AppColors.black,
                         ),
                         CustomText(
                           text: productInfo["offPrice"],
-                          fontsize: Dimensions.fontSizeExtraSmall,
+                          fontsize: Dimensions.fontSizeExtraSmall.sp,
                           fontWeight: FontWeight.w400,
                           color: AppColors.black,
                         ),
                       ],
                     ),
-                    const Row(
+                    Row(
                       children: [
                         Icon(
                           Icons.star,
                           color: Colors.red,
                           size: 12,
                         ),
-                        Icon(Icons.star, color: Colors.red, size: 12),
-                        Icon(Icons.star, color: Colors.red, size: 12),
-                        Icon(Icons.star, color: Colors.black26, size: 12),
-                        Icon(Icons.star, color: Colors.black26, size: 12),
+                        Icon(Icons.star, color: Colors.red, size: 12.h),
+                        Icon(Icons.star, color: Colors.red, size: 12.h),
+                        Icon(Icons.star, color: Colors.black26, size: 12.h),
+                        Icon(Icons.star, color: Colors.black26, size: 12.h),
                       ],
                     ),
                   ],
@@ -186,7 +186,7 @@ class ProductContainer extends StatelessWidget {
                           child: Center(child: SvgPicture.asset(AppIcons.minusIcon))
                       ),
                     ),
-                  CustomText(text: itemQty.value != 0? itemQty.toString() : AppConstants.addtocart,fontsize: Dimensions.fontSizeSmall,fontWeight: FontWeight.w500,color: AppColors.black,),
+                  CustomText(text: itemQty.value != 0? itemQty.toString() : AppConstants.addtocart,fontsize: Dimensions.fontSizeSmall.sp,fontWeight: FontWeight.w500,color: AppColors.black,),
                   GestureDetector(
                     onTap: (){
                       itemQty.value++;

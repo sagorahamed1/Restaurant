@@ -23,11 +23,11 @@ class CetegoryContainer extends StatelessWidget {
         color: AppColors.white,
         boxShadow: const [
           BoxShadow(
-            color: Color(0x33000000),
-            offset: Offset(0, 0),
+            color: Color(0x33414138),
             blurRadius: 20,
+            offset: Offset(0, 4),
             spreadRadius: 0,
-          ),
+          )
         ],
       ),
       child: Stack(
@@ -36,10 +36,10 @@ class CetegoryContainer extends StatelessWidget {
             top: 22.h,
             left: 16.w,
             child: Container(
-              height: 60.h,
+              height: 82.h,
               width: 82.w,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(50),
+                shape: BoxShape.circle,
                 color: imageBgColor,
               ),
             ),
