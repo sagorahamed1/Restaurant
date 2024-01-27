@@ -20,4 +20,7 @@ class AppColors{
   static const Color white10 = Color(0xFFEEF4FF);
 
   static Color dd = Colors.redAccent;
+
+  static const Color pink120 = Color(0xFFf5cdce);
+
 }
