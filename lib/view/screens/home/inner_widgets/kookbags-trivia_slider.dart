@@ -37,26 +37,28 @@ class _KookbagsTriviaSliderState extends State<KookbagsTriviaSlider> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return CarouselSlider.builder(
-      carouselController: _carouselController,
       itemCount: images.length,
       options: CarouselOptions(
         autoPlay: false,
         enlargeCenterPage: true,
-        aspectRatio: 2,
+        height:180 ,
+        enlargeFactor: 0.5,
 
+        // aspectRatio: 2,
         autoPlayAnimationDuration: Duration(seconds: 1),
         reverse: false,
       ),
       itemBuilder: (context, index, realIndex) {
         var sliderImage = images[index];
         return Container(
-          height: 140.w,
-          width: 229.w,
+          // height: 140.w,
+          // width: 229.w,
           decoration: BoxDecoration(
             color: AppColors.white,
             borderRadius: BorderRadius.circular(16),
             image: DecorationImage(
-                image: AssetImage(sliderImage["bgColor"],),fit: BoxFit.cover,
+              fit: BoxFit. fill,
+                image: AssetImage(sliderImage["bgColor"],),
             ),
             boxShadow: const [
               BoxShadow(

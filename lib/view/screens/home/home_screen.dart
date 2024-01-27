@@ -22,12 +22,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Container(
-            margin: EdgeInsets.only(left: 20.w),
+            // margin: EdgeInsets.only(left: 20.w),
             child: SvgPicture.asset(AppIcons.location)),
         
         title: Container(
           height: 29.h,
-          width: 107.w,
+
           child: Image.asset(AppImages.kookbagsLogo),
         ),
         actions: [
@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.symmetric(
-            horizontal: Dimensions.paddingSizeLarge,
+
             vertical: Dimensions.paddingSizeExtraLarge),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
