@@ -10,6 +10,7 @@ class AppIcons{
   static  const String tomato = "$basePath/tomatoIcon.svg";
   static  const String Location = "$basePath/nocationIcon.svg";
   static  const String notificationBell = "$basePath/notificationBell.svg";
+  static  const String knob = "$basePath/knob.svg";
 
 
   ///----------------------cetegory screen------------------------->

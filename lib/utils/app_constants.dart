@@ -8,6 +8,12 @@ class AppConstants{
   static const String theOTP = "The OTP code is invalid.";
   static const String didNot = "Did not receive the code ?";
   static const String resend = "Resend a new code";
+  static const String userDetails = "User Details";
+  static const String fName = "First Name";
+  static const String lName = "Last Name";
+  static const String email = "E-Mail";
+  static const String rCode = "Referral Code";
+  static const String signUp = "SIGN UP";
 
 
 
