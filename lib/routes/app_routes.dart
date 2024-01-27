@@ -20,9 +20,6 @@ class AppRoutes{
   static const String otpNextScreen = "/otp_next_screen.dart";
   static const String otpVerificationScreen = "/otp_verification_screen.dart";
   static const String signUpScreen = "/sign_up_screen.dart";
-  static const String homeScreen = "/home_screen";
-  static const String categoryScreen = "/category_screen";
-  static const String bottomNavBar = "/BottomNavBar";
   static const String storesDetailsScreen = "/StoresDetailsScreen";
   static const String storesScreen = "/StoresScreen";
 
