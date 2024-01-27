@@ -36,7 +36,7 @@ class StoresDetailsScreen extends StatelessWidget {
       ),
 
 
-      ///--------------------------body section------------------------------->
+      ///--------------------------body section------------------------------------git --->
       body: const Padding(
         padding:  EdgeInsets.symmetric(
             horizontal: Dimensions.paddingSizeLarge,
