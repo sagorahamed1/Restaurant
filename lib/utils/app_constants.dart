@@ -28,4 +28,17 @@ class AppConstants{
   ///------------------------Fruits screen------------------------------->
   static const String Fruits = "Fruits";
   static const String addtocart = "Add to cart";
+  static const String deliveryTime = "Delivery Time 20-40";
+  static const String min = "min";
+
+
+  ///----------------------------stores details screen----------------------->
+  static const String freshPeach = "Fresh Peach";
+  static const String groceryStore = "Grocery Store";
+  static const String productPrice = " 445 Tk";
+  static const String productOffPrice = "1500 Tk";
+  static const String productWeight = "In kg";
+  static const String description = "Description";
+  static const String descriptionDetails = "Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in.";
+  static const String Weight = "Weight";
 }

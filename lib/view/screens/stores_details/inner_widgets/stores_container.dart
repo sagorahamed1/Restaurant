@@ -17,24 +17,25 @@ class StoresContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 20),
+      margin: const EdgeInsets.only(top: 20),
       height: 174.h,
       width: 335.w,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          image: DecorationImage(
+          image: const DecorationImage(
               image: AssetImage("${AppImages.potsSlider1}"),
               fit: BoxFit.cover)),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Align(
-            alignment: Alignment.topRight,
+            alignment: Alignment.topLeft,
             child: Container(
+              margin: EdgeInsets.only(left: 15.w,top: 10.h),
               height: 24.h,
               width: 34.w,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50),
+                  shape: BoxShape.circle,
                   color: AppColors.red),
               child: Center(
                   child: SvgPicture.asset(
@@ -46,7 +47,7 @@ class StoresContainer extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 102.h,
+            height: 92.h,
           ),
 
           ///----------------------------stores name location rating------------------>
@@ -59,41 +60,64 @@ class StoresContainer extends StatelessWidget {
                     bottomRight: Radius.circular(8),
                     bottomLeft: Radius.circular(8)),
                 color: AppColors.black),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
+            child: Row(
               children: [
-                CustomText(
-                  text: "Grocery Store",
-                  textAlign: TextAlign.start,
-                  fontsize: Dimensions.fontSizeDefault,
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.white,
+
+                Container(
+                  margin: EdgeInsets.only(left: 10.w,right: 10.w),
+                  height: 35.h,
+                  width: 38.w,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(38.r),
+                  ),
+                  child: SvgPicture.asset(AppIcons.cardIcondetailspage),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    CustomText(
-                      text: "128/1 East Dhanmondi",
-                      fontsize: Dimensions.fontSizeDefault,
-                      fontWeight: FontWeight.w600,
-                      color: AppColors.white,
-                    ),
-                    Container(
-                      height: 20.h,
-                      width: 40.w,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(2),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CustomText(
+                          text: "Grocery Store",
+                          textAlign: TextAlign.start,
+                          fontsize: Dimensions.fontSizeDefault,
+                          fontWeight: FontWeight.w600,
                           color: AppColors.white,
-                          border: Border.all(color: AppColors.red)),
-                      child: Center(
-                        child: CustomText(
-                          text: "storesInfo",
                         ),
-                      ),
+
+                        CustomText(
+                          text: "Min Order",
+                          fontsize: Dimensions.fontSizeSmall,
+                          fontWeight: FontWeight.w500,
+                          color: AppColors.white,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CustomText(
+                          text: "128/1 East Dhanmondi",
+                          fontsize: Dimensions.fontSizeDefault,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.white,
+                        ),
+
+
+                        CustomText(
+                          text: r"$500",
+                          fontsize: Dimensions.fontSizeDefault,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.white,
+                        ),
+                      ],
                     )
                   ],
-                )
+                ),
               ],
             ),
           )

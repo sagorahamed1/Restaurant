@@ -21,7 +21,7 @@ class TwoBotton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 40.h,
+      height: 40.w,
       width: 160.w,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8.r),
@@ -30,7 +30,7 @@ class TwoBotton extends StatelessWidget {
       child: Center(
           child: CustomText(
             text: text,
-            fontsize: Dimensions.fontSizeLarge,
+            fontsize: Dimensions.fontSizeLarge.sp,
             fontWeight: FontWeight.w600,
             color: textColor,
           )),
