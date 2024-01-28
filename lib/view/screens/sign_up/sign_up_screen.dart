@@ -111,7 +111,7 @@ class SignUpScreen extends StatelessWidget {
                       CustomButtom(
                           title: AppConstants.signUp,
                           onpress: () {
-                            Get.toNamed(AppRoutes.otpSubmitScreen);
+                            Get.toNamed(AppRoutes.logInUpScreen);
                           }),
                     ],
                   ),

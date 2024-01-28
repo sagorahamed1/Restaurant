@@ -14,6 +14,12 @@ class AppConstants{
   static const String email = "E-Mail";
   static const String rCode = "Referral Code";
   static const String signUp = "SIGN UP";
+  static const String letsStart = "Let’s start your shopping";
+  static const String enterYour = "Enter your phone number";
+  static const String sentOTP = "SEND OTP";
+  static const String byContinue = "By continuing you agree to our";
+  static const String termsOf = "Terms Of Services";
+  static const String privacyOf = "Privacy Policy";
 
 
 

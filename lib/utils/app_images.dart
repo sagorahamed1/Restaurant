@@ -15,6 +15,7 @@ class AppImages{
   static  const String patternBg = "$basePath/patternbg.png";
   static  const String appel2 = "$basePath/appel_slils.png";
   static  const String kookbagsTrivia_slider1 = "$basePath/kookbageSlider1.png";
+  static  const String india1 = "$basePath/india1.png";
 
 
   ///-------------------cetegory screen ------------------------->
