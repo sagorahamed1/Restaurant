@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:restaurent_kookbags/utils/app_constants.dart';
 import 'package:restaurent_kookbags/utils/app_images.dart';
 import 'package:restaurent_kookbags/view/widgets/custom_text_field.dart';
+
+import '../../../utils/app_icons.dart';
 
 class SelectLanguageScreen extends StatelessWidget {
   const SelectLanguageScreen({super.key});
@@ -65,14 +68,58 @@ class SelectLanguageScreen extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 20.sp, fontWeight: FontWeight.w600),
                         ),
+                        SizedBox(height: 16.h),
+                        SvgPicture.asset(AppIcons.group48),
                         SizedBox(height: 48.h),
+
+                        //===============================================> TextFormField Section <=================================================
+
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 24.w),
-                          child: const CustomTextField(
-                              title: 'English',
-                              prifixicon:
-                                  Icon(Icons.arrow_forward_ios_outlined)),
-                        ),
+                            padding: EdgeInsets.symmetric(horizontal: 24.w),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                                  filled: true,
+                                  fillColor: Colors.white,
+                                  prefixIcon: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 16, vertical: 8),
+                                    child: Container(
+                                        width: 34.w,
+                                        height: 23.w,
+                                        child: Image.asset(AppImages.flagIn,
+                                            height: 23.h)),
+                                  ),
+                                  suffixIcon: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 16, vertical: 11),
+                                    child: Container(
+                                        width: 16.w,
+                                        height: 16.w,
+                                        child: SvgPicture.asset(
+                                          AppIcons.frame,
+                                          width: 16.w,
+                                          height: 16.w,
+                                        )),
+                                  ),
+                                  suffixIconColor: Colors.grey,
+                                  prefixIconColor: Colors.grey,
+                                  hintText: AppConstants.english,
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(8),
+                                    borderSide: BorderSide(
+                                      width: 2.w,
+                                      color: Colors.grey,
+                                    ),
+                                  ),
+                                  focusedBorder: const OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        width: 2.0, color: Colors.grey),
+                                  ),
+                                  enabledBorder: const OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        width: 2.0, color: Colors.grey),
+                                  )),
+                            )),
                         SizedBox(height: 32.h),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -119,6 +166,9 @@ class SelectLanguageScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+
+                  //===============================================> Rounded Positioned Section <=================================================
+
                   Positioned(
                     left: 140,
                     right: 139,
@@ -148,6 +198,9 @@ class SelectLanguageScreen extends StatelessWidget {
               SizedBox(
                 height: 51.h,
               ),
+
+              //===============================================> Bottom Pattern Section <=================================================
+
               Image.asset(
                 AppImages.patternBg,
                 width: 375.w,

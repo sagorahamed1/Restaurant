@@ -15,6 +15,7 @@ class AppConstants{
   static const String rCode = "Referral Code";
   static const String signUp = "SIGN UP";
   static const String selectLanguage = "Select Language";
+  static const String english = "English";
 
 
 
