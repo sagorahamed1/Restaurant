@@ -40,9 +40,9 @@ class _HeaderSliderState extends State<HeaderSlider> {
           options: CarouselOptions(
             autoPlay: true,
             enlargeCenterPage: true,
-            aspectRatio: 8,
+
             enableInfiniteScroll: true,
-            height: 400,
+           height: MediaQuery.of(context).size.height*0.3,
             onPageChanged: (index, reason) {
               setState(() {
                 currentIndex = index;
@@ -55,7 +55,7 @@ class _HeaderSliderState extends State<HeaderSlider> {
           itemBuilder: (context, index, realIndex) {
             return Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.only(right: 50),
+
               decoration: BoxDecoration(
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(16),

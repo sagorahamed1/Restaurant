@@ -8,6 +8,8 @@ import 'package:restaurent_kookbags/view/screens/otp_verification/otp_verificati
 import 'package:restaurent_kookbags/view/screens/sign_up/sign_up_screen.dart';
 
 import '../view/screens/bottom_nav_bar/bottom_nav_bar.dart';
+import '../view/screens/stores/stores_screen.dart';
+import '../view/screens/stores_details/stores_details_screen.dart';
 
 
 class AppRoutes{
@@ -18,10 +20,14 @@ class AppRoutes{
   static const String otpNextScreen = "/otp_next_screen.dart";
   static const String otpVerificationScreen = "/otp_verification_screen.dart";
   static const String signUpScreen = "/sign_up_screen.dart";
+  static const String storesDetailsScreen = "/StoresDetailsScreen";
+  static const String storesScreen = "/StoresScreen";
 
   static List <GetPage> routes = [
     GetPage(name: homeScreen, page: ()=> HomeScreen()),
     GetPage(name: categoryScreen, page: ()=> CategoryScreen()),
+    GetPage(name: storesDetailsScreen, page: ()=> StoresDetailsScreen()),
+    GetPage(name: storesScreen, page: ()=> StoresScreen()),
     GetPage(name: bottomNavBar, page: ()=> BottomNavBar()),
     GetPage(name: otpSubmitScreen, page: ()=> OtpSubmitScreen()),
     GetPage(name: otpNextScreen, page: ()=> OtpNextScreen()),

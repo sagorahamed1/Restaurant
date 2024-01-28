@@ -5,8 +5,6 @@ import 'package:restaurent_kookbags/routes/app_routes.dart';
 
 import 'themes/light_theme.dart';
 import 'view/screens/bottom_nav_bar/bottom_nav_bar.dart';
-import 'view/screens/otp_submit/otp_submit_screen.dart';
-import 'view/screens/sign_up/sign_up_screen.dart';
 
 
 void main() {
@@ -21,6 +19,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       builder: (context, child) => GetMaterialApp(
         debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
           theme: light,
         initialRoute: AppRoutes.signUpScreen,
         getPages: AppRoutes.routes,

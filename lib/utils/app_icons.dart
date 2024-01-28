@@ -23,4 +23,10 @@ class AppIcons{
   static  const String plusIcon = "$basePath/plus.svg";
   static  const String minusIcon = "$basePath/minusIcon.svg";
 
+
+  ///-----------------------stores details screen----------------------
+  static  const String cardIcondetailspage = "$basePath/cardforDetailsPage.svg";
+  static  const String watch = "$basePath/watch.svg";
+  static  const String location2 = "$basePath/location2.svg";
+
 }

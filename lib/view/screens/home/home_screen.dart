@@ -6,6 +6,7 @@ import 'package:restaurent_kookbags/utils/app_constants.dart';
 import 'package:restaurent_kookbags/utils/app_icons.dart';
 import 'package:restaurent_kookbags/utils/app_images.dart';
 import 'package:restaurent_kookbags/utils/dimensions.dart';
+import 'package:restaurent_kookbags/view/screens/home/inner_widgets/kookbags-trivia_slider.dart';
 import 'package:restaurent_kookbags/view/widgets/custom_text.dart';
 
 import 'inner_widgets/cetegory_container.dart';
@@ -21,12 +22,12 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Container(
-            margin: EdgeInsets.only(left: 20.w),
+            // margin: EdgeInsets.only(left: 20.w),
             child: SvgPicture.asset(AppIcons.location)),
         
         title: Container(
           height: 29.h,
-          width: 107.w,
+
           child: Image.asset(AppImages.kookbagsLogo),
         ),
         actions: [
@@ -39,7 +40,7 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.symmetric(
-            horizontal: Dimensions.paddingSizeLarge,
+
             vertical: Dimensions.paddingSizeExtraLarge),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -109,12 +110,8 @@ class HomeScreen extends StatelessWidget {
             SizedBox(
               height: 24.h,
             ),
-            Container(
-              height: 100,
-              width: 300,
-              color: Colors.green,
-              child: Text("Slider"),
-            ),
+
+            KookbagsTriviaSlider(),
 
             SizedBox(
               height: 24.h,
