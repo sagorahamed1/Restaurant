@@ -14,6 +14,7 @@ class AppConstants{
   static const String email = "E-Mail";
   static const String rCode = "Referral Code";
   static const String signUp = "SIGN UP";
+  static const String selectLanguage = "Select Language";
 
 
 

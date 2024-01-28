@@ -20,28 +20,26 @@ class CustomTextField extends StatelessWidget {
     return TextFormField(
       validator: validator,
       decoration: InputDecoration(
-        filled: true,
-        fillColor: Colors.white,
-        prefixIcon: prifixicon,
-        suffixIcon: sufixicons,
-        suffixIconColor: Colors.grey,
-        prefixIconColor: Colors.grey,
-        hintText: title,
-        border: OutlineInputBorder(
-
-          borderRadius: BorderRadius.circular(8),
-          borderSide: BorderSide(
-            width: 2.w,
-            color: Colors.grey,
+          filled: true,
+          fillColor: Colors.white,
+          prefixIcon: prifixicon,
+          suffixIcon: sufixicons,
+          suffixIconColor: Colors.grey,
+          prefixIconColor: Colors.grey,
+          hintText: title,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8),
+            borderSide: BorderSide(
+              width: 2.w,
+              color: Colors.grey,
+            ),
           ),
-        ),
-        focusedBorder: const OutlineInputBorder(
-          borderSide: BorderSide(width: 2.0, color: Colors.grey),
-        ),
-        enabledBorder: const OutlineInputBorder(
-          borderSide: BorderSide(width: 2.0, color: Colors.grey),
-        )
-      ),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(width: 2.0, color: Colors.grey),
+          ),
+          enabledBorder: const OutlineInputBorder(
+            borderSide: BorderSide(width: 2.0, color: Colors.grey),
+          )),
     );
   }
 }
