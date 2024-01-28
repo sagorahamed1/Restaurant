@@ -5,6 +5,7 @@ import 'package:restaurent_kookbags/routes/app_routes.dart';
 
 import 'themes/light_theme.dart';
 import 'view/screens/bottom_nav_bar/bottom_nav_bar.dart';
+import 'view/screens/sign_up/sign_up_screen.dart';
 
 
 void main() {
