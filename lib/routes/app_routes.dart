@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:restaurent_kookbags/view/screens/category/category_screen.dart';
+import 'package:restaurent_kookbags/view/screens/checkout/checkout_screen.dart';
 import 'package:restaurent_kookbags/view/screens/home/home_screen.dart';
 import 'package:restaurent_kookbags/view/screens/otp_next/otp_next_screen.dart';
 import 'package:restaurent_kookbags/view/screens/otp_submit/otp_submit_screen.dart';
@@ -24,6 +25,7 @@ class AppRoutes{
   static const String storesDetailsScreen = "/StoresDetailsScreen";
   static const String storesScreen = "/StoresScreen";
   static const String selectLanguageScreen = "/select_language_screen.dart";
+  static const String checkoutScreen = "/checkout_screen.dart";
 
 
   static List <GetPage> routes = [
@@ -37,6 +39,7 @@ class AppRoutes{
     GetPage(name: otpVerificationScreen, page: ()=> OtpVerificationScreen()),
     GetPage(name: signUpScreen, page: ()=> SignUpScreen()),
     GetPage(name: selectLanguageScreen, page: ()=> SelectLanguageScreen()),
+    GetPage(name: checkoutScreen, page: ()=> CheckoutScreen()),
 
   ];
 }

@@ -13,6 +13,7 @@ class AppIcons{
   static  const String knob = "$basePath/knob.svg";
   static  const String frame = "$basePath/frame.svg";
   static  const String group48 = "$basePath/group48.svg";
+  static  const String houseframe = "$basePath/houseframe.svg";
 
 
   ///----------------------cetegory screen------------------------->

@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:restaurent_kookbags/utils/app_constants.dart';
 import 'package:restaurent_kookbags/utils/app_images.dart';
-import 'package:restaurent_kookbags/view/widgets/custom_text_field.dart';
 
 import '../../../utils/app_icons.dart';
 
@@ -83,7 +82,7 @@ class SelectLanguageScreen extends StatelessWidget {
                                   prefixIcon: Padding(
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 16, vertical: 8),
-                                    child: Container(
+                                    child: SizedBox(
                                         width: 34.w,
                                         height: 23.w,
                                         child: Image.asset(AppImages.flagIn,
@@ -92,7 +91,7 @@ class SelectLanguageScreen extends StatelessWidget {
                                   suffixIcon: Padding(
                                     padding: const EdgeInsets.symmetric(
                                         horizontal: 16, vertical: 11),
-                                    child: Container(
+                                    child: SizedBox(
                                         width: 16.w,
                                         height: 16.w,
                                         child: SvgPicture.asset(

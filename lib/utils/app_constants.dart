@@ -16,6 +16,27 @@ class AppConstants{
   static const String signUp = "SIGN UP";
   static const String selectLanguage = "Select Language";
   static const String english = "English";
+//===================================> Checkout Screen <=============================
+  static const String checkout = "Checkout";
+  static const String deliveryOpt = "Delivery Option";
+  static const String hOMEOpt = "HOME DELIVERY";
+  static const String takeOpt = "TAKE AWAY";
+  static const String deliveryAdd = "Delivery Address";
+  static const String home = "HOME";
+  static const String office = "OFFICE";
+  static const String others = "Others";
+  static const String loactAdd = "141 / 1 East kolkata";
+  static const String sectorHint = "Sector/Apartment/Society";
+  static const String houseHint = "House No.";
+  static const String floor = "Floor";
+  static const String deliverySch = "Delivery Schedule ";
+  static const String today = "Today ";
+  static const String tomorrow = "Tomorrow ";
+  static const String todayTime = "05:30 PM - 06.00 PM";
+  static const String tomorrowTime = "005:30 PM - 06.00 PM";
+  static const String tipFor = "Tip For Delivery Assistant";
+  static const String tipHint = "Custom Amount....";
+  static const String payNOW = "PAY NOW";
 
 
 
