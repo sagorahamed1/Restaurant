@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:restaurent_kookbags/routes/app_routes.dart';
 import 'package:restaurent_kookbags/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
+import 'package:restaurent_kookbags/view/screens/log_in/log_in_screen.dart';
 
 import 'themes/light_theme.dart';
 import 'view/screens/bottom_nav_bar/bottom_nav_bar.dart';

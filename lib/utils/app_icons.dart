@@ -15,6 +15,8 @@ class AppIcons{
   static  const String group48 = "$basePath/group48.svg";
   static  const String houseframe = "$basePath/houseframe.svg";
   static  const String india = "$basePath/india.svg";
+  static  const String edit = "$basePath/edit.svg";
+  static  const String office = "$basePath/office.svg";
 
 
   ///----------------------cetegory screen------------------------->

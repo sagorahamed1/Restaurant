@@ -33,7 +33,7 @@ class AppConstants{
   static const String today = "Today ";
   static const String tomorrow = "Tomorrow ";
   static const String todayTime = "05:30 PM - 06.00 PM";
-  static const String tomorrowTime = "005:30 PM - 06.00 PM";
+  static const String tomorrowTime = "05:30 PM - 06.00 PM";
   static const String tipFor = "Tip For Delivery Assistant";
   static const String tipHint = "Custom Amount....";
   static const String payNOW = "PAY NOW";
