@@ -1,16 +1,13 @@
 import 'package:flutter/material(1).dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-import 'package:restaurent_kookbags/controller/my_kookbags_controller.dart';
-import 'package:restaurent_kookbags/utils/app_colors.dart';
-
 import '../../../utils/app_constants.dart';
 import '../../../utils/app_icons.dart';
 import '../../../utils/dimensions.dart';
 import '../../widgets/custom_text.dart';
 import 'inner_widgets/card_items.dart';
 import 'inner_widgets/coupon_code_container.dart';
+import 'inner_widgets/kookbags_slider.dart';
 import 'inner_widgets/total_number_item_container.dart';
 
 class MyKookBagsScreen extends StatelessWidget {
@@ -43,8 +40,13 @@ class MyKookBagsScreen extends StatelessWidget {
               vertical: Dimensions.paddingSizeExtraLarge),
           child: Column(
             children: [
+              KookBagsSlider(),
+
               ///----------------------card itms ----------------------->
-              Container(height: 500.w, child: CardItems()),
+              Container(
+                  height: 500.w,
+                  child: CardItems()
+              ),
 
               ///-----------------------Total number of items container ----------------->
               TotalNumberItemContainer(),

@@ -74,42 +74,43 @@ class CouponCodeContainer extends StatelessWidget {
             ),
 
             ///-----------------------text field-------------------------->
-            Row(
-              children: [
-                const Expanded(
-                  flex: 9,
-                  child: TextField(
-                    decoration: InputDecoration(
-                        suffixIconConstraints: BoxConstraints(
-                          maxHeight: 40,
-                          maxWidth: 50,
-                        ),
-                        hintText: "Enter your coupon code",
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(8),
-                                bottomLeft: Radius.circular(8)),
-                            borderSide:
-                                BorderSide(color: AppColors.red, width: 2))),
-                  ),
-                ),
-                Expanded(
-                  flex: 2,
-                  child: Container(
-                    width: 65.w,
-                    height: 59.w,
-                    decoration: const BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(8),
-                            topRight: Radius.circular(8))),
-                    child: const Icon(
-                      Icons.arrow_forward_rounded,
-                      color: AppColors.white,
+            Container(
+              child: Row(
+                children: [
+                   Expanded(
+                    flex: 9,
+                    child: TextField(
+                      decoration: InputDecoration(
+                          hintText: "Enter your coupon code",
+                          hintStyle: TextStyle(
+                            fontSize: 14.h
+                          ),
+                          border: const OutlineInputBorder(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(8),
+                                  bottomLeft: Radius.circular(8)),
+                              borderSide:
+                                  BorderSide(color: AppColors.red, width: 2))),
                     ),
                   ),
-                )
-              ],
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      width: 65.w,
+                      height: 62.w,
+                      decoration: const BoxDecoration(
+                          color: Colors.red,
+                          borderRadius: BorderRadius.only(
+                              bottomRight: Radius.circular(8),
+                              topRight: Radius.circular(8))),
+                      child: const Icon(
+                        Icons.arrow_forward_rounded,
+                        color: AppColors.white,
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
 
             SizedBox(

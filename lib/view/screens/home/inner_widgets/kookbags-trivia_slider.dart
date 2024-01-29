@@ -27,7 +27,7 @@ class _KookbagsTriviaSliderState extends State<KookbagsTriviaSlider> {
       "bgColor" :"${AppImages.kookbagsTrivia_slider1}"
     },
     {
-      "sliderImage" : "${AppImages.appel2}",
+      "sliderImage" : "${AppImages.appel}",
       "bgColor" :"${AppImages.kookbagsTrivia_slider1}"
     }
   ];
@@ -39,27 +39,19 @@ class _KookbagsTriviaSliderState extends State<KookbagsTriviaSlider> {
     return CarouselSlider.builder(
       itemCount: images.length,
       options: CarouselOptions(
+        height: 182.w,
+        aspectRatio: 1.8,
         autoPlay: false,
         enlargeCenterPage: true,
-        height:180 ,
-        enlargeFactor: 0.5,
-
-        // aspectRatio: 2,
         autoPlayAnimationDuration: Duration(seconds: 1),
         reverse: false,
       ),
       itemBuilder: (context, index, realIndex) {
         var sliderImage = images[index];
         return Container(
-          // height: 140.w,
-          // width: 229.w,
           decoration: BoxDecoration(
-            color: AppColors.white,
+            color: Color(0xFF529A04),
             borderRadius: BorderRadius.circular(16),
-            image: DecorationImage(
-              fit: BoxFit. fill,
-                image: AssetImage(sliderImage["bgColor"],),
-            ),
             boxShadow: const [
               BoxShadow(
                 color: Color(0x33414138),

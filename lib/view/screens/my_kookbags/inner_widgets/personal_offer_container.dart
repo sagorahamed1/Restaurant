@@ -77,14 +77,14 @@ class PersonalOfferContainer extends StatelessWidget {
                     children: [
                       CustomText(
                         text: "Personal offer ",
-                        fontsize: 11.w,
+                        fontsize: 11.h,
                         fontWeight: FontWeight.w500,
                         color: AppColors.black,
                         top: 8.w,
                       ),
                       CustomText(
                         text: "mypromocode2020 ",
-                        fontsize: 10.w,
+                        fontsize: 10.h,
                         fontWeight: FontWeight.w400,
                         color: AppColors.black,
                         top: 16.w,
@@ -95,7 +95,7 @@ class PersonalOfferContainer extends StatelessWidget {
                         children: [
                           CustomText(
                             text: "6 days remaining ",
-                            fontsize: 10.w,
+                            fontsize: 10.h,
                             fontWeight: FontWeight.w400,
                             color: AppColors.red,
                             top: 16.w,
