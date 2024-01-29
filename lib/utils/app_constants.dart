@@ -1,4 +1,26 @@
 class AppConstants{
+//===================================> Otp Submit Screen <=============================
+  static const String oTPVerifi = "OTP Verification";
+  static const String enterThe = "Enter the verification code sent to";
+  static const String resendConfirm = "Resend confirmation code (1:23)";
+  static const String submit = "SUBMIT";
+  static const String next = "Next";
+  static const String theOTP = "The OTP code is invalid.";
+  static const String didNot = "Did not receive the code ?";
+  static const String resend = "Resend a new code";
+  static const String userDetails = "User Details";
+  static const String fName = "First Name";
+  static const String lName = "Last Name";
+  static const String email = "E-Mail";
+  static const String rCode = "Referral Code";
+  static const String signUp = "SIGN UP";
+  static const String letsStart = "Let’s start your shopping";
+  static const String enterYour = "Enter your phone number";
+  static const String sentOTP = "SEND OTP";
+  static const String byContinue = "By continuing you agree to our";
+  static const String termsOf = "Terms Of Services";
+  static const String privacyOf = "Privacy Policy";
+
 
 
   ///--------------------home page------------------>
