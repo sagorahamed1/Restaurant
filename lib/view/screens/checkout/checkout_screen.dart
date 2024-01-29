@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:restaurent_kookbags/utils/app_constants.dart';
-import 'package:restaurent_kookbags/utils/app_icons.dart';
-import 'package:restaurent_kookbags/utils/app_images.dart';
 import 'package:restaurent_kookbags/view/widgets/custom_buttom.dart';
-
+import '../../../utils/app_icons.dart';
 import 'InnerWidget/delivery_address_card.dart';
+import 'InnerWidget/delivery_assistant_card.dart';
 import 'InnerWidget/delivery_option_card.dart';
 import 'InnerWidget/delivery_schedule_card.dart';
 
@@ -40,6 +39,120 @@ class CheckoutScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
                 ),
+                child: Padding(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 28.w, vertical: 10.w),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                width: 24.w,
+                                height: 24.w,
+                                decoration: ShapeDecoration(
+                                  shape: OvalBorder(
+                                    side: BorderSide(
+                                        width: 0.80.w,
+                                        color: const Color(0xFF8A8A8A)),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 4.h),
+                              Text('1',
+                                  style: TextStyle(
+                                      fontSize: 12.w,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.grey)),
+                            ],
+                          ),
+                          SizedBox(width: 6.w),
+                          Column(
+                            children: [
+                              Container(
+                                width: 88.w,
+                                decoration: ShapeDecoration(
+                                  shape: RoundedRectangleBorder(
+                                    side: BorderSide(
+                                      width: 0.50.w,
+                                      strokeAlign: BorderSide.strokeAlignCenter,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 16.w),
+                            ],
+                          ),
+                          SizedBox(width: 6.w),
+                          Column(
+                            children: [
+                              Container(
+                                width: 24.w,
+                                height: 24.w,
+                                decoration: const ShapeDecoration(
+                                  color: Colors.white,
+                                  shape: OvalBorder(),
+                                ),
+                                child: Center(
+                                    child: SvgPicture.asset(
+                                  AppIcons.vector,
+                                )),
+                              ),
+                              SizedBox(height: 4.h),
+                              Text('2',
+                                  style: TextStyle(
+                                      fontSize: 12.w,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.white)),
+                            ],
+                          ),
+                          SizedBox(width: 6.w),
+                          Column(
+                            children: [
+                              Container(
+                                width: 88.w,
+                                decoration: ShapeDecoration(
+                                  shape: RoundedRectangleBorder(
+                                    side: BorderSide(
+                                      width: 0.50.w,
+                                      strokeAlign: BorderSide.strokeAlignCenter,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 16.w),
+                            ],
+                          ),
+                          SizedBox(width: 6.w),
+                          Column(
+                            children: [
+                              Container(
+                                width: 24.w,
+                                height: 24.w,
+                                decoration: ShapeDecoration(
+                                  shape: OvalBorder(
+                                    side: BorderSide(
+                                        width: 0.80.w,
+                                        color: const Color(0xFF8A8A8A)),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 4.h),
+                              Text('3',
+                                  style: TextStyle(
+                                      fontSize: 12.w,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.grey)),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
               ),
               SizedBox(
                 height: 24.h,
@@ -60,26 +173,13 @@ class CheckoutScreen extends StatelessWidget {
                 height: 16.h,
               ),
               //====================================> Delivery Assistant Section <============================================================================
-              Container(
-                width: 335.w,
-                height: 166.w,
-                decoration: ShapeDecoration(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.r)),
-                  shadows: [
-                    BoxShadow(
-                      color: const Color(0x33000000),
-                      blurRadius: 20.r,
-                      offset: const Offset(0, 4),
-                      spreadRadius: 0,
-                    )
-                  ],
-                ),
-              ),
+              const DeliveryAssistantCard(),
               SizedBox(height: 32.h),
-              CustomButtom(title: AppConstants.payNOW,onpress: (){},),
+              CustomButtom(
+                title: AppConstants.payNOW,
+                onpress: () {},
+              ),
               SizedBox(height: 14.h),
-
             ],
           ),
         ),
@@ -87,5 +187,3 @@ class CheckoutScreen extends StatelessWidget {
     );
   }
 }
-
-

@@ -15,7 +15,7 @@ class CustomButtom extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         width: 334.w,
-         height: 48.h,
+         height: 48.w,
         decoration: ShapeDecoration(
           color:  const Color(0xFFcd0608),
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.r)),
@@ -26,7 +26,7 @@ class CustomButtom extends StatelessWidget {
                  letterSpacing: 2,
                  color: Colors.white,
                fontWeight: FontWeight.w600,
-               fontSize: 16.h,
+               fontSize: 16.w,
                ),
         ),
       ),

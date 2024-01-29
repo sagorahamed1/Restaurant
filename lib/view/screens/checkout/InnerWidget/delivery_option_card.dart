@@ -29,7 +29,7 @@ class DeliveryOptionCard extends StatelessWidget {
       ),
       child: Padding(
         padding:
-            const EdgeInsets.only(left: 16, right: 15, top: 16, bottom: 16),
+            const EdgeInsets.only(left: 16, right: 15, top: 16, bottom: 12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -71,7 +71,7 @@ class DeliveryOptionCard extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SvgPicture.asset(AppIcons.houseframe),
+                        SvgPicture.asset(AppIcons.houseframe,height: 24.w),
                         SizedBox(
                           width: 7.w,
                         ),
@@ -119,7 +119,7 @@ class DeliveryOptionCard extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SvgPicture.asset(AppIcons.houseframe),
+                        SvgPicture.asset(AppIcons.houseframe,height: 24.w),
                         SizedBox(
                           width: 7.w,
                         ),

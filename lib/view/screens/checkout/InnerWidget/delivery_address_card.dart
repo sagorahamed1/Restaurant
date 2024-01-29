@@ -77,10 +77,10 @@ class DeliveryAddressCard extends StatelessWidget {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 19, vertical: 12),
+                        horizontal: 18, vertical: 12),
                     child: Row(
                       children: [
-                        SvgPicture.asset(AppIcons.houseframe),
+                        SvgPicture.asset(AppIcons.houseframe,height: 24.w),
                         SizedBox(width: 8.w),
                         Text(AppConstants.home,
                             style: TextStyle(
@@ -108,10 +108,10 @@ class DeliveryAddressCard extends StatelessWidget {
                   ),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 16, vertical: 12),
+                        horizontal: 14, vertical: 11),
                     child: Row(
                       children: [
-                        SvgPicture.asset(AppIcons.office),
+                        SvgPicture.asset(AppIcons.office, height: 24.w),
                         SizedBox(width: 8.w),
                         Text(AppConstants.office,
                             style: TextStyle(
@@ -147,7 +147,7 @@ class DeliveryAddressCard extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                 child: Row(
                   children: [
-                    SvgPicture.asset(AppIcons.location2),
+                    SvgPicture.asset(AppIcons.location2,height: 24.w),
                     SizedBox(width: 12.w),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -166,7 +166,7 @@ class DeliveryAddressCard extends StatelessWidget {
                       ],
                     ),
                     const Spacer(),
-                    SvgPicture.asset(AppIcons.edit),
+                    SvgPicture.asset(AppIcons.edit,height: 24.w),
                   ],
                 ),
               ),
