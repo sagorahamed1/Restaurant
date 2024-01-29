@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:restaurent_kookbags/view/screens/home/home_screen.dart';
+import 'package:restaurent_kookbags/view/screens/my_kookbags/my_kookbags_screen.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import '../category/category_screen.dart';
@@ -60,7 +61,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       case 0 : return HomeScreen();
       case 1 : return StoresScreen();
       case 2 : return CategoryScreen();
-      default : return FruitsScreen();
+      default : return MyKookBagsScreen();
     }
   }
 }

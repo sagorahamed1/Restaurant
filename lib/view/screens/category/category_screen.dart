@@ -17,6 +17,8 @@ class CategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: false,
+      resizeToAvoidBottomInset: false,
       ///-------------------------------app bar section----------------------------->
       appBar: AppBar(
         leading: Container(
@@ -31,7 +33,7 @@ class CategoryScreen extends StatelessWidget {
         child: Column(
           children: [
             Obx(() => Container(
-              height: 670,
+              height: 485.w,
               child: GridView.builder(
                  itemCount: controller.cetegoryList.value.length,
                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 7,mainAxisSpacing: 16,childAspectRatio: 0.8),
@@ -43,13 +45,13 @@ class CategoryScreen extends StatelessWidget {
                        decoration: BoxDecoration(
                          borderRadius: BorderRadius.circular(8),
                          color: AppColors.white,
-                         boxShadow: const [
+                         boxShadow : const [
                            BoxShadow(
-                             color: Color(0x33000000),
-                             offset: Offset(0, 0),
-                             blurRadius: 5,
+                             color: Color(0x19414138),
+                             blurRadius: 20,
+                             offset: Offset(0, 10),
                              spreadRadius: 0,
-                           ),
+                           )
                          ],
                        ),
 
@@ -60,7 +62,7 @@ class CategoryScreen extends StatelessWidget {
                              children: [
                                Container(
                                  margin: EdgeInsets.only(top: 30.h),
-                                 height: 86.h,
+                                 height: 86.w,
                                  width: 86.w,
                                  decoration: BoxDecoration(
                                    shape: BoxShape.circle,
@@ -75,9 +77,11 @@ class CategoryScreen extends StatelessWidget {
                              ],
                            ),
 
+                           SizedBox(height: 40.w,),
                            Divider(),
-                           SizedBox(height: 8.h,),
-                           CustomText(text: productInfo["productName"],)
+                           CustomText(top: 2.h,
+                             textAlign: TextAlign.center,
+                             text: productInfo["productName"],)
                          ],
                        ),
                      );

@@ -30,4 +30,8 @@ class AppIcons{
   static  const String watch = "$basePath/watch.svg";
   static  const String location2 = "$basePath/location2.svg";
 
+
+  ///-------------------------my kookbags screen---------------------->
+  static  const String cauliflower = "$basePath/Cauliflower.svg";
+
 }
