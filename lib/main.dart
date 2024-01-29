@@ -24,11 +24,9 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       builder: (context, child) => GetMaterialApp(
           debugShowCheckedModeBanner: false,
-          title: 'Flutter Demo',
           useInheritedMediaQuery: true,
           locale: DevicePreview.locale(context),
           builder: DevicePreview.appBuilder,
-          debugShowCheckedModeBanner: false,
           title: 'Kookbags',
           theme: light,
           initialRoute: AppRoutes.checkoutScreen,
