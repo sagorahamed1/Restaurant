@@ -44,6 +44,26 @@ class AppConstants{
   static const String termsOf = "Terms Of Services";
   static const String privacyOf = "Privacy Policy";
 
+  //===================================> Payment Screen <=============================
+  static const String payment = "Payment";
+  static const String billDetails = "Bill Details";
+  static const String totalNum = "Total number of items";
+  static const String itemPrice = "Item Price";
+  static const String gST  = "GST";
+  static const String deliveryCharges  = "Delivery charges";
+  static const String packagingCharges  = "Packaging charges";
+  static const String couponNam  = "Coupon (Name)";
+  static const String walletDis  = "Wallet Discount";
+  static const String tipForDeli  = "Tip For Delivery Assistant";
+  static const String toPay  = "To Pay";
+  static const String yourTotal  = "Your total savings";
+  static const String choosePayment  = "Choose Payment Method";
+  static const String paytm  = "Paytm";
+  static const String payThrough  = "Pay through Mobile";
+  static const String cashOn  = "Cash On Delivery";
+  static const String payYour  = "Pay your payment on getting delivery";
+  static const String placeOrder  = "PLACE ORDER";
+
 
 
   ///--------------------home page------------------>

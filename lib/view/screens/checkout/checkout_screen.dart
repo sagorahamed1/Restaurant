@@ -42,6 +42,9 @@ class CheckoutScreen extends StatelessWidget {
                 child: Padding(
                   padding:
                       EdgeInsets.symmetric(horizontal: 28.w, vertical: 10.w),
+
+                  //====================================> Top Section <============================================================================
+
                   child: Column(
                     children: [
                       Row(

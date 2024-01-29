@@ -19,6 +19,8 @@ class AppImages{
   static  const String flagIn = "$basePath/flag1.png";
   static  const String india1 = "$basePath/india1.png";
   static  const String pluse = "$basePath/pluse.png";
+  static  const String cashonDelivery = "$basePath/cashondelivery.png";
+  static  const String paytm = "$basePath/paytm.png";
 
 
   ///-------------------cetegory screen ------------------------->
