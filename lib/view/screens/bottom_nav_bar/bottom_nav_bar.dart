@@ -18,7 +18,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _currentIndex == 1 ? HomeScreen() : StoresScreen(),
+      body: _PageView(_currentIndex),
         bottomNavigationBar: SalomonBottomBar(
           currentIndex: _currentIndex,
           onTap: (i) => setState(() => _currentIndex = i),
@@ -53,5 +53,14 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ],
         ),
     );
+  }
+
+  _PageView(int index) {
+    switch(index){
+      case 0 : return HomeScreen();
+      case 1 : return StoresScreen();
+      case 2 : return CategoryScreen();
+      default : return FruitsScreen();
+    }
   }
 }

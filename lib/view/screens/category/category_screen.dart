@@ -24,20 +24,22 @@ class CategoryScreen extends StatelessWidget {
             child: SvgPicture.asset(AppIcons.backArrow)),
         title: CustomText(text: AppConstants.categories,fontsize: Dimensions.fontSizeExtraLarge,fontWeight: FontWeight.w600,),
       ),
+
+      ///--------------------------body section--------------------------------------->
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge,vertical: Dimensions.paddingSizeExtraLarge),
         child: Column(
           children: [
             Obx(() => Container(
-              height: 534,
+              height: 670,
               child: GridView.builder(
                  itemCount: controller.cetegoryList.value.length,
                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 7,mainAxisSpacing: 16,childAspectRatio: 0.8),
                    itemBuilder: (context, index) {
                    var productInfo = controller.cetegoryList[index];
                      return Container(
-                       height: 193.h,
-                       width: 173.w,
+                       // height: 193.h,
+                       // width: 173.w,
                        decoration: BoxDecoration(
                          borderRadius: BorderRadius.circular(8),
                          color: AppColors.white,
@@ -58,10 +60,10 @@ class CategoryScreen extends StatelessWidget {
                              children: [
                                Container(
                                  margin: EdgeInsets.only(top: 30.h),
-                                 height: 60.h,
+                                 height: 86.h,
                                  width: 86.w,
                                  decoration: BoxDecoration(
-                                   borderRadius: BorderRadius.circular(50),
+                                   shape: BoxShape.circle,
                                    color: productInfo["color"]
                                  ),
                                ),
