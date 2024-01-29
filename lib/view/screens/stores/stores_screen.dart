@@ -4,7 +4,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:restaurent_kookbags/controller/stores_controller.dart';
 import 'package:restaurent_kookbags/routes/app_routes.dart';
-import 'package:restaurent_kookbags/view/screens/stores_details/stores_details_screen.dart';
 import 'package:restaurent_kookbags/view/widgets/custom_text.dart';
 import '../../../utils/app_colors.dart';
 import '../../../utils/app_icons.dart';
@@ -48,28 +47,32 @@ class StoresScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(
-              // horizontal: Dimensions.paddingSizeLarge,
-              // vertical: Dimensions.paddingSizeExtraLarge
           ),
           child: Column(
             children: [
+              SizedBox(height: 16.h,),
               ///--------------------- two botton------------------------->
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  TwoBotton(
-                      bottonColor: AppColors.white,
-                      text: "Products",
-                      textColor: AppColors.black),
-                  TwoBotton(
-                      bottonColor: AppColors.red,
-                      text: "Stores",
-                      textColor: AppColors.white),
-                ],
+
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.h),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TwoBotton(
+                        bottonColor: AppColors.white,
+                        text: "Products",
+                        textColor: AppColors.black),
+                    TwoBotton(
+                        bottonColor: AppColors.red,
+                        text: "Stores",
+                        textColor: AppColors.white),
+                  ],
+                ),
               ),
-        
-              //
-              Container(
+
+              SizedBox(height: 20.h,),
+              ///-------------------------stores container-------------------------->
+              SizedBox(
                 height: MediaQuery.of(context).size.height*0.8,
                 child: Obx(
                   () => ListView.builder(
@@ -80,18 +83,21 @@ class StoresScreen extends StatelessWidget {
                         onTap: (){
                           Get.toNamed(AppRoutes.storesDetailsScreen);
                         },
+
+
                         child: Container(
-                          margin: EdgeInsets.only(top: 20.h),
-                          height: 174.w,
-                          width: 342.w,
+                          margin: EdgeInsets.only(bottom: 20,left: 20.r, right: 20.r),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               image: DecorationImage(
+                                ///-----------------------------------image------------------------------>
                                   image: AssetImage("${storesInfo["image"]}"),
                                   fit: BoxFit.cover)),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
+
+                              ///--------------------------------favorite botton------------------------>
                               Align(
                                 alignment: Alignment.topRight,
                                 child: Container(
