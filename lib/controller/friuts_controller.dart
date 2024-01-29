@@ -12,6 +12,7 @@ class FriutsController extends GetxController{
   //   isFavorite.value = !isFavorite.value;
   // }
 
+
   RxList friutsList =  [
     {
       "discount" : "30% Off",

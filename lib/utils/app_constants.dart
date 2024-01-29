@@ -106,4 +106,10 @@ class AppConstants{
   static const String description = "Description";
   static const String descriptionDetails = "Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in.";
   static const String Weight = "Weight";
+
+
+
+  ///-----------------------------My Kookbags screen-------------------------->
+  static const String myKookbags = "My Kookbags";
+
 }

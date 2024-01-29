@@ -31,4 +31,8 @@ class AppImages{
   ///----------------------------stores details screen ------------------------
   static const String bgImageForbottomsheet = "$basePath/bgImageForbottomsheet.png";
 
+
+  ///---------------------------my kookbags screen--------------------------->
+  static const String cauliflower = "$basePath/Cauliflower.png";
+
 }

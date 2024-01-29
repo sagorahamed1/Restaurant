@@ -37,4 +37,15 @@ class AppIcons{
   static  const String watch = "$basePath/watch.svg";
   static  const String location2 = "$basePath/location2.svg";
 
+
+  ///-------------------------my kookbags screen---------------------->
+  static  const String cauliflower = "$basePath/Cauliflower.svg";
+
+
+  ///-----------------------------bottom nav bar-------------------------->
+  static  const String person = "$basePath/person1.svg";
+  static  const String search_for_bottom = "$basePath/search1.svg";
+  static  const String order_bag = "$basePath/order_bag1.svg";
+  static  const String home1 = "$basePath/home1.svg";
+
 }

@@ -26,7 +26,7 @@ class FruitsScreen extends StatelessWidget {
         leading: Container(
             padding: const EdgeInsets.all(19),
             child: SvgPicture.asset(AppIcons.backArrow)),
-        title: CustomText(
+        title: const CustomText(
           text: AppConstants.Fruits,
           fontsize: Dimensions.fontSizeExtraLarge,
           fontWeight: FontWeight.w600,
@@ -39,6 +39,7 @@ class FruitsScreen extends StatelessWidget {
 
       ///----------------------------body section--------------------------------->
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Padding(
           padding: const EdgeInsets.symmetric(
               horizontal: Dimensions.paddingSizeLarge,

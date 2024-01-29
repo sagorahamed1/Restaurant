@@ -22,7 +22,7 @@ class BottomSheetContainer extends StatelessWidget {
         width: MediaQuery.of(context).size.width.w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          image: DecorationImage(
+          image: const DecorationImage(
             image: AssetImage(AppImages.bgImageForbottomsheet),fit: BoxFit.contain,alignment: Alignment.topCenter,
           )
         ),
@@ -59,7 +59,7 @@ class BottomSheetContainer extends StatelessWidget {
                       borderRadius: BorderRadius.circular(2),
                       border: Border.all(color: AppColors.red),
                     ),
-                    child: Center(
+                    child: const Center(
                       child: CustomText(
                         text: "In Stock",
                         fontsize: Dimensions.fontSizeDefault,
@@ -105,19 +105,19 @@ class BottomSheetContainer extends StatelessWidget {
                         margin: EdgeInsets.only(left: 24.w, top: 20.w),
                         child: Column(
                           children: [
-                            CustomText(
+                            const CustomText(
                               text: AppConstants.freshPeach,
                               fontWeight: FontWeight.w600,
                               fontsize: Dimensions.fontSizeLarge,
                               color: AppColors.black,
                             ),
-                            CustomText(
+                            const CustomText(
                               text: AppConstants.groceryStore,
                               fontWeight: FontWeight.w400,
                               fontsize: Dimensions.fontSizeDefault,
                               color: AppColors.black,
                             ),
-                            Row(
+                            const Row(
                               children: [
                                 CustomText(
                                   text: "${AppConstants.productPrice}  ",
@@ -139,7 +139,7 @@ class BottomSheetContainer extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(5),
                                     color: AppColors.white20),
-                                child: Center(
+                                child: const Center(
                                     child: CustomText(
                                   text: "In kg",
                                   fontWeight: FontWeight.w600,
@@ -154,13 +154,13 @@ class BottomSheetContainer extends StatelessWidget {
                 ],
               ),
 
-              CustomText(
+              const CustomText(
                 text: AppConstants.description,
                 fontsize: Dimensions.fontSizeLarge,
                 fontWeight: FontWeight.w600,
                 color: AppColors.black,
               ),
-              CustomText(
+              const CustomText(
                 text: AppConstants.descriptionDetails,
                 fontsize: Dimensions.fontSizeSmall,
                 fontWeight: FontWeight.w400,
@@ -168,7 +168,7 @@ class BottomSheetContainer extends StatelessWidget {
               ),
 
               SizedBox(height: 16.w,),
-              CustomText(
+              const CustomText(
                 text: "Weight",
                 fontsize: Dimensions.fontSizeLarge,
                 fontWeight: FontWeight.w600,
@@ -187,7 +187,7 @@ class BottomSheetContainer extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CustomText(
+                  const CustomText(
                     text: "Quantity",
                     fontsize: Dimensions.fontSizeLarge,
                     fontWeight: FontWeight.w600,
@@ -200,7 +200,7 @@ class BottomSheetContainer extends StatelessWidget {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           color: AppColors.white20),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Icon(Icons.remove,color: Colors.red,),
@@ -221,7 +221,7 @@ class BottomSheetContainer extends StatelessWidget {
               Divider(),
 
               SizedBox(height: 20.w,),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomText(
@@ -242,7 +242,7 @@ class BottomSheetContainer extends StatelessWidget {
 
 
               SizedBox(height: 14.w,),
-              ElevatedButton(onPressed: (){}, child: CustomText(text: "ADD TO CART",))
+              ElevatedButton(onPressed: (){}, child: const CustomText(text: "ADD TO CART",color: AppColors.white,))
             ],
           ),
         ),
@@ -274,7 +274,7 @@ class WeightSelect extends StatelessWidget {
                       border:
                           Border.all(color: AppColors.red, width: 5)),
                 ),
-                CustomText(
+                const CustomText(
                   text: "  1 kg",
                   fontsize: Dimensions.fontSizeLarge,
                   fontWeight: FontWeight.w400,
@@ -282,7 +282,7 @@ class WeightSelect extends StatelessWidget {
                 ),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 CustomText(
                   text: "945 ",
