@@ -1,3 +1,5 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -10,7 +12,8 @@ import 'view/screens/select_language/select_language_screen.dart';
 import 'view/screens/sign_up/sign_up_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(DevicePreview(
+      enabled: !kReleaseMode, builder: (context) => const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -22,6 +25,11 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => GetMaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
+          useInheritedMediaQuery: true,
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
+          debugShowCheckedModeBanner: false,
+          title: 'Kookbags',
           theme: light,
           initialRoute: AppRoutes.checkoutScreen,
           getPages: AppRoutes.routes,
@@ -30,3 +38,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+

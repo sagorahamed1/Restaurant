@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:restaurent_kookbags/view/screens/category/category_screen.dart';
 import 'package:restaurent_kookbags/view/screens/checkout/checkout_screen.dart';
 import 'package:restaurent_kookbags/view/screens/home/home_screen.dart';
+import 'package:restaurent_kookbags/view/screens/log_in/log_in_screen.dart';
 import 'package:restaurent_kookbags/view/screens/otp_next/otp_next_screen.dart';
 import 'package:restaurent_kookbags/view/screens/otp_submit/otp_submit_screen.dart';
 import 'package:restaurent_kookbags/view/screens/otp_verification/otp_verification_screen.dart';
@@ -22,6 +23,7 @@ class AppRoutes{
   static const String otpNextScreen = "/otp_next_screen.dart";
   static const String otpVerificationScreen = "/otp_verification_screen.dart";
   static const String signUpScreen = "/sign_up_screen.dart";
+  static const String logInUpScreen = "/log_in_screen.dart";
   static const String storesDetailsScreen = "/StoresDetailsScreen";
   static const String storesScreen = "/StoresScreen";
   static const String selectLanguageScreen = "/select_language_screen.dart";
@@ -40,6 +42,9 @@ class AppRoutes{
     GetPage(name: signUpScreen, page: ()=> SignUpScreen()),
     GetPage(name: selectLanguageScreen, page: ()=> SelectLanguageScreen()),
     GetPage(name: checkoutScreen, page: ()=> CheckoutScreen()),
+    GetPage(name: storesDetailsScreen, page: ()=> StoresDetailsScreen()),
+    GetPage(name: storesScreen, page: ()=> StoresScreen()),
+    GetPage(name: logInUpScreen, page: ()=> LogInUpScreen()),
 
   ];
 }

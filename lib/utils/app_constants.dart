@@ -37,6 +37,12 @@ class AppConstants{
   static const String tipFor = "Tip For Delivery Assistant";
   static const String tipHint = "Custom Amount....";
   static const String payNOW = "PAY NOW";
+  static const String letsStart = "Let’s start your shopping";
+  static const String enterYour = "Enter your phone number";
+  static const String sentOTP = "SEND OTP";
+  static const String byContinue = "By continuing you agree to our";
+  static const String termsOf = "Terms Of Services";
+  static const String privacyOf = "Privacy Policy";
 
 
 
