@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Container(
-            // margin: EdgeInsets.only(left: 20.w),
+            padding : EdgeInsets.only(left: 20.w),
             child: SvgPicture.asset(AppIcons.location)),
         
         title: Container(
@@ -40,7 +40,6 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.symmetric(
-
             vertical: Dimensions.paddingSizeExtraLarge),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,91 +47,93 @@ class HomeScreen extends StatelessWidget {
             ///-----------------------------header slider------------------------------->
             HeaderSlider(),
             SizedBox(height: 24.h,),
-            CustomText(
+            ///---------------------------shop by cetegory----------------------->
+             CustomText(
+              left: 20.h,
+              bottom: 16.h,
               text: AppConstants.shopByCetegory,
               color: AppColors.black100,
               fontsize: Dimensions.fontSizeLarge,
               fontWeight: FontWeight.w600,
             ),
 
-            SizedBox(
-              height: 16.h,
-            ),
 
             ///<-----------------cetegory container-------------------->
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                CetegoryContainer(
-                    imageBgColor: AppColors.amber,
-                    imagepath: AppImages.fruitsVegetables,
-                    text: AppConstants.fruitsVegetabes),
-                CetegoryContainer(
-                    imageBgColor: AppColors.grey,
-                    imagepath: AppImages.fruitsVegetables,
-                    text: AppConstants.chickenMutton),
-                CetegoryContainer(
-                    imageBgColor: AppColors.amber,
-                    imagepath: AppImages.fruitsVegetables,
-                    text: AppConstants.fruitsVegetabes),
-              ],
+             Padding(
+              padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge.h),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CetegoryContainer(
+                      imageBgColor: AppColors.amber,
+                      imagepath: AppImages.fruitsVegetables,
+                      text: AppConstants.fruitsVegetabes),
+                  CetegoryContainer(
+                      imageBgColor: AppColors.grey,
+                      imagepath: AppImages.fruitsVegetables,
+                      text: AppConstants.chickenMutton),
+                  CetegoryContainer(
+                      imageBgColor: AppColors.amber,
+                      imagepath: AppImages.fruitsVegetables,
+                      text: AppConstants.fruitsVegetabes),
+                ],
+              ),
             ),
 
-            SizedBox(
-              height: 24.h,
-            ),
 
-            CustomText(
+             ///---------------------------------kook bage deals---------------------------->
+             CustomText(
+              top: 20.h,
+              left: 20.w,
+              bottom: 16.h,
               textAlign: TextAlign.start,
               text: AppConstants.kookbagsDeals,
               fontsize: Dimensions.fontSizeLarge,
               fontWeight: FontWeight.w600,
             ),
 
-            SizedBox(
-              height: 16.h,
-            ),
-
             ///<----------------kook bags slider------------------->
             KookbagsSlider(),
 
-            SizedBox(
-              height: 24.h,
-            ),
 
-            CustomText(
+            ///-------------------kook bags trivia----------------->
+             CustomText(
+              left: 20.w,
+              bottom: 24.h,
+              top: 24.h,
               textAlign: TextAlign.start,
               text: AppConstants.kookbagsTrivia,
               fontsize: Dimensions.fontSizeLarge,
               fontWeight: FontWeight.w600,
             ),
 
-            SizedBox(
-              height: 24.h,
-            ),
-
+            ///-------------------kook bags trivia slider------------------->
             KookbagsTriviaSlider(),
 
             SizedBox(
               height: 24.h,
             ),
 
-            CustomText(
+             CustomText(
+              top: 24.h,
+              bottom: 24.h,
+              left: 20.w,
               textAlign: TextAlign.start,
               text: AppConstants.featuredProducts,
               fontsize: Dimensions.fontSizeLarge,
               fontWeight: FontWeight.w600,
             ),
 
-            SizedBox(
-              height: 24.h,
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                FeaturedProductsContainer(),
-                FeaturedProductsContainer(),
-              ],
+
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  FeaturedProductsContainer(),
+                  FeaturedProductsContainer(),
+                ],
+              ),
             )
           ],
         ),

@@ -49,7 +49,7 @@ class CetegoryContainer extends StatelessWidget {
               bottom: 12.h,
               left: 10.w,
               child: CustomText(
-                text: text,
+                text: "$text",
                 textAlign: TextAlign.center,
                 maxline: 2,
                 fontWeight: FontWeight.w500,

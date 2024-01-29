@@ -1,15 +1,18 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation(1).dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:restaurent_kookbags/routes/app_routes.dart';
-import 'package:restaurent_kookbags/view/screens/home/home_screen.dart';
 
 import 'themes/light_theme.dart';
 import 'view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp(DevicePreview(
+    enabled: !kReleaseMode,
+     builder: (context) =>const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -19,12 +22,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       builder: (context, child) => GetMaterialApp(
+          useInheritedMediaQuery: true,
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Kookbags',
           theme: light,
-        initialRoute: AppRoutes.homeScreen,
+        // initialRoute: AppRoutes.bottomNavBar,
         getPages: AppRoutes.routes,
-         home: HomeScreen()
+         home: BottomNavBar()
       ),
       designSize: Size(375.0, 812.0),
     );
