@@ -63,6 +63,10 @@ class AppConstants{
   static const String cashOn  = "Cash On Delivery";
   static const String payYour  = "Pay your payment on getting delivery";
   static const String placeOrder  = "PLACE ORDER";
+  static const String orderSuccess  = "Your order was succesfull !";
+  static const String weStartOur  = "We start our delivery process and you will receive your  item soon";
+  static const String youHaveEarned  = "You have earned 4 points. It will add to you balance when the order is delivered";
+  static const String tRACKORDER  = "TRACK ORDER NOW";
 
 
 
