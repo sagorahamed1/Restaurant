@@ -5,6 +5,7 @@ import 'package:restaurent_kookbags/utils/app_icons.dart';
 import 'package:restaurent_kookbags/view/screens/home/home_screen.dart';
 import 'package:restaurent_kookbags/view/screens/mudule/mudule_screen.dart';
 import 'package:restaurent_kookbags/view/screens/my_kookbags/my_kookbags_screen.dart';
+import 'package:restaurent_kookbags/view/screens/search/search_screen.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 import '../category/category_screen.dart';
@@ -63,7 +64,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   _PageView(int index) {
     switch(index){
-      case 0 : return const HomeScreen();
+      // case 0 : return const HomeScreen();
+      case 0 : return const SearchScreen();
       case 1 : return StoresScreen();
       // case 2 : return CategoryScreen();
       case 2 : return MuduleScreen();

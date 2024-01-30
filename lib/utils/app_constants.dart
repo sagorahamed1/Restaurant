@@ -129,4 +129,12 @@ class AppConstants{
   static const String mango = "Mango";
   static const String exotic = "Exotic";
 
+
+  ///-------------------------search screen--------------------------------->
+  static const String cauliflower = "Cauliflower";
+  static const String goranStore = "Goran Store";
+  static const String offPriceSearchScreeen = "1800 Tk";
+  static const String priceSearchScreeen = "1500 Tk";
+  static const String deshiOnion = "Deshi Onion";
+
 }
