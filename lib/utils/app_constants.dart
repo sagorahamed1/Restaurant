@@ -136,5 +136,6 @@ class AppConstants{
   static const String offPriceSearchScreeen = "1800 Tk";
   static const String priceSearchScreeen = "1500 Tk";
   static const String deshiOnion = "Deshi Onion";
+  static const String shopByCategory = "Shop By Category";
 
 }
