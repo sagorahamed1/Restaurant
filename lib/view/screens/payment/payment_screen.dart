@@ -3,10 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:restaurent_kookbags/utils/app_constants.dart';
 import 'package:restaurent_kookbags/view/widgets/custom_buttom.dart';
-
 import '../../../utils/app_icons.dart';
-import '../../../utils/app_images.dart';
 import 'InnerWidget/bill_details_card.dart';
+import 'InnerWidget/cash_on_delivery.dart';
+import 'InnerWidget/paytm_section.dart';
 
 class PaymentScreen extends StatelessWidget {
   const PaymentScreen({super.key});
@@ -20,7 +20,7 @@ class PaymentScreen extends StatelessWidget {
         elevation: 12,
         leading: const Icon(Icons.arrow_back_ios_outlined),
         // toolbarOpacity: 0.5,
-        shadowColor: Colors.grey,
+        shadowColor: const Color(0xFFe8e8e8),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -156,126 +156,18 @@ class PaymentScreen extends StatelessWidget {
                   ),
                 ),
               ),
+
+              //====================================> BillDetailsCard Section <============================================================================
+
               SizedBox(height: 24.w),
               const BillDetailsCard(),
               SizedBox(height: 16.w),
+
               //====================================> Payment Method Section <============================================================================
 
-              Container(
-                width: 335.w,
-                height: 76.w,
-                decoration: ShapeDecoration(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4)),
-                  shadows: [
-                    BoxShadow(
-                      color: const Color(0x33000000),
-                      blurRadius: 20.w,
-                      offset: const Offset(0, 4),
-                      spreadRadius: 0.w,
-                    )
-                  ],
-                ),
-                child: Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 16.w, vertical: 18.w),
-                  child: Row(
-                    children: [
-                      Image.asset(AppImages.paytm),
-                      SizedBox(width: 16.w),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            AppConstants.paytm,
-                            style: TextStyle(
-                              color: const Color(0xFF61656A),
-                              fontSize: 14.sp,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500,
-                              height: 0.10.w,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 15.w,
-                          ),
-                          Text(
-                            AppConstants.payThrough,
-                            style: TextStyle(
-                              color: const Color(0xFFBFBFBF),
-                              fontSize: 10.sp,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w400,
-                              height: 0.20.w,
-                            ),
-                          ),
-                        ],
-                      ),
-                      const Spacer(),
-                      SvgPicture.asset(AppIcons.fmframe),
-                    ],
-                  ),
-                ),
-              ),
+              const PaytmSection(),
               SizedBox(height: 16.w),
-              Container(
-                width: 335.w,
-                height: 76.w,
-                decoration: ShapeDecoration(
-                  color: Colors.white,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4)),
-                  shadows: [
-                    BoxShadow(
-                      color: const Color(0x33000000),
-                      blurRadius: 20.w,
-                      offset: const Offset(0, 4),
-                      spreadRadius: 0.w,
-                    )
-                  ],
-                ),
-                child: Padding(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: 16.w, vertical: 18.w),
-                  child: Row(
-                    children: [
-                      Image.asset(AppImages.cashonDelivery),
-                      SizedBox(width: 16.w),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            AppConstants.cashOn,
-                            style: TextStyle(
-                              color: const Color(0xFF61656A),
-                              fontSize: 14.sp,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w500,
-                              height: 0.10.w,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 15.w,
-                          ),
-                          Text(
-                            AppConstants.payYour,
-                            style: TextStyle(
-                              color: const Color(0xFFBFBFBF),
-                              fontSize: 10.sp,
-                              fontFamily: 'Poppins',
-                              fontWeight: FontWeight.w400,
-                              height: 0.20.w,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              const CashOnDelivery(),
               SizedBox(height: 58.w),
               CustomButtom(
                 onpress: () {},

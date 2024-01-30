@@ -19,8 +19,13 @@ class AppImages{
   static  const String flagIn = "$basePath/flag1.png";
   static  const String india1 = "$basePath/india1.png";
   static  const String pluse = "$basePath/pluse.png";
-  static  const String cashonDelivery = "$basePath/cashondelivery.png";
+  static  const String cashOnDelivery = "$basePath/cashondelivery.png";
   static  const String paytm = "$basePath/paytm.png";
+  static  const String kookBag = "$basePath/kookbag.png";
+  static  const String bgKook = "$basePath/bgkook.png";
+  static  const String giftBox = "$basePath/giftbox.png";
+  static  const String topBgKook = "$basePath/topbgkook.png";
+  static  const String gMap = "$basePath/gmap.png";
 
 
   ///-------------------cetegory screen ------------------------->

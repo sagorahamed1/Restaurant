@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:restaurent_kookbags/routes/app_routes.dart';
+import 'package:restaurent_kookbags/view/screens/add_new_address/add_new_address.dart';
 import 'package:restaurent_kookbags/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:restaurent_kookbags/view/screens/log_in/log_in_screen.dart';
 
 import 'themes/light_theme.dart';
 import 'view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'view/screens/checkout/checkout_screen.dart';
+import 'view/screens/order_succesfull/order_succesfull.dart';
 import 'view/screens/payment/payment_screen.dart';
 import 'view/screens/select_language/select_language_screen.dart';
 import 'view/screens/sign_up/sign_up_screen.dart';
@@ -32,9 +34,9 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Kookbags',
           theme: light,
-          initialRoute: AppRoutes.paymentScreen,
+          initialRoute: AppRoutes.addNewAddress,
           getPages: AppRoutes.routes,
-          home: PaymentScreen()),
+          home: AddNewAddress()),
       designSize: Size(375.0, 812.0),
     );
   }

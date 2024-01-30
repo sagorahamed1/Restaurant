@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../utils/app_constants.dart';
+import '../../../widgets/input_text.dart';
 
 class DeliveryScheduleCard extends StatelessWidget {
   const DeliveryScheduleCard({
@@ -35,25 +36,25 @@ class DeliveryScheduleCard extends StatelessWidget {
             SizedBox(height: 12.h),
             //====================================> Schedule Day Section <============================================================================
 
-            Row(
-              children: [
-                Container(
-                  width: 88.w,
-                  height: 32.w,
-                  decoration: ShapeDecoration(
-                    color: const Color(0xFF353535),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4.r)),
-                  ),
-                  child: Center(
-                      child: Text(AppConstants.today,
-                          style: TextStyle(
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.white))),
+            Row(children: [
+              Container(
+                width: 88.w,
+                height: 32.w,
+                decoration: ShapeDecoration(
+                  color: const Color(0xFF353535),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4.r)),
                 ),
-                SizedBox(width: 8.w),
-                Container(
+                child: Center(
+                    child: InputText(
+                      title: AppConstants.today,
+                      fontsize: 12.w,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    )),
+              ),
+              SizedBox(width: 8.w),
+              Container(
                   width: 88.w,
                   height: 32.w,
                   decoration: ShapeDecoration(
@@ -64,14 +65,13 @@ class DeliveryScheduleCard extends StatelessWidget {
                     ),
                   ),
                   child: Center(
-                      child: Text(AppConstants.tomorrow,
-                          style: TextStyle(
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.grey))),
-                )
-              ],
-            ),
+                      child: InputText(
+                    title: AppConstants.tomorrow,
+                    fontsize: 12.w,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.grey,
+                  )))
+            ]),
             SizedBox(height: 12.h),
 
             //====================================> Schedule Time Section <============================================================================
@@ -79,40 +79,34 @@ class DeliveryScheduleCard extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  width: 146.w,
-                  height: 32.w,
-                  decoration: ShapeDecoration(
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                          width: 0.50.w, color: const Color(0xFF9B9B9B)),
-                      borderRadius: BorderRadius.circular(4.r),
-                    ),
-                  ),
-                  child: Center(
-                      child: Text(AppConstants.todayTime,
-                          style: TextStyle(
-                              fontSize: 12.sp,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.grey))),
-                ),
+                    width: 146.w,
+                    height: 32.w,
+                    decoration: ShapeDecoration(
+                        shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                                width: 0.50.w, color: const Color(0xFF9B9B9B)),
+                            borderRadius: BorderRadius.circular(4.r))),
+                    child: Center(
+                        child: InputText(
+                            title: AppConstants.todayTime,
+                            fontsize: 12.w,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.grey))),
                 SizedBox(width: 8.w),
                 Container(
-                  width: 146.w,
-                  height: 32.w,
-                  decoration: ShapeDecoration(
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                          width: 0.50.w, color: const Color(0xFF9B9B9B)),
-                      borderRadius: BorderRadius.circular(4.r),
-                    ),
-                  ),
-                  child: Center(
-                      child: Text(AppConstants.tomorrowTime,
-                          style: TextStyle(
-                              fontSize: 12.w,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.grey))),
-                ),
+                    width: 146.w,
+                    height: 32.w,
+                    decoration: ShapeDecoration(
+                        shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                                width: 0.50.w, color: const Color(0xFF9B9B9B)),
+                            borderRadius: BorderRadius.circular(4.r))),
+                    child: Center(
+                        child: InputText(
+                            title: AppConstants.tomorrowTime,
+                            fontsize: 12.w,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.grey))),
               ],
             )
           ],

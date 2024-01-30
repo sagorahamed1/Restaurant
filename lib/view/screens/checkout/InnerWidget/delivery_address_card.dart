@@ -4,6 +4,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:restaurent_kookbags/utils/app_constants.dart';
 import 'package:restaurent_kookbags/utils/app_icons.dart';
 import 'package:restaurent_kookbags/utils/app_images.dart';
+import 'package:restaurent_kookbags/view/widgets/custom_input_field.dart';
+import 'package:restaurent_kookbags/view/widgets/input_text.dart';
+import '../../../widgets/custom_card.dart';
 
 class DeliveryAddressCard extends StatelessWidget {
   const DeliveryAddressCard({
@@ -28,7 +31,7 @@ class DeliveryAddressCard extends StatelessWidget {
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -53,78 +56,28 @@ class DeliveryAddressCard extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
-              height: 16.h,
-            ),
+            SizedBox(height: 16.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  width: 106.w,
-                  height: 48.w,
-                  decoration: ShapeDecoration(
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4)),
-                    shadows: [
-                      BoxShadow(
-                        color: const Color(0x33000000),
-                        blurRadius: 20.r,
-                        offset: const Offset(0, 4),
-                        spreadRadius: 0,
-                      )
-                    ],
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 18, vertical: 12),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(AppIcons.houseframe,height: 24.w),
-                        SizedBox(width: 8.w),
-                        Text(AppConstants.home,
-                            style: TextStyle(
-                                fontSize: 12.sp, fontWeight: FontWeight.w500)),
-                      ],
-                    ),
+                CustomCard(
+                  title: AppConstants.home,
+                  svgImage: SvgPicture.asset(
+                    AppIcons.houseframe,
+                    width: 24.w,
                   ),
                 ),
                 SizedBox(width: 8.w),
-                Container(
-                  width: 106.w,
-                  height: 48.w,
-                  decoration: ShapeDecoration(
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4)),
-                    shadows: [
-                      BoxShadow(
-                        color: const Color(0x33000000),
-                        blurRadius: 20.r,
-                        offset: const Offset(0, 4),
-                        spreadRadius: 0,
-                      )
-                    ],
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 14, vertical: 11),
-                    child: Row(
-                      children: [
-                        SvgPicture.asset(AppIcons.office, height: 24.w),
-                        SizedBox(width: 8.w),
-                        Text(AppConstants.office,
-                            style: TextStyle(
-                                fontSize: 12.sp, fontWeight: FontWeight.w500)),
-                      ],
-                    ),
+                CustomCard(
+                  title: AppConstants.office,
+                  svgImage: SvgPicture.asset(
+                    AppIcons.office,
+                    width: 24.w,
                   ),
                 ),
               ],
             ),
-            SizedBox(
-              height: 16.h,
-            ),
+            SizedBox(height: 16.h),
             Container(
               width: 303.w,
               height: 49.w,
@@ -147,26 +100,24 @@ class DeliveryAddressCard extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
                 child: Row(
                   children: [
-                    SvgPicture.asset(AppIcons.location2,height: 24.w),
+                    SvgPicture.asset(AppIcons.location2, height: 24.w),
                     SizedBox(width: 12.w),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          AppConstants.others,
-                          style: TextStyle(
-                              fontSize: 12.sp, fontWeight: FontWeight.w400),
-                        ),
-                        Text(
-                          AppConstants.loactAdd,
-                          style: TextStyle(
-                              fontSize: 10.sp, fontWeight: FontWeight.w400),
-                        ),
+                        InputText(
+                            title: AppConstants.others,
+                            fontsize: 12.sp,
+                            fontWeight: FontWeight.w400),
+                        InputText(
+                            title: AppConstants.loactAdd,
+                            fontsize: 10.sp,
+                            fontWeight: FontWeight.w400),
                       ],
                     ),
                     const Spacer(),
-                    SvgPicture.asset(AppIcons.edit,height: 24.w),
+                    SvgPicture.asset(AppIcons.edit, height: 24.w),
                   ],
                 ),
               ),
@@ -178,27 +129,16 @@ class DeliveryAddressCard extends StatelessWidget {
             //====================================> Location TextFormField Section <============================================================================
 
             Container(
-              width: 303.w,
-              height: 40.w,
-              decoration: ShapeDecoration(
-                color: const Color(0xFFEFECEC),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(4.r)),
-              ),
-              child: TextFormField(
-                decoration: InputDecoration(
-                  hintText: AppConstants.sectorHint,
-                  hintStyle: TextStyle(
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.w400,
-                    color: const Color(0xFFB9B9B9),
-                  ),
-                  enabledBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(width: 1.0, color: Colors.white),
-                  ),
+                width: 303.w,
+                height: 40.w,
+                decoration: ShapeDecoration(
+                  color: const Color(0xFFEFECEC),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4.r)),
                 ),
-              ),
-            ),
+                child: const CustomInputField(
+                  title: AppConstants.sectorApartment,
+                )),
             SizedBox(
               height: 16.h,
             ),
@@ -206,27 +146,16 @@ class DeliveryAddressCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  width: 144.w,
-                  height: 40.w,
-                  decoration: ShapeDecoration(
-                    color: const Color(0xFFEFECEC),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(4.r)),
-                  ),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      hintText: AppConstants.houseHint,
-                      hintStyle: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w400,
-                        color: const Color(0xFFB9B9B9),
-                      ),
-                      enabledBorder: const OutlineInputBorder(
-                        borderSide: BorderSide(width: 1.0, color: Colors.white),
-                      ),
+                    width: 144.w,
+                    height: 40.w,
+                    decoration: ShapeDecoration(
+                      color: const Color(0xFFEFECEC),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(4.r)),
                     ),
-                  ),
-                ),
+                    child: const CustomInputField(
+                      title: AppConstants.houseHint,
+                    )),
                 SizedBox(width: 8.w),
                 Container(
                   width: 144.w,
@@ -236,18 +165,8 @@ class DeliveryAddressCard extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(4.r)),
                   ),
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                      hintText: AppConstants.floor,
-                      hintStyle: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w400,
-                        color: const Color(0xFFB9B9B9),
-                      ),
-                      enabledBorder: const OutlineInputBorder(
-                        borderSide: BorderSide(width: 1.0, color: Colors.white),
-                      ),
-                    ),
+                  child: const CustomInputField(
+                    title: AppConstants.floor,
                   ),
                 ),
               ],

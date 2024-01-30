@@ -19,6 +19,7 @@ class AppIcons{
   static  const String office = "$basePath/office.svg";
   static  const String vector = "$basePath/vector.svg";
   static  const String fmframe = "$basePath/fmframe.svg";
+  static  const String splocation = "$basePath/splocation.svg";
 
 
   ///----------------------cetegory screen------------------------->
