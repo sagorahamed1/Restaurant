@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:restaurent_kookbags/view/widgets/input_text.dart';
+import 'package:restaurent_kookbags/view/widgets/custom_text.dart';
 
 class CustomCard extends StatelessWidget {
   final String title;
@@ -34,8 +34,8 @@ class CustomCard extends StatelessWidget {
           children: [
             svgImage,
             SizedBox(width: 8.w),
-            InputText(
-                title: title, fontsize: 12.sp, fontWeight: FontWeight.w500),
+            CustomText(
+                text: title, fontsize: 12.sp, fontWeight: FontWeight.w500),
           ],
         ),
       ),

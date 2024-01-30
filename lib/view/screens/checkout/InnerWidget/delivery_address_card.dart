@@ -5,7 +5,7 @@ import 'package:restaurent_kookbags/utils/app_constants.dart';
 import 'package:restaurent_kookbags/utils/app_icons.dart';
 import 'package:restaurent_kookbags/utils/app_images.dart';
 import 'package:restaurent_kookbags/view/widgets/custom_input_field.dart';
-import 'package:restaurent_kookbags/view/widgets/input_text.dart';
+import 'package:restaurent_kookbags/view/widgets/custom_text.dart';
 import '../../../widgets/custom_card.dart';
 
 class DeliveryAddressCard extends StatelessWidget {
@@ -39,11 +39,10 @@ class DeliveryAddressCard extends StatelessWidget {
 
             Row(
               children: [
-                Text(
-                  AppConstants.deliveryAdd,
-                  style:
-                      TextStyle(fontWeight: FontWeight.w600, fontSize: 14.sp),
-                ),
+                CustomText(
+                    text: AppConstants.deliveryAdd,
+                    fontWeight: FontWeight.w600,
+                    fontsize: 14.sp),
                 const Spacer(),
                 Container(
                   width: 16.w,
@@ -106,12 +105,12 @@ class DeliveryAddressCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        InputText(
-                            title: AppConstants.others,
+                        CustomText(
+                            text: AppConstants.others,
                             fontsize: 12.sp,
                             fontWeight: FontWeight.w400),
-                        InputText(
-                            title: AppConstants.loactAdd,
+                        CustomText(
+                            text: AppConstants.loactAdd,
                             fontsize: 10.sp,
                             fontWeight: FontWeight.w400),
                       ],

@@ -3,12 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:restaurent_kookbags/utils/app_constants.dart';
 import 'package:restaurent_kookbags/view/widgets/custom_buttom.dart';
-
+import 'package:restaurent_kookbags/view/widgets/custom_text.dart';
 import '../../../utils/app_icons.dart';
 import '../../../utils/app_images.dart';
 import '../../widgets/custom_card.dart';
 import '../../widgets/custom_input_field.dart';
-import '../../widgets/input_text.dart';
 
 class AddNewAddress extends StatelessWidget {
   const AddNewAddress({super.key});
@@ -40,12 +39,11 @@ class AddNewAddress extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 12.w),
-              InputText(
-                title: AppConstants.addTheLocation,
-                color: const Color(0xFFCD0608),
-                fontsize: 10.w,
-                fontWeight: FontWeight.w400,
-              ),
+              CustomText(
+                  text: AppConstants.addTheLocation,
+                  color: const Color(0xFFCD0608),
+                  fontsize: 10.w,
+                  fontWeight: FontWeight.w400),
               SizedBox(height: 24.h),
               //=============================================> CustomCard Section ========================================================
               Row(
@@ -82,12 +80,11 @@ class AddNewAddress extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  InputText(
-                    title: AppConstants.deliveryAdd,
-                    fontsize: 12.w,
-                    fontWeight: FontWeight.w500,
-                    color: const Color(0xFF61656A),
-                  ),
+                  CustomText(
+                      text: AppConstants.deliveryAdd,
+                      fontsize: 12.w,
+                      fontWeight: FontWeight.w500,
+                      color: const Color(0xFF61656A)),
                   SizedBox(height: 8.h),
                   Container(
                     width: 334.w,
@@ -100,12 +97,11 @@ class AddNewAddress extends StatelessWidget {
                     child: const CustomInputField(title: AppConstants.loactAdd),
                   ),
                   SizedBox(height: 16.h),
-                  InputText(
-                    title: AppConstants.contactPerson,
-                    fontsize: 12.w,
-                    fontWeight: FontWeight.w500,
-                    color: const Color(0xFF61656A),
-                  ),
+                  CustomText(
+                      text: AppConstants.contactPerson,
+                      fontsize: 12.w,
+                      fontWeight: FontWeight.w500,
+                      color: const Color(0xFF61656A)),
                   SizedBox(height: 8.h),
                   Container(
                     width: 334.w,
@@ -118,12 +114,11 @@ class AddNewAddress extends StatelessWidget {
                     child: const CustomInputField(title: AppConstants.debashis),
                   ),
                   SizedBox(height: 16.h),
-                  InputText(
-                    title: AppConstants.contactPersonNumber,
-                    fontsize: 12.w,
-                    fontWeight: FontWeight.w500,
-                    color: const Color(0xFF61656A),
-                  ),
+                  CustomText(
+                      text: AppConstants.contactPersonNumber,
+                      fontsize: 12.w,
+                      fontWeight: FontWeight.w500,
+                      color: const Color(0xFF61656A)),
                   SizedBox(height: 8.h),
                   Container(
                     width: 334.w,
@@ -137,12 +132,11 @@ class AddNewAddress extends StatelessWidget {
                         title: AppConstants.personNumber),
                   ),
                   SizedBox(height: 16.h),
-                  InputText(
-                    title: AppConstants.sectorApartment,
-                    fontsize: 12.w,
-                    fontWeight: FontWeight.w500,
-                    color: const Color(0xFF61656A),
-                  ),
+                  CustomText(
+                      text: AppConstants.sectorApartment,
+                      fontsize: 12.w,
+                      fontWeight: FontWeight.w500,
+                      color: const Color(0xFF61656A)),
                   SizedBox(height: 8.h),
                   Container(
                     width: 334.w,
@@ -162,12 +156,11 @@ class AddNewAddress extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          InputText(
-                            title: AppConstants.houseNo,
-                            fontsize: 12.w,
-                            fontWeight: FontWeight.w500,
-                            color: const Color(0xFF61656A),
-                          ),
+                          CustomText(
+                              text: AppConstants.houseNo,
+                              fontsize: 12.w,
+                              fontWeight: FontWeight.w500,
+                              color: const Color(0xFF61656A)),
                           SizedBox(height: 8.w),
                           Container(
                             width: 144.w,
@@ -184,8 +177,8 @@ class AddNewAddress extends StatelessWidget {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          InputText(
-                            title: AppConstants.floorNo,
+                          CustomText(
+                            text: AppConstants.floorNo,
                             fontsize: 12.w,
                             fontWeight: FontWeight.w500,
                             color: const Color(0xFF61656A),
@@ -207,7 +200,6 @@ class AddNewAddress extends StatelessWidget {
                   ),
                   SizedBox(height: 39.h),
                   //============================================================================================================
-
                   CustomButtom(title: AppConstants.sAveAdd, onpress: () {}),
                   SizedBox(height: 90.h),
                 ],
