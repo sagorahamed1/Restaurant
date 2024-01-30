@@ -126,5 +126,7 @@ class AppConstants{
   static const String priceMuduleScreen = "445.00 Tk";
   static const String ofPriceMuduleScreen = "1500 Tk";
   static const String seasonal = "Seasonal";
+  static const String mango = "Mango";
+  static const String exotic = "Exotic";
 
 }

@@ -161,7 +161,8 @@ class FruitsContainerWidget extends StatelessWidget {
                       ),
                     )
                   ],
-                )
+                ),
+
               ],
             ),
           )

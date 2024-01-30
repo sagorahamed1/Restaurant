@@ -34,5 +34,6 @@ class AppImages{
 
   ///---------------------------my kookbags screen--------------------------->
   static const String cauliflower = "$basePath/Cauliflower.png";
+  static const String mango = "$basePath/mango.png";
 
 }

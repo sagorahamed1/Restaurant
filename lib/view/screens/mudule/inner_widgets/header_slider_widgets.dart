@@ -49,7 +49,7 @@ class _HeaderSliderWidgetsState extends State<HeaderSliderWidgets> {
               });
             },
 
-            autoPlayAnimationDuration: Duration(seconds: 1),
+            autoPlayAnimationDuration: const Duration(seconds: 1),
             reverse: false,
           ),
           itemBuilder: (context, index, realIndex) {
@@ -73,12 +73,12 @@ class _HeaderSliderWidgetsState extends State<HeaderSliderWidgets> {
               ),
 
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
 
-                    SizedBox(height: 160.w,),
+                    SizedBox(height: 150.h,),
 
                     const CustomText(
                       text: "20% off on your",
@@ -107,11 +107,10 @@ class _HeaderSliderWidgetsState extends State<HeaderSliderWidgets> {
         AnimatedSmoothIndicator(
           activeIndex: currentIndex,
           count: images.length,
-          effect: const WormEffect( // You can choose different effects here
-            dotColor: Colors.grey, // Inactive dot color
-            activeDotColor: AppColors.black100, // Active dot color
-            dotHeight: 8.0, // Height of inactive dots
-            // activeDotHeight: 12.0, // Height of active dot
+          effect: const WormEffect(
+            dotColor: Colors.grey,
+            activeDotColor: AppColors.black100,
+            dotHeight: 8.0,
           ),
         ),
 

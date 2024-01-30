@@ -15,6 +15,7 @@ import 'inner_widgets/FruitsSlider/fruits_container_slider.dart';
 import 'inner_widgets/kookbags_combos.dart';
 import 'inner_widgets/SplashDealsSlider/splash_deals_slider.dart';
 import 'inner_widgets/SplashDealsSlider/splash_deals_slider_container.dart';
+import 'inner_widgets/seasonal_fruits_container.dart';
 
 class MuduleScreen extends StatelessWidget {
   const MuduleScreen({super.key});
@@ -204,6 +205,81 @@ class MuduleScreen extends StatelessWidget {
                     ],
                   ),
 
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SeasonalFruitsContainer(),
+                      SeasonalFruitsContainer(),
+                    ],
+                  ),
+
+
+
+
+
+                  ///------------------------------Vegetables and view all text===========================>
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CustomText(
+                        top: 16.w,
+                        bottom: 20.w,
+                        text: AppConstants.vegetables,
+                        fontWeight: FontWeight.w600,
+                        fontsize: Dimensions.fontSizeLarge.w,
+                        color: AppColors.black,
+                      ),
+
+                      CustomText(
+                        top: 16.w,
+                        bottom: 20.w,
+                        text: AppConstants.viewAll,
+                        fontWeight: FontWeight.w500,
+                        fontsize: Dimensions.fontSizeSmall.w,
+                        color: AppColors.red,
+                      ),
+                    ],
+                  ),
+
+
+                  Container(
+                    height: 89.w,
+                    child: FruitsContainerSlider(),
+                  ),
+
+
+
+
+
+                  ///------------------------------Vegetables and view all text===========================>
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      CustomText(
+                        top: 16.w,
+                        bottom: 20.w,
+                        text: AppConstants.exotic,
+                        fontWeight: FontWeight.w600,
+                        fontsize: Dimensions.fontSizeLarge.w,
+                        color: AppColors.black,
+                      ),
+
+                      CustomText(
+                        top: 16.w,
+                        bottom: 20.w,
+                        text: AppConstants.viewAll,
+                        fontWeight: FontWeight.w500,
+                        fontsize: Dimensions.fontSizeSmall.w,
+                        color: AppColors.red,
+                      ),
+                    ],
+                  ),
+
+
+                  Container(
+                      height: 240.w,
+                      child: KookbagsCombos()),
+
 
                 ],
               ),
@@ -211,7 +287,7 @@ class MuduleScreen extends StatelessWidget {
 
 
 
-            SizedBox(height: 100.w,),
+            SizedBox(height: 10.w,),
 
           ],
         ),
