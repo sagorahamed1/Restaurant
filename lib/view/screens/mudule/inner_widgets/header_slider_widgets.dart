@@ -8,14 +8,14 @@ import 'package:restaurent_kookbags/utils/dimensions.dart';
 import 'package:restaurent_kookbags/view/widgets/custom_text.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class HeaderSlider extends StatefulWidget {
-  HeaderSlider({super.key});
+class HeaderSliderWidgets extends StatefulWidget {
+  HeaderSliderWidgets({super.key});
 
   @override
-  State<HeaderSlider> createState() => _HeaderSliderState();
+  State<HeaderSliderWidgets> createState() => _HeaderSliderWidgetsState();
 }
 
-class _HeaderSliderState extends State<HeaderSlider> {
+class _HeaderSliderWidgetsState extends State<HeaderSliderWidgets> {
   int currentIndex = 0;
 
   CarouselController _carouselController = CarouselController();
@@ -42,14 +42,14 @@ class _HeaderSliderState extends State<HeaderSlider> {
             enlargeCenterPage: true,
 
             enableInfiniteScroll: true,
-           height: MediaQuery.of(context).size.height*0.3,
+            height: MediaQuery.of(context).size.height*0.3,
             onPageChanged: (index, reason) {
               setState(() {
                 currentIndex = index;
               });
             },
 
-            autoPlayAnimationDuration: const Duration(seconds: 1),
+            autoPlayAnimationDuration: Duration(seconds: 1),
             reverse: false,
           ),
           itemBuilder: (context, index, realIndex) {
@@ -60,7 +60,7 @@ class _HeaderSliderState extends State<HeaderSlider> {
                 color: AppColors.white,
                 borderRadius: BorderRadius.circular(16),
                 image: DecorationImage(
-                  image: AssetImage(images[index],),fit: BoxFit.cover
+                    image: AssetImage(images[index],),fit: BoxFit.cover
                 ),
                 boxShadow: const [
                   BoxShadow(
@@ -73,48 +73,26 @@ class _HeaderSliderState extends State<HeaderSlider> {
               ),
 
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
 
-                    SizedBox(height: 16.h,),
-                    Container(
-                      height: 34.h,
-                      width: 50.w,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(50.r),
-                        color: AppColors.redAccent,
-                      ),
-                      child: const Center(
-                        child: CustomText(text: "New", fontsize: Dimensions.fontSizeSmall,fontWeight: FontWeight.w600,color: AppColors.white,),
-                      ),
-                    ),
+                    SizedBox(height: 160.w,),
 
-                    SizedBox(height: 53.h,),
                     const CustomText(
-                      text: AppConstants.freshVegetables,
+                      text: "20% off on your",
                       fontWeight: FontWeight.w500,
-                      fontsize: Dimensions.fontSizeLarge,
+                      fontsize: Dimensions.fontSizeDefault,
                       color: AppColors.white,
                     ),
 
                     SizedBox(height: 12.h,),
-                    Container(
-                      height: 24.h,
-                      width: 86.w,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8.r),
-                        color: AppColors.white
-                      ),
-                      child: const Center(
-                        child: CustomText(
-                          text: AppConstants.buynow,
-                          fontWeight: FontWeight.w400,
-                          fontsize: Dimensions.fontSizeSmall,
-                          color: AppColors.white200,
-                        ),
-                      ),
+                    const CustomText(
+                      text: "first purchase",
+                      fontWeight: FontWeight.w400,
+                      fontsize: Dimensions.fontSizeSmall,
+                      color: AppColors.white,
                     )
                   ],
                 ),

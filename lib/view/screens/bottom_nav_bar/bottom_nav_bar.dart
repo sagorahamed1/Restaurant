@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:restaurent_kookbags/utils/app_colors.dart';
 import 'package:restaurent_kookbags/utils/app_icons.dart';
 import 'package:restaurent_kookbags/view/screens/home/home_screen.dart';
+import 'package:restaurent_kookbags/view/screens/mudule/mudule_screen.dart';
 import 'package:restaurent_kookbags/view/screens/my_kookbags/my_kookbags_screen.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
@@ -64,7 +65,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
     switch(index){
       case 0 : return const HomeScreen();
       case 1 : return StoresScreen();
-      case 2 : return CategoryScreen();
+      // case 2 : return CategoryScreen();
+      case 2 : return MuduleScreen();
       default : return const MyKookBagsScreen();
     }
   }
