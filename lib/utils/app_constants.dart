@@ -68,6 +68,22 @@ class AppConstants{
   static const String youHaveEarned  = "You have earned 4 points. It will add to you balance when the order is delivered";
   static const String tRACKORDER  = "TRACK ORDER NOW";
 
+  //===================================> Add New Address Screen <=============================
+
+  static const String addNewAddress  = "Add New Address";
+  static const String addTheLocation  = "Add the location correctly";
+  static const String oTHERS  = "OTHERS";
+  static const String deliAddress  = "Delivery Address";
+  static const String contactPerson  = "Contact Person Name";
+  static const String debashis  = "Debashis";
+  static const String contactPersonNumber  = "Contact Person Number";
+  static const String personNumber  = "+4405514515";
+  static const String sectorApartment  = "Sector/Apartment/Society (Optional)";
+  static const String houseNo  = "House No. (Optional)";
+  static const String floorNo  = "Floor (Optional)";
+  static const String sAveAdd  = "SAVE ADDRESS";
+
+
 
 
   ///--------------------home page------------------>

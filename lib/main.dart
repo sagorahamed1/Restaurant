@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:restaurent_kookbags/routes/app_routes.dart';
+import 'package:restaurent_kookbags/view/screens/add_new_address/add_new_address.dart';
 import 'package:restaurent_kookbags/view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:restaurent_kookbags/view/screens/log_in/log_in_screen.dart';
 
@@ -33,9 +34,9 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Kookbags',
           theme: light,
-          initialRoute: AppRoutes.orderSuccesfull,
+          initialRoute: AppRoutes.addNewAddress,
           getPages: AppRoutes.routes,
-          home: OrderSuccesfull()),
+          home: AddNewAddress()),
       designSize: Size(375.0, 812.0),
     );
   }

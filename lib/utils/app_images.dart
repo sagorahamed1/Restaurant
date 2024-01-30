@@ -25,6 +25,7 @@ class AppImages{
   static  const String bgKook = "$basePath/bgkook.png";
   static  const String giftBox = "$basePath/giftbox.png";
   static  const String topBgKook = "$basePath/topbgkook.png";
+  static  const String gMap = "$basePath/gmap.png";
 
 
   ///-------------------cetegory screen ------------------------->

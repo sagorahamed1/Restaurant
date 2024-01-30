@@ -3,9 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:restaurent_kookbags/utils/app_constants.dart';
 import 'package:restaurent_kookbags/view/widgets/custom_buttom.dart';
-
 import '../../../utils/app_icons.dart';
-import '../../../utils/app_images.dart';
 import 'InnerWidget/bill_details_card.dart';
 import 'InnerWidget/cash_on_delivery.dart';
 import 'InnerWidget/paytm_section.dart';
@@ -22,7 +20,7 @@ class PaymentScreen extends StatelessWidget {
         elevation: 12,
         leading: const Icon(Icons.arrow_back_ios_outlined),
         // toolbarOpacity: 0.5,
-        shadowColor: Colors.grey,
+        shadowColor: const Color(0xFFe8e8e8),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -183,7 +181,3 @@ class PaymentScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
