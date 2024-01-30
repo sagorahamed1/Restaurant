@@ -49,4 +49,23 @@ class AppIcons{
   static  const String order_bag = "$basePath/order_bag1.svg";
   static  const String home1 = "$basePath/home1.svg";
 
+
+  ///-----------------------------menu-------------------------->
+  static  const String wallet = "$basePath/Wallet.svg";
+  static  const String loyaltyPoints = "$basePath/loyaltyPoints.svg";
+  static  const String referEarn = "$basePath/referEarn.svg";
+  static  const String profileSettings = "$basePath/profileSettings.svg";
+  static  const String kookbagsPolicy = "$basePath/kookbagsPolicy.svg";
+  static  const String myProfile = "$basePath/myProfile.svg";
+  static  const String myAddress = "$basePath/myAddress.svg";
+  static  const String myLanguage = "$basePath/myLanguage.svg";
+  static  const String privacyPolicy = "$basePath/privacyPolicy.svg";
+  static  const String tOS = "$basePath/tOS.svg";
+  static  const String helpSupport = "$basePath/helpSupport.svg";
+  static  const String aboutUs = "$basePath/aboutUs.svg";
+  static  const String servicableArea = "$basePath/servicableArea.svg";
+  static  const String rateUs = "$basePath/rateUs.svg";
+  static  const String liveChat = "$basePath/liveChat.svg";
+  static  const String logOut = "$basePath/logOut.svg";
+
 }

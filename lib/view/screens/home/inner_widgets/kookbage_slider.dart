@@ -57,11 +57,11 @@ class _KookbagsSliderState extends State<KookbagsSlider> {
                   borderRadius: BorderRadius.circular(16),
                 boxShadow: const [
                   BoxShadow(
-                    color: Color(0x33000000),
-                    offset: Offset(0, 0),
-                    blurRadius: 10,
+                    color: Color(0x14000000),
+                    blurRadius: 25,
+                    offset: Offset(0, 1),
                     spreadRadius: 0,
-                  ),
+                  )
                 ],
               ),
 

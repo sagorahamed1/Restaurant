@@ -19,7 +19,6 @@ class KookbagsTriviaSlider extends StatefulWidget {
 class _KookbagsTriviaSliderState extends State<KookbagsTriviaSlider> {
   int currentIndex = 0;
 
-  CarouselController _carouselController = CarouselController();
 
   List images = [
     {

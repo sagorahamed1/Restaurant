@@ -132,4 +132,30 @@ class AppConstants{
   ///-----------------------------My Kookbags screen-------------------------->
   static const String myKookbags = "My Kookbags";
 
+  ///------------------------------mudule screen---------------------------------->
+  static const String viewAll = "view all";
+  static const String vegetables = "Vegetables";
+  static const String splashDeals = "Splash Deals";
+  static const String only1unit = "Only 1 unit of a product can be added from Splash Deal";
+  static const String buy1KgPotato = "Buy 1 Kg Potato\n For Rs 1.";
+  static const String kookbagsCombos = "Kookbags Combos";
+  static const String fruits = "Fruits";
+  static const String howManyPercentOff = "30% Off";
+  static const String apple = "Apple";
+  static const String digitalStore = "Digital store";
+  static const String priceMuduleScreen = "445.00 Tk";
+  static const String ofPriceMuduleScreen = "1500 Tk";
+  static const String seasonal = "Seasonal";
+  static const String mango = "Mango";
+  static const String exotic = "Exotic";
+
+
+  ///-------------------------search screen--------------------------------->
+  static const String cauliflower = "Cauliflower";
+  static const String goranStore = "Goran Store";
+  static const String offPriceSearchScreeen = "1800 Tk";
+  static const String priceSearchScreeen = "1500 Tk";
+  static const String deshiOnion = "Deshi Onion";
+  static const String shopByCategory = "Shop By Category";
+
 }

@@ -12,8 +12,8 @@ import '../../../../utils/dimensions.dart';
 import '../../../widgets/custom_text.dart';
 import '../../home/inner_widgets/discound_container.dart';
 
-class ProductContainer extends StatelessWidget {
-  ProductContainer({
+class KookbagsCombos extends StatelessWidget {
+  KookbagsCombos({
     super.key,
   });
 
@@ -23,7 +23,7 @@ class ProductContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() => GridView.builder(
-      itemCount: controller.friutsList.length,
+      itemCount: controller.friutsList.length-4,
       gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,crossAxisSpacing: 8.h,mainAxisSpacing: 8,childAspectRatio: 0.7),
       itemBuilder: (context, index) {
         var productInfo = controller.friutsList[index];
@@ -143,19 +143,6 @@ class ProductContainer extends StatelessWidget {
                         ),
                       ],
                     ),
-                    // Row(
-                    //   children: [
-                    //     const Icon(
-                    //       Icons.star,
-                    //       color: Colors.red,
-                    //       size: 12,
-                    //     ),
-                    //     Icon(Icons.star, color: Colors.red, size: 12.h),
-                    //     Icon(Icons.star, color: Colors.red, size: 12.h),
-                    //     Icon(Icons.star, color: Colors.black26, size: 12.h),
-                    //     Icon(Icons.star, color: Colors.black26, size: 12.h),
-                    //   ],
-                    // ),
                   ],
                 ),
               ),
