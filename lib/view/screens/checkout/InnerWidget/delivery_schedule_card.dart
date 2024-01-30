@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:restaurent_kookbags/view/widgets/custom_text.dart';
 import '../../../../utils/app_constants.dart';
-import '../../../widgets/input_text.dart';
 
 class DeliveryScheduleCard extends StatelessWidget {
   const DeliveryScheduleCard({
@@ -29,10 +29,10 @@ class DeliveryScheduleCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              AppConstants.deliverySch,
-              style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600),
-            ),
+            CustomText(
+                text: AppConstants.deliverySch,
+                fontsize: 14.sp,
+                fontWeight: FontWeight.w600),
             SizedBox(height: 12.h),
             //====================================> Schedule Day Section <============================================================================
 
@@ -46,12 +46,12 @@ class DeliveryScheduleCard extends StatelessWidget {
                       borderRadius: BorderRadius.circular(4.r)),
                 ),
                 child: Center(
-                    child: InputText(
-                      title: AppConstants.today,
-                      fontsize: 12.w,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
-                    )),
+                    child: CustomText(
+                  text: AppConstants.today,
+                  fontsize: 12.w,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                )),
               ),
               SizedBox(width: 8.w),
               Container(
@@ -65,8 +65,8 @@ class DeliveryScheduleCard extends StatelessWidget {
                     ),
                   ),
                   child: Center(
-                      child: InputText(
-                    title: AppConstants.tomorrow,
+                      child: CustomText(
+                    text: AppConstants.tomorrow,
                     fontsize: 12.w,
                     fontWeight: FontWeight.w600,
                     color: Colors.grey,
@@ -87,8 +87,8 @@ class DeliveryScheduleCard extends StatelessWidget {
                                 width: 0.50.w, color: const Color(0xFF9B9B9B)),
                             borderRadius: BorderRadius.circular(4.r))),
                     child: Center(
-                        child: InputText(
-                            title: AppConstants.todayTime,
+                        child: CustomText(
+                            text: AppConstants.todayTime,
                             fontsize: 12.w,
                             fontWeight: FontWeight.w600,
                             color: Colors.grey))),
@@ -102,8 +102,8 @@ class DeliveryScheduleCard extends StatelessWidget {
                                 width: 0.50.w, color: const Color(0xFF9B9B9B)),
                             borderRadius: BorderRadius.circular(4.r))),
                     child: Center(
-                        child: InputText(
-                            title: AppConstants.tomorrowTime,
+                        child: CustomText(
+                            text: AppConstants.tomorrowTime,
                             fontsize: 12.w,
                             fontWeight: FontWeight.w600,
                             color: Colors.grey))),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:restaurent_kookbags/routes/app_routes.dart';
 import 'package:restaurent_kookbags/utils/app_constants.dart';
 import 'package:restaurent_kookbags/view/widgets/custom_buttom.dart';
 import '../../../utils/app_icons.dart';
@@ -19,7 +21,7 @@ class CheckoutScreen extends StatelessWidget {
         title: const Text(AppConstants.checkout),
         centerTitle: true,
         elevation: 12,
-        leading: const Icon(Icons.arrow_back_ios_outlined),
+        //leading: const Icon(Icons.arrow_back_ios_outlined),
         // toolbarOpacity: 0.5,
         shadowColor: Colors.grey,
       ),
@@ -180,7 +182,7 @@ class CheckoutScreen extends StatelessWidget {
               SizedBox(height: 32.h),
               CustomButtom(
                 title: AppConstants.payNOW,
-                onpress: () {},
+                onpress: () {Get.toNamed(AppRoutes.addNewAddress);},
               ),
               SizedBox(height: 14.h),
             ],

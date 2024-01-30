@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:restaurent_kookbags/utils/app_icons.dart';
-
+import 'package:restaurent_kookbags/view/widgets/custom_text.dart';
 import '../../../../utils/app_constants.dart';
 
 class DeliveryOptionCard extends StatelessWidget {
@@ -33,10 +33,10 @@ class DeliveryOptionCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              AppConstants.deliveryOpt,
-              style: TextStyle(fontWeight: FontWeight.w600, fontSize: 14.sp),
-            ),
+            CustomText(
+                text: AppConstants.deliveryOpt,
+                fontWeight: FontWeight.w600,
+                fontsize: 14.sp),
             SizedBox(
               height: 11.h,
             ),
@@ -71,7 +71,7 @@ class DeliveryOptionCard extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SvgPicture.asset(AppIcons.houseframe,height: 24.w),
+                        SvgPicture.asset(AppIcons.houseframe, height: 24.w),
                         SizedBox(
                           width: 7.w,
                         ),
@@ -79,15 +79,11 @@ class DeliveryOptionCard extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              AppConstants.hOMEOpt,
-                              style: TextStyle(
-                                  fontSize: 12.sp, fontWeight: FontWeight.w500),
-                            ),
-                            Text(
-                              '(\$5028)',
-                              style: TextStyle(fontSize: 12.sp),
-                            )
+                            CustomText(
+                                text: AppConstants.hOMEOpt,
+                                fontsize: 12.sp,
+                                fontWeight: FontWeight.w500),
+                            CustomText(text: '(\$5028)', fontsize: 12.sp),
                           ],
                         )
                       ],
@@ -119,7 +115,7 @@ class DeliveryOptionCard extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SvgPicture.asset(AppIcons.houseframe,height: 24.w),
+                        SvgPicture.asset(AppIcons.houseframe, height: 24.w),
                         SizedBox(
                           width: 7.w,
                         ),

@@ -34,9 +34,9 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Kookbags',
           theme: light,
-          initialRoute: AppRoutes.addNewAddress,
+          initialRoute: AppRoutes.checkoutScreen,
           getPages: AppRoutes.routes,
-          home: AddNewAddress()),
+          home: CheckoutScreen()),
       designSize: Size(375.0, 812.0),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+import 'package:restaurent_kookbags/view/widgets/custom_input_field.dart';
+import 'package:restaurent_kookbags/view/widgets/custom_text.dart';
 import '../../../../utils/app_constants.dart';
 
 class DeliveryAssistantCard extends StatelessWidget {
@@ -30,10 +31,10 @@ class DeliveryAssistantCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              AppConstants.tipFor,
-              style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600),
-            ),
+            CustomText(
+                text: AppConstants.tipFor,
+                fontsize: 14.sp,
+                fontWeight: FontWeight.w600),
             SizedBox(height: 16.h),
             Container(
               width: 303.w,
@@ -43,18 +44,8 @@ class DeliveryAssistantCard extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4.r)),
               ),
-              child: TextFormField(
-                decoration: InputDecoration(
-                  hintText: AppConstants.tipHint,
-                  hintStyle: TextStyle(
-                    fontSize: 12.sp,
-                    fontWeight: FontWeight.w400,
-                    color: const Color(0xFFB9B9B9),
-                  ),
-                  enabledBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(width: 1.0, color: Colors.white),
-                  ),
-                ),
+              child: const CustomInputField(
+                title: AppConstants.tipHint,
               ),
             ),
             SizedBox(height: 16.h),
@@ -71,13 +62,11 @@ class DeliveryAssistantCard extends StatelessWidget {
                     ),
                   ),
                   child: Center(
-                      child: Text(
-                    '\$10',
-                    style: TextStyle(
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w700,
-                        color: const Color(0xFF61656A)),
-                  )),
+                      child: CustomText(
+                          text: '\$10',
+                          fontsize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                          color: const Color(0xFF61656A))),
                 ),
                 SizedBox(width: 8.w),
                 Container(
@@ -89,13 +78,11 @@ class DeliveryAssistantCard extends StatelessWidget {
                         borderRadius: BorderRadius.circular(4)),
                   ),
                   child: Center(
-                      child: Text(
-                    '\$25',
-                    style: TextStyle(
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w700,
-                        color: const Color(0xFFFFFFFF)),
-                  )),
+                      child: CustomText(
+                          text: '\$25',
+                          fontsize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                          color: const Color(0xFFFFFFFF))),
                 ),
                 SizedBox(width: 8.w),
                 Container(
@@ -109,13 +96,11 @@ class DeliveryAssistantCard extends StatelessWidget {
                     ),
                   ),
                   child: Center(
-                      child: Text(
-                    '\$30',
-                    style: TextStyle(
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w700,
-                        color: const Color(0xFF61656A)),
-                  )),
+                      child: CustomText(
+                          text: '\$30',
+                          fontsize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                          color: const Color(0xFF61656A))),
                 ),
                 SizedBox(width: 8.w),
                 Container(
@@ -129,13 +114,11 @@ class DeliveryAssistantCard extends StatelessWidget {
                     ),
                   ),
                   child: Center(
-                      child: Text(
-                    '\$50',
-                    style: TextStyle(
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.w700,
-                        color: const Color(0xFF61656A)),
-                  )),
+                      child: CustomText(
+                          text: '\$50',
+                          fontsize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                          color: const Color(0xFF61656A))),
                 ),
               ],
             ),
