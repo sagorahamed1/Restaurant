@@ -23,7 +23,7 @@ class CheckoutScreen extends StatelessWidget {
         elevation: 12,
         //leading: const Icon(Icons.arrow_back_ios_outlined),
         // toolbarOpacity: 0.5,
-        shadowColor: Colors.grey,
+        shadowColor: const Color(0xFFe8e8e8),
       ),
       body: SingleChildScrollView(
         child: Padding(

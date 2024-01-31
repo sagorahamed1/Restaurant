@@ -26,6 +26,10 @@ class AppImages{
   static  const String giftBox = "$basePath/giftbox.png";
   static  const String topBgKook = "$basePath/topbgkook.png";
   static  const String gMap = "$basePath/gmap.png";
+  static  const String spFlower = "$basePath/spflower.png";
+  static  const String spBaket = "$basePath/spbaket.png";
+  static  const String sprivew = "$basePath/sprivew.png";
+  static  const String spcallicon = "$basePath/spcallicon.png";
 
 
   ///-------------------cetegory screen ------------------------->

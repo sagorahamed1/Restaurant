@@ -11,6 +11,7 @@ import 'package:restaurent_kookbags/view/screens/log_in/log_in_screen.dart';
 import 'themes/light_theme.dart';
 import 'view/screens/bottom_nav_bar/bottom_nav_bar.dart';
 import 'view/screens/checkout/checkout_screen.dart';
+import 'view/screens/order_details/order_details_screen.dart';
 import 'view/screens/order_succesfull/order_succesfull.dart';
 import 'view/screens/payment/payment_screen.dart';
 import 'view/screens/select_language/select_language_screen.dart';
@@ -34,9 +35,9 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Kookbags',
           theme: light,
-          initialRoute: AppRoutes.bottomNavBar,
+          initialRoute: AppRoutes.orderDetailsScreen,
           getPages: AppRoutes.routes,
-          home: BottomNavBar()),
+          home: OrderDetailsScreen()),
       designSize: Size(375.0, 812.0),
     );
   }
