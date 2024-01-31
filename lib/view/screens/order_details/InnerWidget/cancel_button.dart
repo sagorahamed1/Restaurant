@@ -11,7 +11,7 @@ class CancelButton extends StatelessWidget {
     return Container(
       width: 334.w,
       height: 48.w,
-      padding: const EdgeInsets.only(top: 10, left: 6, right:6, bottom: 10),
+      padding: const EdgeInsets.only(top: 10, left: 6, right: 6, bottom: 10),
       decoration: ShapeDecoration(
         shape: RoundedRectangleBorder(
           side: BorderSide(width: 1.w, color: const Color(0xFFCD0608)),

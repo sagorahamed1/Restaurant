@@ -107,6 +107,11 @@ class AppConstants{
   static const String disCountPrise  = "10 %";
   static const String totalPrise  = "\$5028.2";
 
+  //===================================> My Orders Screen <=============================
+  static const String myOrders  = "My Orders";
+  static const String running  = "Running";
+  static const String history  = "History";
+  static const String orderTrack  = "Track Order";
 
 
   ///--------------------home page------------------>
