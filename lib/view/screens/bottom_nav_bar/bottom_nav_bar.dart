@@ -69,7 +69,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       case 0 : return const SearchScreen();
       case 1 : return StoresScreen();
       // case 2 : return CategoryScreen();
-      case 2 : return MuduleScreen();
+      case 2 : return HomeScreen();
       // default : return const MyKookBagsScreen();
       default : return const MenuScreen();
     }

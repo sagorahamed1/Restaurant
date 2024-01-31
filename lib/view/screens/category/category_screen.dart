@@ -21,27 +21,26 @@ class CategoryScreen extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       ///-------------------------------app bar section----------------------------->
       appBar: AppBar(
+        toolbarHeight: 61.w,
         leading: Container(
-            padding: EdgeInsets.all(19),
+            padding:  EdgeInsets.all(22),
             child: SvgPicture.asset(AppIcons.backArrow)),
-        title: CustomText(text: AppConstants.categories,fontsize: Dimensions.fontSizeExtraLarge,fontWeight: FontWeight.w600,),
+        title: const CustomText(text: AppConstants.categories,fontsize: Dimensions.fontSizeExtraLarge,fontWeight: FontWeight.w600,),
       ),
 
       ///--------------------------body section--------------------------------------->
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge,vertical: Dimensions.paddingSizeExtraLarge),
+        padding: const EdgeInsets.symmetric(horizontal: Dimensions.paddingSizeLarge,vertical: Dimensions.paddingSizeExtraLarge),
         child: Column(
           children: [
-            Obx(() => Container(
-              height: 485.w,
+           Obx(() => Expanded(
               child: GridView.builder(
                  itemCount: controller.cetegoryList.value.length,
-                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 7,mainAxisSpacing: 16,childAspectRatio: 0.8),
+                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 7,mainAxisSpacing: 16,childAspectRatio: 0.8),
                    itemBuilder: (context, index) {
                    var productInfo = controller.cetegoryList[index];
                      return Container(
-                       // height: 193.h,
-                       // width: 173.w,
+                        height: 100.h,
                        decoration: BoxDecoration(
                          borderRadius: BorderRadius.circular(8),
                          color: AppColors.white,
@@ -69,17 +68,18 @@ class CategoryScreen extends StatelessWidget {
                                    color: productInfo["color"]
                                  ),
                                ),
-                               
+
                                Positioned(
                                  top: 5,
-                                 child: Image.asset(productInfo["image"],fit: BoxFit.cover,),
+                                 child: Image.asset(productInfo["image"],fit: BoxFit.cover,width: 95.w,),
                                )
                              ],
                            ),
 
-                           SizedBox(height: 40.w,),
+                          Spacer(),
                            Divider(),
-                           CustomText(top: 2.h,
+                           CustomText(top: 5.h,
+                             bottom: 5.w,
                              textAlign: TextAlign.center,
                              text: productInfo["productName"],)
                          ],
@@ -88,7 +88,8 @@ class CategoryScreen extends StatelessWidget {
                    },
                ),
             ),
-           )
+
+           ),
           ],
         ),
       ),

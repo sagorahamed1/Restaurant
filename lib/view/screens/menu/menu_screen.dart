@@ -23,14 +23,13 @@ class MenuScreen extends StatelessWidget {
     return Scaffold(
       ///---------------------------app bar section---------------->
       appBar: AppBar(
+        toolbarHeight: 61.w,
         leading: Container(
-            padding : EdgeInsets.only(left: 20.w),
+            padding : EdgeInsets.only(left: 20),
             child: SvgPicture.asset(AppIcons.location)),
 
         title: Container(
-          height: 29.h,
-
-          child: Image.asset(AppImages.kookbagsLogo),
+          child: Image.asset(AppImages.kookbagsLogo,width: 107.w,height: 29.w,),
         ),
         actions: [
           IconButton(onPressed: (){}, icon: Container(
@@ -239,7 +238,7 @@ Widget myProfileGroupContainer2(){
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SvgPicture.asset(AppIcons.privacyPolicy),
-            CustomText(text: "  Privacy Policy", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,),
+            const CustomText(text: "  Privacy Policy", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,),
           ],
         ),
 
@@ -247,7 +246,7 @@ Widget myProfileGroupContainer2(){
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SvgPicture.asset(AppIcons.tOS),
-            CustomText(text: "  TOS", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,),
+            const CustomText(text: "  TOS", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,),
           ],
         ),
 
@@ -255,7 +254,7 @@ Widget myProfileGroupContainer2(){
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SvgPicture.asset(AppIcons.helpSupport,),
-            Expanded(child: CustomText(text: "  Help & Support", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,)),
+            const Expanded(child: CustomText(text: "  Help & Support", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,)),
           ],
         ),
 

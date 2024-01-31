@@ -19,8 +19,8 @@ class ProfileSettingGroupContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(bottom: 15.w),
       width: 163.w,
-      padding: EdgeInsets.only(top: 15.w, bottom: 15.w, left: 9.w,right: 9.w),
       decoration: BoxDecoration(
           color: AppColors.white,
           borderRadius: BorderRadius.circular(8),
@@ -36,8 +36,10 @@ class ProfileSettingGroupContainer extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          SvgPicture.asset("$containerIcon"),
-          CustomText(text: "$text", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,),
+          Container(
+              padding: EdgeInsets.only(top: 15.w, left: 9.w),
+              child: SvgPicture.asset("$containerIcon")),
+          CustomText(text: "$text", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,left: 7,right: 5,top: 15.w,),
           Icon(Icons.keyboard_arrow_down_rounded)
         ],
       ),

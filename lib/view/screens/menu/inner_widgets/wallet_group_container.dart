@@ -24,8 +24,8 @@ class WalletGroupContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 106.w,
-      padding: EdgeInsets.only(top: 19.w, bottom: 15.w, left: 31.w,right: 31.w),
+      padding: EdgeInsets.all(5),
+      width: 100.w,
       decoration: BoxDecoration(
           color: AppColors.white,
           borderRadius: BorderRadius.circular(8.r),
@@ -40,8 +40,10 @@ class WalletGroupContainer extends StatelessWidget {
       ),
       child: Column(
         children: [
-          SvgPicture.asset("$containerIcon"),
-          CustomText(text: "$text", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,)
+          Container(
+              padding: EdgeInsets.only(top: 19.w, left: 31.w,right: 31.w,bottom: 4.w),
+              child: SvgPicture.asset("$containerIcon")),
+          CustomText(text: "$text", fontsize: Dimensions.fontSizeSmall,fontWeight: FontWeight.w500,bottom: 10.w,)
         ],
       ),
     );

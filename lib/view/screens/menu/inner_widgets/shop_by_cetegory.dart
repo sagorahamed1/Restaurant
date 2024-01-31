@@ -16,8 +16,9 @@ class ShopByCetegoryContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 159.h,
-      width: 106.w,
+      height: 159.w,
+      // width: MediaQuery.of(context).size.width/3.5,
+      width: 100.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.r),
         color: AppColors.white,
@@ -30,32 +31,37 @@ class ShopByCetegoryContainer extends StatelessWidget {
           )
         ],
       ),
-      child: Stack(
-        children: [
-          Positioned(
-            top: 22.h,
-            left: 16.w,
-            child: Container(
-              height: 82.h,
-              width: 82.w,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: imageBgColor,
+
+      child: Expanded(
+        child: Stack(
+          children: [
+            Positioned(
+              top: 22.w,
+              left: 16.w,
+              child: Container(
+                height: 62.w,
+                width: 62.w,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: imageBgColor,
+                ),
               ),
             ),
-          ),
-          Positioned(top: 3.h, left: 9.w, child: Image.asset("$imagepath")),
-          Positioned(
-              bottom: 12.h,
-              left: 10.w,
-              child: CustomText(
-                text: "$text",
-                textAlign: TextAlign.center,
-                maxline: 2,
-                fontWeight: FontWeight.w500,
-                fontsize: Dimensions.fontSizeDefault,
-              ))
-        ],
+            Positioned(top: 3.h, left: 9.w, child: Image.asset("$imagepath",width: 72.w,height: 72.w,fit: BoxFit.cover,)),
+            Positioned(
+                bottom: 12.w,
+                left: 10.w,
+                child: Expanded(
+                  child: CustomText(
+                    text: "$text",
+                    textAlign: TextAlign.center,
+                    maxline: 2,
+                    fontWeight: FontWeight.w500,
+                    fontsize: Dimensions.fontSizeSmall,
+                  ),
+                ))
+          ],
+        ),
       ),
     );
   }

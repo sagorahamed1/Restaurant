@@ -78,7 +78,7 @@ class _HeaderSliderWidgetsState extends State<HeaderSliderWidgets> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
 
-                    SizedBox(height: 150.h,),
+                   Spacer(),
 
                     const CustomText(
                       text: "20% off on your",
@@ -88,7 +88,8 @@ class _HeaderSliderWidgetsState extends State<HeaderSliderWidgets> {
                     ),
 
                     SizedBox(height: 12.h,),
-                    const CustomText(
+                     CustomText(
+                      bottom: 7.w,
                       text: "first purchase",
                       fontWeight: FontWeight.w400,
                       fontsize: Dimensions.fontSizeSmall,

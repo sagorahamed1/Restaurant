@@ -20,23 +20,31 @@ class StoresScreen extends StatelessWidget {
     return Scaffold(
       ///-----------------------------app bar section----------------------------->
       appBar: AppBar(
-        leading: Container(
-            padding: const EdgeInsets.all(19),
-            child: SvgPicture.asset(AppIcons.backArrow)),
+        toolbarHeight: 61.h,
+        leading: IconButton(onPressed: (){
+          Get.back();
+        }, icon: Container(
+            padding: const EdgeInsets.all(5),
+            child: SvgPicture.asset(AppIcons.backArrow))),
+
+        ///------------------titile------------------->
         title: TextFormField(
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
+            contentPadding: EdgeInsets.only(top: 20),
             filled: true,
             fillColor: Colors.white,
-            border: const UnderlineInputBorder(
+            border: UnderlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(2))),
             prefixIcon: Padding(
-              padding: const EdgeInsets.all(15),
-              child: SvgPicture.asset(AppIcons.search),
+              padding: EdgeInsets.all(15),
+              child: Icon(Icons.search_rounded, color: Colors.black26,),
             ),
             hintText: "Search Store",
-            hintStyle: TextStyle(fontSize: Dimensions.fontSizeDefault.h)
+            hintStyle: TextStyle()
           ),
         ),
+
+        ///----------------------------actions-------------------->
         actions: [
           IconButton(
               onPressed: () {}, icon: SvgPicture.asset(AppIcons.cardIcon))
@@ -123,8 +131,7 @@ class StoresScreen extends StatelessWidget {
                               ///----------------------------stores name location rating------------------>
                               Container(
                                  padding: EdgeInsets.only(left: 14.w, right: 14.w),
-                                height: 48.w,
-                                width: 342.w,
+                                width: MediaQuery.of(context).size.width,
                                 decoration: const BoxDecoration(
                                     borderRadius: BorderRadius.only(
                                         bottomRight: Radius.circular(8),
@@ -137,7 +144,7 @@ class StoresScreen extends StatelessWidget {
                                     CustomText(
                                       text: storesInfo["storesName"],
                                       textAlign: TextAlign.start,
-                                      fontsize: Dimensions.fontSizeDefault.sp,
+                                      fontsize: Dimensions.fontSizeDefault.h,
                                       fontWeight: FontWeight.w600,
                                       color: AppColors.white,
                                     ),
@@ -145,11 +152,14 @@ class StoresScreen extends StatelessWidget {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        CustomText(
-                                          text: storesInfo["storesLocation"],
-                                          fontsize: Dimensions.fontSizeDefault.sp,
-                                          fontWeight: FontWeight.w600,
-                                          color: AppColors.white,
+                                        Expanded(
+                                          child: CustomText(
+                                            textAlign: TextAlign.start,
+                                            text: storesInfo["storesLocation"],
+                                            fontsize: Dimensions.fontSizeDefault.h,
+                                            fontWeight: FontWeight.w600,
+                                            color: AppColors.white,
+                                          ),
                                         ),
                                         Container(
                                           height: 20.w,
