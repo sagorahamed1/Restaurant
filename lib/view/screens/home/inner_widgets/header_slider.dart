@@ -42,7 +42,7 @@ class _HeaderSliderState extends State<HeaderSlider> {
             enlargeCenterPage: true,
 
             enableInfiniteScroll: true,
-           height: MediaQuery.of(context).size.height*0.3,
+           height: MediaQuery.of(context).size.height*0.3.w,
             onPageChanged: (index, reason) {
               setState(() {
                 currentIndex = index;
@@ -79,9 +79,11 @@ class _HeaderSliderState extends State<HeaderSlider> {
                   children: [
 
                     SizedBox(height: 16.h,),
+
+                    ///-------------------------------------new botton------------------------------>
                     Container(
-                      height: 34.h,
-                      width: 50.w,
+                      height: 34.w,
+                      width: 35.w,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50.r),
                         color: AppColors.redAccent,
@@ -91,7 +93,7 @@ class _HeaderSliderState extends State<HeaderSlider> {
                       ),
                     ),
 
-                    SizedBox(height: 53.h,),
+                   Spacer(),
                     const CustomText(
                       text: AppConstants.freshVegetables,
                       fontWeight: FontWeight.w500,
@@ -100,14 +102,16 @@ class _HeaderSliderState extends State<HeaderSlider> {
                     ),
 
                     SizedBox(height: 12.h,),
+
+                    ///-------------------------------buy now botton----------------------------------->
                     Container(
-                      height: 24.h,
+                      padding: EdgeInsets.only(top: 5.w,bottom: 5.w),
                       width: 86.w,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8.r),
                         color: AppColors.white
                       ),
-                      child: const Center(
+                      child:  const Center(
                         child: CustomText(
                           text: AppConstants.buynow,
                           fontWeight: FontWeight.w400,
@@ -115,7 +119,9 @@ class _HeaderSliderState extends State<HeaderSlider> {
                           color: AppColors.white200,
                         ),
                       ),
-                    )
+                    ),
+
+                    SizedBox(height: 11.h,),
                   ],
                 ),
               ),
@@ -132,7 +138,7 @@ class _HeaderSliderState extends State<HeaderSlider> {
           effect: const WormEffect( // You can choose different effects here
             dotColor: Colors.grey, // Inactive dot color
             activeDotColor: AppColors.black100, // Active dot color
-            dotHeight: 8.0, // Height of inactive dots
+            dotHeight: 5.0, // Height of inactive dots
             // activeDotHeight: 12.0, // Height of active dot
           ),
         ),

@@ -15,13 +15,13 @@ class DiscoundContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 20.h,
+      height: 20.w,
       width: 56.w,
       decoration: BoxDecoration(
         color: AppColors.red,
         borderRadius: BorderRadius.circular(3.r),
       ),
-      child: Center(
+      child: const Center(
         child: CustomText(
           text: AppConstants.Off30Discound,
           fontsize: Dimensions.fontSizeSmall,

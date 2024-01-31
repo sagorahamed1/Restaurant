@@ -21,13 +21,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 61.w,
         leading: Container(
             padding : EdgeInsets.only(left: 20.w),
             child: SvgPicture.asset(AppIcons.location)),
         
         title: Container(
-          height: 29.h,
-
+          height: 29.w,
           child: Image.asset(AppImages.kookbagsLogo),
         ),
         actions: [
@@ -37,7 +37,10 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       ///---------------------body section------------------------------------->
+
+
         body: SingleChildScrollView(
+
       child: Padding(
         padding: const EdgeInsets.symmetric(
             vertical: Dimensions.paddingSizeExtraLarge),
@@ -49,7 +52,7 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: 24.h,),
             ///---------------------------shop by cetegory----------------------->
              CustomText(
-              left: 20.h,
+              left: 20,
               bottom: 16.h,
               text: AppConstants.shopByCetegory,
               color: AppColors.black100,
@@ -84,7 +87,7 @@ class HomeScreen extends StatelessWidget {
              ///---------------------------------kook bage deals---------------------------->
              CustomText(
               top: 20.h,
-              left: 20.w,
+              left: 20,
               bottom: 16.h,
               textAlign: TextAlign.start,
               text: AppConstants.kookbagsDeals,
@@ -92,13 +95,13 @@ class HomeScreen extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
 
-            ///<----------------kook bags slider------------------->
+            ///<----------------kook bags deals slider------------------->
             KookbagsSlider(),
 
 
             ///-------------------kook bags trivia----------------->
              CustomText(
-              left: 20.w,
+              left: 20,
               bottom: 24.h,
               top: 24.h,
               textAlign: TextAlign.start,
@@ -117,7 +120,7 @@ class HomeScreen extends StatelessWidget {
              CustomText(
               top: 24.h,
               bottom: 24.h,
-              left: 20.w,
+              left: 20,
               textAlign: TextAlign.start,
               text: AppConstants.featuredProducts,
               fontsize: Dimensions.fontSizeLarge,

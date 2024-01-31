@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import '../../../utils/app_constants.dart';
 import '../../../utils/app_icons.dart';
 import '../../../utils/dimensions.dart';
@@ -18,9 +19,13 @@ class MyKookBagsScreen extends StatelessWidget {
     return Scaffold(
       ///---------------------------------app bar section--------------------------->
       appBar: AppBar(
-        leading: Container(
-            padding: const EdgeInsets.all(19),
-            child: SvgPicture.asset(AppIcons.backArrow)),
+        leading: TextButton(onPressed: (){
+          Get.back();
+        },
+          child: Container(
+              // padding: const EdgeInsets.all(19),
+              child: SvgPicture.asset(AppIcons.backArrow)),
+        ),
         title: const CustomText(
           text: AppConstants.myKookbags,
           fontsize: Dimensions.fontSizeExtraLarge,
@@ -44,7 +49,7 @@ class MyKookBagsScreen extends StatelessWidget {
 
               ///----------------------card itms ----------------------->
               Container(
-                  height: 500.w,
+                  height: 300.w,
                   child: CardItems()
               ),
 

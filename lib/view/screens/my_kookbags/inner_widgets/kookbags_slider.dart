@@ -30,11 +30,11 @@ class _KookBagsSliderState extends State<KookBagsSlider> {
           Slider(
               divisions: 2,
               autofocus: true,
-              overlayColor: MaterialStateProperty.all(Colors.cyan),
+              // overlayColor: MaterialStateProperty.all(Colors.cyan),
 
               value: cValue,
-              activeColor: Colors.green,
-              inactiveColor: Colors.red,
+              // activeColor: Colors.green,
+              // inactiveColor: Colors.red,
               onChanged: (value) {
                 setState(() {
                   chageValue(value);
@@ -44,7 +44,7 @@ class _KookBagsSliderState extends State<KookBagsSlider> {
           ///----------------------------intigator----------------------------->
           Container(
             width: 270.w,
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [Text("1"), Text("2"), Text("3")],
             ),

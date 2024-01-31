@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:restaurent_kookbags/utils/app_colors.dart';
 
 import '../../../utils/app_constants.dart';
@@ -23,9 +24,14 @@ class FruitsScreen extends StatelessWidget {
     return Scaffold(
       ///-----------------------------app bar section----------------------------->
       appBar: AppBar(
-        leading: Container(
-            padding: const EdgeInsets.all(19),
-            child: SvgPicture.asset(AppIcons.backArrow)),
+        leading: GestureDetector(
+          onTap: (){
+            Get.back();
+          },
+          child: Container(
+              padding: const EdgeInsets.all(19),
+              child: SvgPicture.asset(AppIcons.backArrow)),
+        ),
         title: const CustomText(
           text: AppConstants.Fruits,
           fontsize: Dimensions.fontSizeExtraLarge,
@@ -99,7 +105,7 @@ class FruitsScreen extends StatelessWidget {
         
         
               Container(
-                  height:395,
+                  height:MediaQuery.of(context).size.height,
                   child: ProductContainer())
             ],
           ),

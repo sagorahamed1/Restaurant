@@ -25,7 +25,6 @@ class PersonalOfferContainer extends StatelessWidget {
             ///----------------------------offer Contaier 10 %------------------------->
             child: Container(
               margin: EdgeInsets.only(right: 10.w),
-              height: 105.w,
               decoration: BoxDecoration(
                 color: offerBgColor,
               ),
@@ -36,7 +35,7 @@ class PersonalOfferContainer extends StatelessWidget {
                   children: [
                     CustomText(
                         text: "10",
-                        fontsize: 34.w,
+                        fontsize: 34.h,
                         fontWeight: FontWeight.w700,
                         color: textColor ?? Colors.white),
                     Column(
@@ -44,14 +43,14 @@ class PersonalOfferContainer extends StatelessWidget {
                       children: [
                         CustomText(
                           text: "%",
-                          fontsize: 14.w,
+                          fontsize: 14.h,
                           fontWeight: FontWeight.w700,
                           color: textColor ?? Colors.white,
-                          top: 30.w,
+                          top: 30.h,
                         ),
                         CustomText(
                           text: " off",
-                          fontsize: 14.w,
+                          fontsize: 14.h,
                           fontWeight: FontWeight.w700,
                           color: textColor ?? Colors.white,
                           bottom: 5.w,
@@ -87,7 +86,7 @@ class PersonalOfferContainer extends StatelessWidget {
                         fontsize: 10.h,
                         fontWeight: FontWeight.w400,
                         color: AppColors.black,
-                        top: 16.w,
+                        top: 3.h,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -98,7 +97,7 @@ class PersonalOfferContainer extends StatelessWidget {
                             fontsize: 10.h,
                             fontWeight: FontWeight.w400,
                             color: AppColors.red,
-                            top: 16.w,
+                            top: 3.h,
                           ),
 
                           ///------------------------------------------apply botton------------------------------------->
@@ -111,11 +110,11 @@ class PersonalOfferContainer extends StatelessWidget {
                             child: Center(
                               child: CustomText(
                                 text: "Apply",
-                                fontsize: 10.w,
+                                fontsize: 10.h,
                                 fontWeight: FontWeight.w400,
                                 color: AppColors.white,
-                                left: 12.w,
-                                right: 12.w,
+                                left: 12.h,
+                                right: 12.h,
                                 top: 4.w,
                                 bottom: 4.w,
                               ),

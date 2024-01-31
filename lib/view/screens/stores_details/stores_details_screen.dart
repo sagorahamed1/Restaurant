@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:restaurent_kookbags/utils/app_colors.dart';
 import 'package:restaurent_kookbags/utils/app_constants.dart';
-import 'package:restaurent_kookbags/view/screens/fruits_screen/inner_widgets/product_container.dart';
 import 'package:restaurent_kookbags/view/widgets/custom_text.dart';
-
 import '../../../utils/app_icons.dart';
 import '../../../utils/dimensions.dart';
 import 'inner_widgets/header_fourbotton.dart';
@@ -20,23 +19,25 @@ class StoresDetailsScreen extends StatelessWidget {
     return Scaffold(
       ///-----------------------------app bar section----------------------------->
       appBar: AppBar(
+        toolbarHeight: 61.w,
         leading: GestureDetector(
           onTap: (){
-            // Get.back;
+             Get.back();
           },
           child: Container(
               padding: const EdgeInsets.all(19),
               child: SvgPicture.asset(AppIcons.backArrow)),
         ),
         title: TextFormField(
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             filled: true,
             fillColor: Colors.white,
-            border: const UnderlineInputBorder(
+            border: UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.black45),
                 borderRadius: BorderRadius.all(Radius.circular(2))),
             prefixIcon: Padding(
-              padding: const EdgeInsets.all(15),
-              child: SvgPicture.asset(AppIcons.search),
+              padding: EdgeInsets.all(15),
+              child: Icon(Icons.search_rounded,color: Colors.black26,),
             ),
             hintText: "Search Store",
           ),

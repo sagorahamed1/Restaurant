@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 import '../../../../utils/app_colors.dart';
 import '../../../../utils/app_constants.dart';
@@ -68,19 +69,24 @@ class BottomSheetContainer extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.only(left: 15.w, top: 10.h),
-                    height: 24.h,
-                    width: 34.w,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: AppColors.red),
-                      shape: BoxShape.circle,
+                  GestureDetector(
+                    onTap: (){
+                      Get.back();
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(left: 15.w, top: 10.h),
+                      height: 24.h,
+                      width: 34.w,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: AppColors.red),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Center(
+                          child: Icon(
+                        Icons.close,
+                        color: AppColors.red,
+                      )),
                     ),
-                    child: const Center(
-                        child: Icon(
-                      Icons.close,
-                      color: AppColors.red,
-                    )),
                   ),
                 ],
               ),

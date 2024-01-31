@@ -43,14 +43,13 @@ class _KookbagsSliderState extends State<KookbagsSlider> {
                 currentIndex = index;
               });
             },
-             aspectRatio: 4,
+             aspectRatio: 3,
             autoPlayAnimationDuration: Duration(seconds: 1),
             reverse: false,
           ),
           itemBuilder: (context, index, realIndex) {
             return Container(
-              margin: EdgeInsets.only(right: 50),
-              height: 88.h,
+              margin: const EdgeInsets.only(right: 50,top: 20,bottom: 20),
               width: 333.w,
               decoration: BoxDecoration(
                   color: AppColors.white,
@@ -70,8 +69,7 @@ class _KookbagsSliderState extends State<KookbagsSlider> {
                   Expanded(
                     flex: 1,
                     child: Container(
-                      height: 82.h,
-                      width: 88.w,
+                      height: double.infinity.w,
                       decoration: const BoxDecoration(
                         borderRadius: BorderRadius.only(
                           bottomLeft: Radius.circular(8),
@@ -83,7 +81,7 @@ class _KookbagsSliderState extends State<KookbagsSlider> {
                       child: Image.asset(images[index]),
                     ),
                   ),
-                  Expanded(
+                  const Expanded(
                     flex: 2,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -117,7 +115,7 @@ class _KookbagsSliderState extends State<KookbagsSlider> {
 
         ),
 
-         SizedBox(height: 24.h,),
+         SizedBox(height: 2.h,),
         ///-----------------indicator section-------------------->
         AnimatedSmoothIndicator(
           activeIndex: currentIndex,
@@ -125,7 +123,7 @@ class _KookbagsSliderState extends State<KookbagsSlider> {
           effect: const WormEffect( // You can choose different effects here
             dotColor: Colors.grey, // Inactive dot color
             activeDotColor: AppColors.black100, // Active dot color
-            dotHeight: 8.0, // Height of inactive dots
+            dotHeight: 5.0, // Height of inactive dots
             // activeDotHeight: 12.0, // Height of active dot
           ),
         ),

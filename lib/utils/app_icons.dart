@@ -48,6 +48,10 @@ class AppIcons{
   static  const String search_for_bottom = "$basePath/search1.svg";
   static  const String order_bag = "$basePath/order_bag1.svg";
   static  const String home1 = "$basePath/home1.svg";
+  static  const String myKookbags = "$basePath/myKookbags.svg";
+  static  const String myWishList = "$basePath/myWishList.svg";
+  static  const String orderHistory = "$basePath/orderHistory.svg";
+  static  const String orderTraking = "$basePath/orderTraking.svg";
 
 
   ///-----------------------------menu-------------------------->

@@ -22,9 +22,14 @@ class CategoryScreen extends StatelessWidget {
       ///-------------------------------app bar section----------------------------->
       appBar: AppBar(
         toolbarHeight: 61.w,
-        leading: Container(
-            padding:  EdgeInsets.all(22),
-            child: SvgPicture.asset(AppIcons.backArrow)),
+        leading: GestureDetector(
+          onTap: (){
+            Get.back();
+          },
+          child: Container(
+              padding:  EdgeInsets.all(22),
+              child: SvgPicture.asset(AppIcons.backArrow)),
+        ),
         title: const CustomText(text: AppConstants.categories,fontsize: Dimensions.fontSizeExtraLarge,fontWeight: FontWeight.w600,),
       ),
 

@@ -25,7 +25,7 @@ class FeaturedProductsContainer extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: AppColors.white,
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Color(0x33414138),
             blurRadius: 20,
@@ -47,7 +47,7 @@ class FeaturedProductsContainer extends StatelessWidget {
                 const DiscoundContainer(),
                 Container(
                     padding: EdgeInsets.all(5),
-                    height: 24.h,
+                    height: 24.w,
                     width: 24.w,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
@@ -64,15 +64,16 @@ class FeaturedProductsContainer extends StatelessWidget {
             Container(
               height: 78.w,
               width: 78.w,
+              clipBehavior: Clip.antiAlias,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(50.r),
               ),
               child: Image.asset(AppImages.tomato,fit: BoxFit.cover,),
             ),
-            SizedBox(height: 10.h,),
+            Spacer(),
 
             ///--------------------product name and price section------------>
-            Row(
+            const Row(
               children: [
                 CustomText(
                   text: AppConstants.Tomato,
@@ -88,7 +89,7 @@ class FeaturedProductsContainer extends StatelessWidget {
                 ),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 CustomText(
                   text: AppConstants.price,

@@ -18,8 +18,8 @@ class CardItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 650.w,
+    return Expanded(
+      flex: 1,
       child: ListView.builder(
         itemCount: controller.cardItemsList.length,
         itemBuilder: (context, index) {
@@ -58,7 +58,7 @@ class CardItems extends StatelessWidget {
                 },
                 child: Container(
                   margin: EdgeInsets.only(top: 16.w),
-                  // height: 96,
+                  padding: EdgeInsets.all(20),
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: AppColors.white,

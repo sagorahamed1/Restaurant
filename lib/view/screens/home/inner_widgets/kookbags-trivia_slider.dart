@@ -38,18 +38,18 @@ class _KookbagsTriviaSliderState extends State<KookbagsTriviaSlider> {
     return CarouselSlider.builder(
       itemCount: images.length,
       options: CarouselOptions(
-        height: 182.w,
-        aspectRatio: 1.8,
+         height: 182.w,
+        // aspectRatio: 2,
         autoPlay: false,
         enlargeCenterPage: true,
-        autoPlayAnimationDuration: Duration(seconds: 1),
+        autoPlayAnimationDuration: const Duration(seconds: 1),
         reverse: false,
       ),
       itemBuilder: (context, index, realIndex) {
         var sliderImage = images[index];
         return Container(
           decoration: BoxDecoration(
-            color: Color(0xFF529A04),
+            color: const Color(0xFF529A04),
             borderRadius: BorderRadius.circular(16),
             boxShadow: const [
               BoxShadow(
