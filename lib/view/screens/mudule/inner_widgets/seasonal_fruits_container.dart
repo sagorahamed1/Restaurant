@@ -91,7 +91,7 @@ class SeasonalFruitsContainer extends StatelessWidget {
               children: [
                 CustomText(
                   text: "445.00 Tk",
-                  fontsize: 10.w,
+                  fontsize: 10.h,
                   fontWeight: FontWeight.w600,
                 ),
 
@@ -107,7 +107,7 @@ class SeasonalFruitsContainer extends StatelessWidget {
                         right: 4,
                         left: 4,
                         text: "4.5",
-                        fontsize: 10.w,
+                        fontsize: 10.h,
                         fontWeight: FontWeight.w600,
                         color: AppColors.red,
                       ),

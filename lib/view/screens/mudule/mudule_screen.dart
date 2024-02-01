@@ -26,9 +26,10 @@ class MuduleScreen extends StatelessWidget {
 
       ///-----------------------------app bar section------------------------->
       appBar: AppBar(
+        elevation: 12,
         leading: Container(
-            padding : EdgeInsets.only(left: 20.w),
-            child: SvgPicture.asset(AppIcons.cardIcon),),
+            padding : EdgeInsets.all(17),
+            child: SvgPicture.asset(AppIcons.addToCardIcon),height: 8.h,width: 8.h,),
 
         title: Container(
           height: 29.h,
@@ -37,7 +38,7 @@ class MuduleScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(onPressed: (){}, icon: Container(
-              padding: EdgeInsets.only(right: 20),
+              padding: const EdgeInsets.only(right: 20),
               child: SvgPicture.asset(AppIcons.notificationBell)))
         ],
       ),
@@ -47,6 +48,7 @@ class MuduleScreen extends StatelessWidget {
         child: Column(
          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 5.h,),
             ///--------------------------------header slider----------------------------->
             HeaderSliderWidgets(),
 
@@ -67,7 +69,7 @@ class MuduleScreen extends StatelessWidget {
                         bottom: 20.w,
                         text: AppConstants.categories,
                         fontWeight: FontWeight.w600,
-                        fontsize: Dimensions.fontSizeLarge.w,
+                        fontsize: Dimensions.fontSizeLarge.h,
                         color: AppColors.black,
                       ),
 
@@ -75,7 +77,7 @@ class MuduleScreen extends StatelessWidget {
                         bottom: 20.w,
                         text: AppConstants.viewAll,
                         fontWeight: FontWeight.w500,
-                        fontsize: Dimensions.fontSizeSmall.w,
+                        fontsize: Dimensions.fontSizeSmall.h,
                         color: AppColors.red,
                       ),
                     ],
@@ -100,7 +102,7 @@ class MuduleScreen extends StatelessWidget {
                     bottom: 6.w,
                     text: AppConstants.splashDeals,
                     fontWeight: FontWeight.w600,
-                    fontsize: Dimensions.fontSizeExtraLarge.w,
+                    fontsize: Dimensions.fontSizeExtraLarge.h,
                     color: AppColors.black,
                   ),
 
@@ -109,7 +111,7 @@ class MuduleScreen extends StatelessWidget {
                     bottom: 20.w,
                     text: AppConstants.only1unit,
                     fontWeight: FontWeight.w400,
-                    fontsize: Dimensions.fontSizeSmall.w,
+                    fontsize: Dimensions.fontSizeSmall.h,
                     color: AppColors.black,
                   ),
 
@@ -122,13 +124,15 @@ class MuduleScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CustomText(
-                        top: 16.w,
-                        bottom: 20.w,
-                        text: AppConstants.kookbagsCombos,
-                        fontWeight: FontWeight.w600,
-                        fontsize: Dimensions.fontSizeLarge.w,
-                        color: AppColors.black,
+                      Flexible(
+                        child: CustomText(
+                          top: 16.w,
+                          bottom: 20.w,
+                          text: AppConstants.kookbagsCombos,
+                          fontWeight: FontWeight.w600,
+                          fontsize: Dimensions.fontSizeLarge.h,
+                          color: AppColors.black,
+                        ),
                       ),
 
                       CustomText(
@@ -136,7 +140,7 @@ class MuduleScreen extends StatelessWidget {
                         bottom: 20.w,
                         text: AppConstants.viewAll,
                         fontWeight: FontWeight.w500,
-                        fontsize: Dimensions.fontSizeSmall.w,
+                        fontsize: Dimensions.fontSizeSmall.h,
                         color: AppColors.red,
                       ),
                     ],
@@ -158,7 +162,7 @@ class MuduleScreen extends StatelessWidget {
                         bottom: 20.w,
                         text: AppConstants.fruits,
                         fontWeight: FontWeight.w600,
-                        fontsize: Dimensions.fontSizeLarge.w,
+                        fontsize: Dimensions.fontSizeLarge.h,
                         color: AppColors.black,
                       ),
 
@@ -167,7 +171,7 @@ class MuduleScreen extends StatelessWidget {
                         bottom: 20.w,
                         text: AppConstants.viewAll,
                         fontWeight: FontWeight.w500,
-                        fontsize: Dimensions.fontSizeSmall.w,
+                        fontsize: Dimensions.fontSizeSmall.h,
                         color: AppColors.red,
                       ),
                     ],
@@ -190,7 +194,7 @@ class MuduleScreen extends StatelessWidget {
                         bottom: 20.w,
                         text: AppConstants.seasonal,
                         fontWeight: FontWeight.w600,
-                        fontsize: Dimensions.fontSizeLarge.w,
+                        fontsize: Dimensions.fontSizeLarge.h,
                         color: AppColors.black,
                       ),
 
@@ -199,7 +203,7 @@ class MuduleScreen extends StatelessWidget {
                         bottom: 20.w,
                         text: AppConstants.viewAll,
                         fontWeight: FontWeight.w500,
-                        fontsize: Dimensions.fontSizeSmall.w,
+                        fontsize: Dimensions.fontSizeSmall.h,
                         color: AppColors.red,
                       ),
                     ],
@@ -226,7 +230,7 @@ class MuduleScreen extends StatelessWidget {
                         bottom: 20.w,
                         text: AppConstants.vegetables,
                         fontWeight: FontWeight.w600,
-                        fontsize: Dimensions.fontSizeLarge.w,
+                        fontsize: Dimensions.fontSizeLarge.h,
                         color: AppColors.black,
                       ),
 
@@ -235,7 +239,7 @@ class MuduleScreen extends StatelessWidget {
                         bottom: 20.w,
                         text: AppConstants.viewAll,
                         fontWeight: FontWeight.w500,
-                        fontsize: Dimensions.fontSizeSmall.w,
+                        fontsize: Dimensions.fontSizeSmall.h,
                         color: AppColors.red,
                       ),
                     ],
@@ -260,7 +264,7 @@ class MuduleScreen extends StatelessWidget {
                         bottom: 20.w,
                         text: AppConstants.exotic,
                         fontWeight: FontWeight.w600,
-                        fontsize: Dimensions.fontSizeLarge.w,
+                        fontsize: Dimensions.fontSizeLarge.h,
                         color: AppColors.black,
                       ),
 
@@ -269,7 +273,7 @@ class MuduleScreen extends StatelessWidget {
                         bottom: 20.w,
                         text: AppConstants.viewAll,
                         fontWeight: FontWeight.w500,
-                        fontsize: Dimensions.fontSizeSmall.w,
+                        fontsize: Dimensions.fontSizeSmall.h,
                         color: AppColors.red,
                       ),
                     ],

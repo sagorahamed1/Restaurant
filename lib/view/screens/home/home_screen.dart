@@ -21,6 +21,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 12,
+        // shadowColor: const Color(0xFFe8e8e8),
         toolbarHeight: 61.w,
         leading: Container(
             padding : EdgeInsets.only(left: 20.w),

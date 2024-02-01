@@ -37,7 +37,7 @@ class AboutUsGroupContainer extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           SvgPicture.asset("$containerIcon"),
-          Expanded(child: CustomText(text: "$text", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,)),
+          Flexible(child: CustomText(text: "$text", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,)),
         ],
       ),
     );

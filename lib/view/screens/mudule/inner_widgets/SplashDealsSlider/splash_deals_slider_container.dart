@@ -61,13 +61,15 @@ class splashDealsSliderContainer extends StatelessWidget {
                 ///--------------------fruit name------------>
                 Row(
                   children: [
-                    CustomText(
-                      textAlign: TextAlign.start,
-                      maxline: 2,
-                      text: AppConstants.buy1KgPotato,
-                      fontsize: Dimensions.fontSizeDefault.sp,
-                      fontWeight: FontWeight.w500,
-                      color: AppColors.black,
+                    Flexible(
+                      child: CustomText(
+                        textAlign: TextAlign.start,
+                        maxline: 2,
+                        text: AppConstants.buy1KgPotato,
+                        fontsize: Dimensions.fontSizeDefault.h,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.black,
+                      ),
                     ),
                   ],
                 ),
@@ -109,7 +111,7 @@ class splashDealsSliderContainer extends StatelessWidget {
                   text: itemQty.value != 0
                       ? itemQty.toString()
                       : AppConstants.addtocart,
-                  fontsize: Dimensions.fontSizeSmall.sp,
+                  fontsize: Dimensions.fontSizeSmall.h,
                   fontWeight: FontWeight.w500,
                   color: AppColors.black,
                 ),

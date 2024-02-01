@@ -19,6 +19,7 @@ class MyKookBagsScreen extends StatelessWidget {
     return Scaffold(
       ///---------------------------------app bar section--------------------------->
       appBar: AppBar(
+        elevation: 12,
         leading: TextButton(onPressed: (){
           Get.back();
         },

@@ -19,6 +19,7 @@ class StoresDetailsScreen extends StatelessWidget {
     return Scaffold(
       ///-----------------------------app bar section----------------------------->
       appBar: AppBar(
+        elevation: 12,
         toolbarHeight: 61.w,
         leading: GestureDetector(
           onTap: (){

@@ -37,7 +37,7 @@ class FruitsContainerWidget extends StatelessWidget {
                       text: AppConstants.howManyPercentOff,
                       color: AppColors.white,
                       fontWeight: FontWeight.w600,
-                      fontsize: Dimensions.fontSizeExtraSmall.w,
+                      fontsize: Dimensions.fontSizeExtraSmall.h,
                     ),
                   ),
                 ),
@@ -48,7 +48,7 @@ class FruitsContainerWidget extends StatelessWidget {
 
           Container(
             padding:
-                EdgeInsets.only(left: 10, top: 7.w, bottom: 7.w, right: 7.w),
+                const EdgeInsets.only(left: 10, top: 7, bottom: 7, right: 7),
             color: const Color(0xFFECF8FF),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -62,14 +62,14 @@ class FruitsContainerWidget extends StatelessWidget {
                       text: AppConstants.apple,
                       color: AppColors.black,
                       fontWeight: FontWeight.w600,
-                      fontsize: Dimensions.fontSizeExtraSmall.w,
+                      fontsize: Dimensions.fontSizeExtraSmall.h,
                     ),
 
                     CustomText(
                       text: AppConstants.digitalStore,
                       color: AppColors.white200,
                       fontWeight: FontWeight.w500,
-                      fontsize: Dimensions.fontSizeExtraSmall.w,
+                      fontsize: Dimensions.fontSizeExtraSmall.h,
                     ),
 
                     ///------------------------rating-------------------->
@@ -110,7 +110,7 @@ class FruitsContainerWidget extends StatelessWidget {
                           text: "${AppConstants.priceMuduleScreen}   ",
                           color: AppColors.black,
                           fontWeight: FontWeight.w500,
-                          fontsize: Dimensions.fontSizeSmall.w,
+                          fontsize: Dimensions.fontSizeSmall.h,
                         ),
                         const Text(
                           AppConstants.ofPriceMuduleScreen,

@@ -22,6 +22,7 @@ class CategoryScreen extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       ///-------------------------------app bar section----------------------------->
       appBar: AppBar(
+        elevation: 12,
         toolbarHeight: 61.w,
         leading: GestureDetector(
           onTap: (){

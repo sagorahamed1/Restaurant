@@ -48,7 +48,7 @@ class KookbagsCombos extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(
-                    vertical: Dimensions.paddingSizeSmall,
+                    vertical: Dimensions.paddingSizeExtraSmall,
                     horizontal: Dimensions.paddingSizeDefault),
                 child: Column(
                   children: [
@@ -84,9 +84,6 @@ class KookbagsCombos extends StatelessWidget {
                         )
                       ],
                     ),
-                    // SizedBox(
-                    //   height: 17.h,
-                    // ),
 
                     ///--------------------image of product------------------>
                     Container(
@@ -104,8 +101,7 @@ class KookbagsCombos extends StatelessWidget {
                     ),
 
                     Container(
-                      height: 15.h,
-                      width: 34.w,
+                      width: 45.w,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(2.r),
                         border: Border.all(color: AppColors.red),
@@ -122,24 +118,26 @@ class KookbagsCombos extends StatelessWidget {
                     ///--------------------product name and price section------------>
                     CustomText(
                       text: productInfo["productName"],
-                      fontsize: Dimensions.fontSizeDefault.sp,
+                      fontsize: Dimensions.fontSizeDefault.h,
                       fontWeight: FontWeight.w500,
                       color: AppColors.black,
                     ),
                     Row(
                       children: [
                         CustomText(
-                          left: 20.w,
+                          left: 20.h,
                           text: "${productInfo["price"]}   ",
-                          fontsize: Dimensions.fontSizeSmall.sp,
+                          fontsize: Dimensions.fontSizeSmall.h,
                           fontWeight: FontWeight.w500,
                           color: AppColors.black,
                         ),
-                        CustomText(
-                          text: productInfo["offPrice"],
-                          fontsize: Dimensions.fontSizeExtraSmall.sp,
-                          fontWeight: FontWeight.w400,
-                          color: AppColors.black,
+                        Flexible(
+                          child: CustomText(
+                            text: productInfo["offPrice"],
+                            fontsize: Dimensions.fontSizeExtraSmall.h,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.black,
+                          ),
                         ),
                       ],
                     ),
@@ -171,7 +169,7 @@ class KookbagsCombos extends StatelessWidget {
                             child: Center(child: SvgPicture.asset(AppIcons.minusIcon))
                         ),
                       ),
-                    CustomText(text: itemQty.value != 0? itemQty.toString() : AppConstants.addtocart,fontsize: Dimensions.fontSizeSmall.sp,fontWeight: FontWeight.w500,color: AppColors.black,),
+                    CustomText(text: itemQty.value != 0? itemQty.toString() : AppConstants.addtocart,fontsize: Dimensions.fontSizeSmall.h,fontWeight: FontWeight.w500,color: AppColors.black,),
                     GestureDetector(
                       onTap: (){
                         itemQty.value++;

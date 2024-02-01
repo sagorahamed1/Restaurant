@@ -42,20 +42,18 @@ class CetegoryContainer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              height: 74.w,
-              width: 74.w,
               decoration: const BoxDecoration(
                 color: AppColors.amber,
                 shape: BoxShape.circle,
               ),
-              child: Image.asset(AppImages.cauliflower),
+              child: Image.asset(AppImages.cauliflower,height: 74.w,width: 74.w,),
             ),
 
             SizedBox(height: 12.w,),
             CustomText(
               text: AppConstants.vegetables,
               fontWeight: FontWeight.w500,
-              fontsize: Dimensions.fontSizeLarge.w,
+              fontsize: Dimensions.fontSizeLarge.h,
               color: AppColors.black,
             ),
           ],

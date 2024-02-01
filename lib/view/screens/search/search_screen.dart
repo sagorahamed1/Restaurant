@@ -20,7 +20,7 @@ class SearchScreen extends StatelessWidget {
 
       ///------------------------------app bar seation------------------------->
       appBar: AppBar(
-        elevation: 1,
+        elevation: 12,
         bottomOpacity: 2,
         leading: Container(
             padding : EdgeInsets.only(left: 20.w,top: 16.w,bottom: 16.w),

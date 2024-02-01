@@ -25,9 +25,10 @@ class MenuScreen extends StatelessWidget {
     return Scaffold(
       ///---------------------------app bar section---------------->
       appBar: AppBar(
+        elevation: 12,
         toolbarHeight: 61.w,
         leading: Container(
-            padding : EdgeInsets.only(left: 20),
+            padding : const EdgeInsets.only(left: 20),
             child: SvgPicture.asset(AppIcons.location)),
 
         title: Container(
@@ -35,7 +36,7 @@ class MenuScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(onPressed: (){}, icon: Container(
-              padding: EdgeInsets.only(right: 20),
+              padding: const EdgeInsets.only(right: 20),
               child: SvgPicture.asset(AppIcons.notificationBell)))
         ],
       ),
@@ -97,8 +98,8 @@ class MenuScreen extends StatelessWidget {
                         WalletGroupContainer(text: "Refer & Earn", containerIcon: AppIcons.referEarn,),
                       ],
                     ),
-        
-        
+
+
                     SizedBox(height: 19.w,),
                     ///----------------------------Profile setting group container ----------------------------->
                     const Row(
@@ -108,9 +109,9 @@ class MenuScreen extends StatelessWidget {
                         ProfileSettingGroupContainer(text: "Kookbags \n Policy",containerIcon: AppIcons.kookbagsPolicy,)
                       ],
                     ),
-        
-        
-        
+
+
+
                     SizedBox(height: 19.w,),
                     ///----------------------------My Profile group contaiter----------------------------->
                      Row(
@@ -118,12 +119,12 @@ class MenuScreen extends StatelessWidget {
                       children: [
                         myProfileGroupContainer1(),
                         myProfileGroupContainer2(),
-        
+
                       ],
                     ),
-        
-        
-        
+
+
+
                     SizedBox(height: 19.w,),
                     ///----------------------------about us group container----------------------------->
                     const Row(
@@ -133,10 +134,10 @@ class MenuScreen extends StatelessWidget {
                         AboutUsGroupContainer(text: "Servicable Area",containerIcon: AppIcons.servicableArea,)
                       ],
                     ),
-        
+
                     SizedBox(height: 12.w,),
-        
-        
+
+
                     ///----------------------------Rating us group container----------------------------->
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -146,8 +147,8 @@ class MenuScreen extends StatelessWidget {
                         RatingUsGroupContainer(text: "Log Out", containerIcon: AppIcons.logOut,),
                       ],
                     ),
-        
-        
+
+
                   ],
                 ),
               )
@@ -254,7 +255,7 @@ Widget myProfileGroupContainer2(){
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SvgPicture.asset(AppIcons.helpSupport,),
-            const Expanded(child: CustomText(text: "  Help & Support", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,)),
+            const Flexible(child: CustomText(text: "  Help & Support", fontsize: Dimensions.fontSizeDefault,fontWeight: FontWeight.w500,)),
           ],
         ),
 

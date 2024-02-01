@@ -26,6 +26,7 @@ class FruitsScreen extends StatelessWidget {
     return Scaffold(
       ///-----------------------------app bar section----------------------------->
       appBar: AppBar(
+        elevation: 12,
         leading: GestureDetector(
           onTap: (){
             Get.back();

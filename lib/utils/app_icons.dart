@@ -23,6 +23,7 @@ class AppIcons{
   static  const String clock = "$basePath/clock.svg";
   static  const String dots = "$basePath/dots.svg";
   static  const String round = "$basePath/round.svg";
+  static  const String addToCardIcon = "$basePath/addToCardIcon.svg";
 
 
   ///----------------------cetegory screen------------------------->

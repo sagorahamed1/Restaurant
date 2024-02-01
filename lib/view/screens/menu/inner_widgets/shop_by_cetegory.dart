@@ -32,36 +32,37 @@ class ShopByCetegoryContainer extends StatelessWidget {
         ],
       ),
 
-      child: Expanded(
-        child: Stack(
-          children: [
-            Positioned(
-              top: 22.w,
-              left: 16.w,
-              child: Container(
-                height: 62.w,
-                width: 62.w,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: imageBgColor,
-                ),
-              ),
+      child: Column(
+        children: [
+          SizedBox(height: 24.w,),
+          Container(
+            height: 62.w,
+            width: 62.w,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: imageBgColor,
+              image: DecorationImage(
+                image: AssetImage("$imagepath"),
+              )
             ),
-            Positioned(top: 3.h, left: 9.w, child: Image.asset("$imagepath",width: 72.w,height: 72.w,fit: BoxFit.cover,)),
-            Positioned(
-                bottom: 12.w,
-                left: 10.w,
-                child: Expanded(
-                  child: CustomText(
-                    text: "$text",
-                    textAlign: TextAlign.center,
-                    maxline: 2,
-                    fontWeight: FontWeight.w500,
-                    fontsize: Dimensions.fontSizeSmall,
-                  ),
-                ))
-          ],
-        ),
+          ),
+
+
+          Spacer(),
+
+
+          Flexible(
+            child: CustomText(
+              text: "$text",
+              textAlign: TextAlign.center,
+              maxline: 2,
+              fontWeight: FontWeight.w500,
+              fontsize: Dimensions.fontSizeSmall,
+            ),
+          ),
+
+          const SizedBox(height: 20,),
+        ],
       ),
     );
   }
