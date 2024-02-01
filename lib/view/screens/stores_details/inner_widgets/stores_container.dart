@@ -46,14 +46,13 @@ class StoresContainer extends StatelessWidget {
               )),
             ),
           ),
-          SizedBox(
-            height: 92.h,
-          ),
+
+
+          Spacer(),
 
           ///----------------------------stores name location rating------------------>
           Container(
             padding: EdgeInsets.only(left: 14.w, right: 14.w),
-            height: 48.h,
             width: 335.w,
             decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(

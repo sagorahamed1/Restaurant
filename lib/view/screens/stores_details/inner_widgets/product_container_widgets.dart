@@ -44,7 +44,7 @@ class ProductContainerWidgets extends StatelessWidget {
                 );
               },
               child: Container(
-                height: 180.h,
+                margin: EdgeInsets.only(top: 5),
                 width: 163.w,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
@@ -62,7 +62,7 @@ class ProductContainerWidgets extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: Dimensions.paddingSizeDefault,
+                           vertical: Dimensions.paddingSizeExtraSmall,
                           horizontal: Dimensions.paddingSizeDefault),
                       child: Column(
                         children: [
@@ -107,34 +107,34 @@ class ProductContainerWidgets extends StatelessWidget {
                             ],
                           ),
                           SizedBox(
-                            height: 17.h,
+                            height: 20.h,
                           ),
 
                           ///--------------------image of product------------------>
                           Container(
-                            height: 78.h,
-                            width: 100.w,
+
+                            clipBehavior: Clip.antiAlias,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50.r),
                             ),
                             child: Image.asset(
-                              productInfo["productImage"],
+                              productInfo["productImage"],width: 100.w,height: 78.h,
                               fit: BoxFit.cover,
                             ),
                           ),
                           SizedBox(
-                            height: 10.h,
+                            height: 7.h,
                           ),
 
                           Container(
-                            height: 15.h,
-                            width: 34.w,
+                            width: 50.w,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(2.r),
                               border: Border.all(color: AppColors.red),
                             ),
                             child: Center(
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   CustomText(
                                     text: " ${productInfo["rating"]}",
@@ -157,7 +157,7 @@ class ProductContainerWidgets extends StatelessWidget {
                             children: [
                               CustomText(
                                 text: productInfo["productName"],
-                                fontsize: Dimensions.fontSizeDefault.sp,
+                                fontsize: Dimensions.fontSizeDefault.h,
                                 fontWeight: FontWeight.w500,
                                 color: AppColors.black,
                               ),
@@ -167,41 +167,38 @@ class ProductContainerWidgets extends StatelessWidget {
                             children: [
                               CustomText(
                                 text: "${productInfo["price"]}   ",
-                                fontsize: Dimensions.fontSizeSmall.sp,
+                                fontsize: Dimensions.fontSizeSmall.h,
                                 fontWeight: FontWeight.w500,
                                 color: AppColors.black,
                               ),
                               CustomText(
                                 text: productInfo["offPrice"],
-                                fontsize: Dimensions.fontSizeExtraSmall.sp,
+                                fontsize: Dimensions.fontSizeExtraSmall.h,
                                 fontWeight: FontWeight.w400,
                                 color: AppColors.black,
                               ),
                             ],
                           ),
+
+
                           Row(
                             children: [
-                              Icon(
-                                Icons.star,
-                                color: Colors.red,
-                                size: 12,
-                              ),
+                              const Icon(Icons.star, color: Colors.red, size: 12,),
                               Icon(Icons.star, color: Colors.red, size: 12.h),
                               Icon(Icons.star, color: Colors.red, size: 12.h),
-                              Icon(Icons.star,
-                                  color: Colors.black26, size: 12.h),
-                              Icon(Icons.star,
-                                  color: Colors.black26, size: 12.h),
+                              Icon(Icons.star, color: Colors.black26, size: 12.h),
+                              Icon(Icons.star, color: Colors.black26, size: 12.h),
                             ],
                           ),
                         ],
                       ),
                     ),
 
+                    Spacer(),
                     Divider(),
 
-                    ///<<<=========================Item Increment Decrement Portion=======================================
 
+                    ///<<<=========================Item Increment Decrement Portion=======================================
                     Obx(() => Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
@@ -227,7 +224,7 @@ class ProductContainerWidgets extends StatelessWidget {
                               text: itemQty.value != 0
                                   ? itemQty.toString()
                                   : AppConstants.addtocart,
-                              fontsize: Dimensions.fontSizeSmall.sp,
+                              fontsize: Dimensions.fontSizeSmall.h,
                               fontWeight: FontWeight.w500,
                               color: AppColors.black,
                             ),
@@ -249,6 +246,8 @@ class ProductContainerWidgets extends StatelessWidget {
                             ),
                           ],
                         )),
+
+                    SizedBox(height: 5.w,)
                   ],
                 ),
               ),

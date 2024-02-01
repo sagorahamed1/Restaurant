@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:restaurent_kookbags/controller/cetegoryController.dart';
+import 'package:restaurent_kookbags/routes/app_routes.dart';
 import 'package:restaurent_kookbags/utils/app_colors.dart';
 import 'package:restaurent_kookbags/utils/app_constants.dart';
 import 'package:restaurent_kookbags/utils/app_icons.dart';
@@ -44,50 +45,55 @@ class CategoryScreen extends StatelessWidget {
                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 7,mainAxisSpacing: 16,childAspectRatio: 0.8),
                    itemBuilder: (context, index) {
                    var productInfo = controller.cetegoryList[index];
-                     return Container(
-                        height: 100.h,
-                       decoration: BoxDecoration(
-                         borderRadius: BorderRadius.circular(8),
-                         color: AppColors.white,
-                         boxShadow : const [
-                           BoxShadow(
-                             color: Color(0x19414138),
-                             blurRadius: 20,
-                             offset: Offset(0, 10),
-                             spreadRadius: 0,
-                           )
-                         ],
-                       ),
+                     return GestureDetector(
+                       onTap: (){
+                         Get.toNamed(AppRoutes.fruitsScreen);
+                       },
+                       child: Container(
+                          height: 100.h,
+                         decoration: BoxDecoration(
+                           borderRadius: BorderRadius.circular(8),
+                           color: AppColors.white,
+                           boxShadow : const [
+                             BoxShadow(
+                               color: Color(0x19414138),
+                               blurRadius: 20,
+                               offset: Offset(0, 10),
+                               spreadRadius: 0,
+                             )
+                           ],
+                         ),
 
-                       child: Column(
-                         children: [
-                           Stack(
-                             clipBehavior: Clip.none,
-                             children: [
-                               Container(
-                                 margin: EdgeInsets.only(top: 30.h),
-                                 height: 86.w,
-                                 width: 86.w,
-                                 decoration: BoxDecoration(
-                                   shape: BoxShape.circle,
-                                   color: productInfo["color"]
+                         child: Column(
+                           children: [
+                             Stack(
+                               clipBehavior: Clip.none,
+                               children: [
+                                 Container(
+                                   margin: EdgeInsets.only(top: 30.h),
+                                   height: 86.w,
+                                   width: 86.w,
+                                   decoration: BoxDecoration(
+                                     shape: BoxShape.circle,
+                                     color: productInfo["color"]
+                                   ),
                                  ),
-                               ),
 
-                               Positioned(
-                                 top: 5,
-                                 child: Image.asset(productInfo["image"],fit: BoxFit.cover,width: 95.w,),
-                               )
-                             ],
-                           ),
+                                 Positioned(
+                                   top: 5,
+                                   child: Image.asset(productInfo["image"],fit: BoxFit.cover,width: 95.w,),
+                                 )
+                               ],
+                             ),
 
-                          Spacer(),
-                           Divider(),
-                           CustomText(top: 5.h,
-                             bottom: 5.w,
-                             textAlign: TextAlign.center,
-                             text: productInfo["productName"],)
-                         ],
+                            Spacer(),
+                             Divider(),
+                             CustomText(top: 5.h,
+                               bottom: 5.w,
+                               textAlign: TextAlign.center,
+                               text: productInfo["productName"],)
+                           ],
+                         ),
                        ),
                      );
                    },

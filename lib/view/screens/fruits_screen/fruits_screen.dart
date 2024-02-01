@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
+import 'package:restaurent_kookbags/routes/app_routes.dart';
 import 'package:restaurent_kookbags/utils/app_colors.dart';
+import 'package:restaurent_kookbags/view/screens/stores/stores_screen.dart';
 
 import '../../../utils/app_constants.dart';
 import '../../../utils/app_icons.dart';
@@ -70,7 +72,8 @@ class FruitsScreen extends StatelessWidget {
                 child: TextFormField(
                   decoration: InputDecoration(
                       filled: true,
-                      focusColor: AppColors.white,
+                      fillColor: AppColors.white,
+                      // focusColor: AppColors.white,
                       prefixIcon: Padding(
                         padding: const EdgeInsets.all(12),
                         child: SvgPicture.asset(AppIcons.search),
@@ -85,7 +88,7 @@ class FruitsScreen extends StatelessWidget {
               ),
         
               ///--------------------- two botton------------------------->
-              const Row(
+               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   TwoBotton(
@@ -93,6 +96,7 @@ class FruitsScreen extends StatelessWidget {
                       text: "Products",
                       textColor: AppColors.white),
                   TwoBotton(
+                    route: AppRoutes.storesScreen,
                       bottonColor: AppColors.white,
                       text: "Stores",
                       textColor: AppColors.black),

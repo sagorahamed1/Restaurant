@@ -90,7 +90,7 @@ class OrderDialogWithGridview extends StatelessWidget {
           ///-------------------------------Order History--------------------------------->
           GestureDetector(
             onTap: (){
-              Get.toNamed(AppRoutes.fruitsScreen);
+              // Get.toNamed(AppRoutes.);
             },
             child: Container(
               decoration: BoxDecoration(

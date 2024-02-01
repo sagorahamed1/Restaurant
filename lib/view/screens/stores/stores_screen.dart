@@ -67,6 +67,7 @@ class StoresScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     TwoBotton(
+                        route: AppRoutes.fruitsScreen,
                         bottonColor: AppColors.white,
                         text: "Products",
                         textColor: AppColors.black),

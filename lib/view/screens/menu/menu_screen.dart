@@ -15,6 +15,8 @@ import 'inner_widgets/profile_setting_group_container.dart';
 import 'inner_widgets/shop_by_cetegory.dart';
 import 'inner_widgets/wallet_group_container.dart';
 
+
+
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
 
@@ -48,9 +50,7 @@ class MenuScreen extends StatelessWidget {
         
               ///--------------------------- header slider widgets----------------------------->
               HeaderSliderWidgets(),
-              
-              
-              
+
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8.r),

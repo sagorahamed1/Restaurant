@@ -19,7 +19,7 @@ class BottomSheetContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-        height:MediaQuery.of(context).size.height*0.72.w,
+        // height:MediaQuery.of(context).size.height*0.72.w,
         width: MediaQuery.of(context).size.width.w,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
@@ -69,10 +69,15 @@ class BottomSheetContainer extends StatelessWidget {
                       ),
                     ),
                   ),
+
+
                   GestureDetector(
                     onTap: (){
                       Get.back();
                     },
+
+
+                    ///----------------------------close icon--------------------------------///
                     child: Container(
                       margin: EdgeInsets.only(left: 15.w, top: 10.h),
                       height: 24.h,
@@ -103,56 +108,63 @@ class BottomSheetContainer extends StatelessWidget {
                     children: [
                       Image.asset(
                         AppImages.appel,
-                        height: 120.h,
-                        width: 123.w,
+                        height: 120.w,
+                        width: 90.w,
                         fit: BoxFit.contain,
                       ),
-                      Container(
-                        margin: EdgeInsets.only(left: 24.w, top: 20.w),
-                        child: Column(
-                          children: [
-                            const CustomText(
-                              text: AppConstants.freshPeach,
-                              fontWeight: FontWeight.w600,
-                              fontsize: Dimensions.fontSizeLarge,
-                              color: AppColors.black,
-                            ),
-                            const CustomText(
-                              text: AppConstants.groceryStore,
-                              fontWeight: FontWeight.w400,
-                              fontsize: Dimensions.fontSizeDefault,
-                              color: AppColors.black,
-                            ),
-                            const Row(
-                              children: [
-                                CustomText(
-                                  text: "${AppConstants.productPrice}  ",
-                                  fontWeight: FontWeight.w600,
-                                  fontsize: Dimensions.fontSizeExtraLarge,
-                                  color: AppColors.black,
-                                ),
-                                CustomText(
-                                  text: AppConstants.productOffPrice,
-                                  fontWeight: FontWeight.w400,
-                                  fontsize: Dimensions.fontSizeLarge,
-                                  color: AppColors.black,
-                                ),
-                              ],
-                            ),
-                            Container(
-                                height: 25.w,
-                                width: 35.w,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    color: AppColors.white20),
-                                child: const Center(
+                      Flexible(
+                        child: Container(
+                          margin: EdgeInsets.only(left: 24.w, top: 20.w),
+                          child: Column(
+                            children: [
+                              const CustomText(
+                                text: AppConstants.freshPeach,
+                                fontWeight: FontWeight.w600,
+                                fontsize: Dimensions.fontSizeLarge,
+                                color: AppColors.black,
+                              ),
+                              const CustomText(
+                                text: AppConstants.groceryStore,
+                                fontWeight: FontWeight.w400,
+                                fontsize: Dimensions.fontSizeDefault,
+                                color: AppColors.black,
+                              ),
+                              const Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  Expanded(
                                     child: CustomText(
-                                  text: "In kg",
-                                  fontWeight: FontWeight.w600,
-                                  fontsize: Dimensions.fontSizeDefault,
-                                  color: AppColors.black,
-                                )))
-                          ],
+                                      text: "${AppConstants.productPrice}  ",
+                                      fontWeight: FontWeight.w600,
+                                      fontsize: Dimensions.fontSizeExtraLarge,
+                                      color: AppColors.black,
+                                    ),
+                                  ),
+                                  Expanded(
+                                    child: CustomText(
+                                      text: AppConstants.productOffPrice,
+                                      fontWeight: FontWeight.w400,
+                                      fontsize: Dimensions.fontSizeLarge,
+                                      color: AppColors.black,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Container(
+                                  height: 25.w,
+                                  width: 35.w,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                      color: AppColors.white20),
+                                  child: const Center(
+                                      child: CustomText(
+                                    text: "In kg",
+                                    fontWeight: FontWeight.w600,
+                                    fontsize: Dimensions.fontSizeDefault,
+                                    color: AppColors.black,
+                                  )))
+                            ],
+                          ),
                         ),
                       )
                     ],

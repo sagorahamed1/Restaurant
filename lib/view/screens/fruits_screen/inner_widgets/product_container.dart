@@ -48,9 +48,10 @@ class ProductContainer extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(
-                    vertical: Dimensions.paddingSizeSmall,
+                    vertical: Dimensions.paddingSizeExtraSmall,
                     horizontal: Dimensions.paddingSizeDefault),
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ///-----------discound and favorite------------->
                     Row(
@@ -84,9 +85,9 @@ class ProductContainer extends StatelessWidget {
                         )
                       ],
                     ),
-                    // SizedBox(
-                    //   height: 17.h,
-                    // ),
+
+
+
 
                     ///--------------------image of product------------------>
                     Container(
@@ -100,17 +101,17 @@ class ProductContainer extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 9.h,
+                      height: 6.h,
                     ),
 
                     Container(
-                      height: 15.h,
-                      width: 34.w,
+                       width: 50.w,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(2.r),
                         border: Border.all(color: AppColors.red),
                       ),child: Center(
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           CustomText(text: " ${productInfo["rating"]}",fontsize: Dimensions.fontSizeExtraSmall.h,fontWeight: FontWeight.w500,color: AppColors.red,),
                           Icon(Icons.star,color: Colors.red,size: 10.h,)
@@ -122,44 +123,34 @@ class ProductContainer extends StatelessWidget {
                     ///--------------------product name and price section------------>
                     CustomText(
                       text: productInfo["productName"],
-                      fontsize: Dimensions.fontSizeDefault.sp,
+                      fontsize: Dimensions.fontSizeDefault.h,
                       fontWeight: FontWeight.w500,
                       color: AppColors.black,
                     ),
                     Row(
                       children: [
                         CustomText(
-                          left: 20.w,
+                          left: 20.h,
                           text: "${productInfo["price"]}   ",
-                          fontsize: Dimensions.fontSizeSmall.sp,
+                          fontsize: Dimensions.fontSizeSmall.h,
                           fontWeight: FontWeight.w500,
                           color: AppColors.black,
                         ),
-                        CustomText(
-                          text: productInfo["offPrice"],
-                          fontsize: Dimensions.fontSizeExtraSmall.sp,
-                          fontWeight: FontWeight.w400,
-                          color: AppColors.black,
+                        Expanded(
+                          child: CustomText(
+                            text: productInfo["offPrice"],
+                            fontsize: Dimensions.fontSizeExtraSmall.h,
+                            fontWeight: FontWeight.w400,
+                            color: AppColors.black,
+                          ),
                         ),
                       ],
                     ),
-                    // Row(
-                    //   children: [
-                    //     const Icon(
-                    //       Icons.star,
-                    //       color: Colors.red,
-                    //       size: 12,
-                    //     ),
-                    //     Icon(Icons.star, color: Colors.red, size: 12.h),
-                    //     Icon(Icons.star, color: Colors.red, size: 12.h),
-                    //     Icon(Icons.star, color: Colors.black26, size: 12.h),
-                    //     Icon(Icons.star, color: Colors.black26, size: 12.h),
-                    //   ],
-                    // ),
                   ],
                 ),
               ),
 
+              Spacer(),
               Divider(),
               ///<<<=========================Item Increment Decrement Portion=======================================
 
@@ -184,15 +175,14 @@ class ProductContainer extends StatelessWidget {
                             child: Center(child: SvgPicture.asset(AppIcons.minusIcon))
                         ),
                       ),
-                    CustomText(text: itemQty.value != 0? itemQty.toString() : AppConstants.addtocart,fontsize: Dimensions.fontSizeSmall.sp,fontWeight: FontWeight.w500,color: AppColors.black,),
+                    CustomText(text: itemQty.value != 0? itemQty.toString() : AppConstants.addtocart,fontsize: Dimensions.fontSizeSmall,fontWeight: FontWeight.w500,color: AppColors.black,),
                     GestureDetector(
                       onTap: (){
                         itemQty.value++;
                         print("***************************************,,,,$itemQty");
                       },
                       child: Container(
-                          height: 16.h,
-                          width: 26.w,
+
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(1.5),
                               color: AppColors.red
@@ -203,6 +193,9 @@ class ProductContainer extends StatelessWidget {
                   ],
                 ),
               )),
+
+
+               SizedBox(height: 5.h,)
 
             ],
           ),
