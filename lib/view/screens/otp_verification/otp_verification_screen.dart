@@ -95,7 +95,9 @@ class OtpVerificationScreen extends StatelessWidget {
               //==============================================> Button Section <===========================
 
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Get.toNamed(AppRoutes.selectLanguageScreen);
+                },
                 child: Container(
                   alignment: Alignment.center,
                   width: 334.w,

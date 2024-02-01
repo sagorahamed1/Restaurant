@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+import 'package:restaurent_kookbags/routes/app_routes.dart';
 import 'package:restaurent_kookbags/utils/app_constants.dart';
 import 'package:restaurent_kookbags/utils/app_images.dart';
 
@@ -141,23 +143,28 @@ class SelectLanguageScreen extends StatelessWidget {
                               SizedBox(
                                 width: 8.w,
                               ),
-                              Container(
-                                width: 80.w,
-                                height: 30.w,
-                                decoration: ShapeDecoration(
-                                  color: const Color(0xFF353535),
-                                  shape: RoundedRectangleBorder(
-                                    side: BorderSide(
-                                        width: 0.50.w,
-                                        color: const Color(0xFF353535)),
-                                    borderRadius: BorderRadius.circular(4),
+                              GestureDetector(
+                                onTap: (){
+                                  Get.toNamed(AppRoutes.bottomNavBar);
+                                },
+                                child: Container(
+                                  width: 80.w,
+                                  height: 30.w,
+                                  decoration: ShapeDecoration(
+                                    color: const Color(0xFF353535),
+                                    shape: RoundedRectangleBorder(
+                                      side: BorderSide(
+                                          width: 0.50.w,
+                                          color: const Color(0xFF353535)),
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
                                   ),
+                                  child: const Center(
+                                      child: Text(
+                                    'Confirm',
+                                    style: TextStyle(color: Colors.white),
+                                  )),
                                 ),
-                                child: const Center(
-                                    child: Text(
-                                  'Confirm',
-                                  style: TextStyle(color: Colors.white),
-                                )),
                               )
                             ],
                           ),
