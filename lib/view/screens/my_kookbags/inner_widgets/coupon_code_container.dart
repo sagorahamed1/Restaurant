@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:restaurent_kookbags/routes/app_routes.dart';
 import 'package:restaurent_kookbags/view/screens/my_kookbags/inner_widgets/personal_offer_container.dart';
 
 import '../../../../utils/app_colors.dart';
@@ -146,7 +148,9 @@ class CouponCodeContainer extends StatelessWidget {
             ),
 
             ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.toNamed(AppRoutes.checkoutScreen);
+                },
                 child: CustomText(
                   text: "CHECK OUT",
                   fontsize: Dimensions.fontSizeExtraLarge,

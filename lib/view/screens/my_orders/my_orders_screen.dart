@@ -29,24 +29,18 @@ class MyOrdersScreen extends StatelessWidget {
               //===============================================> Two Button Section <=============================
               Row(
                 children: [
-                  GestureDetector(
-                    onTap: (){Get.toNamed(AppRoutes.myOrdersScreen);},
-                    child: const TwoBotton(
-                      textColor: Colors.white,
-                      text: AppConstants.running,
-                      bottonColor: Color(0xFFCD0608),
-                    ),
+                  const TwoBotton(
+                    route: null,
+                    textColor: Colors.white,
+                    text: AppConstants.running,
+                    bottonColor: Color(0xFFCD0608),
                   ),
                   SizedBox(width: 8.w),
-                  GestureDetector(
-                    onTap: (){
-                      Get.toNamed(AppRoutes.historyScreen);
-                    },
-                    child:const TwoBotton(
-                      textColor: Colors.black,
-                      text: AppConstants.history,
-                      bottonColor: Colors.white,
-                    ),
+                  const TwoBotton(
+                    route: AppRoutes.historyScreen,
+                    textColor: Colors.black,
+                    text: AppConstants.history,
+                    bottonColor: Colors.white,
                   ),
                 ],
               ),

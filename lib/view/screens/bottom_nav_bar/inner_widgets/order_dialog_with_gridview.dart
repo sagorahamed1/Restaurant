@@ -90,7 +90,7 @@ class OrderDialogWithGridview extends StatelessWidget {
           ///-------------------------------Order History--------------------------------->
           GestureDetector(
             onTap: (){
-              // Get.toNamed(AppRoutes.);
+               Get.toNamed(AppRoutes.myOrdersScreen);
             },
             child: Container(
               decoration: BoxDecoration(
@@ -116,25 +116,30 @@ class OrderDialogWithGridview extends StatelessWidget {
 
 
           ///-------------------------------order Tracking--------------------------------->
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8.r),
-              color: Color(0xFFFFF5F5),
-              boxShadow: const [
-                BoxShadow(
-                  color: Color(0x4C000000),
-                  blurRadius: 4,
-                  offset: Offset(0, 4),
-                  spreadRadius: 0,
-                )
+          GestureDetector(
+            onTap: (){
+              Get.toNamed(AppRoutes.myOrdersScreen);
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.r),
+                color: Color(0xFFFFF5F5),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Color(0x4C000000),
+                    blurRadius: 4,
+                    offset: Offset(0, 4),
+                    spreadRadius: 0,
+                  )
+                ],
+              ),child: Column(
+              children: [
+                SizedBox(height: 25.w,),
+                SvgPicture.asset(AppIcons.orderTraking),
+                CustomText(text: "Order \n Tracking",)
               ],
-            ),child: Column(
-            children: [
-              SizedBox(height: 25.w,),
-              SvgPicture.asset(AppIcons.orderTraking),
-              CustomText(text: "Order \n Tracking",)
-            ],
-          ),
+            ),
+            ),
           ),
 
 
