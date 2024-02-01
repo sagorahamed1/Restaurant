@@ -182,7 +182,9 @@ class CheckoutScreen extends StatelessWidget {
               SizedBox(height: 32.h),
               CustomButtom(
                 title: AppConstants.payNOW,
-                onpress: () {Get.toNamed(AppRoutes.addNewAddress);},
+                onpress: () {
+                  Get.toNamed(AppRoutes.addNewAddress);
+                },
               ),
               SizedBox(height: 14.h),
             ],
