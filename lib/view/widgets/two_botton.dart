@@ -29,6 +29,7 @@ class TwoBotton extends StatelessWidget {
         Get.toNamed("$route");
       },
       child: Container(
+        padding: EdgeInsets.only(top: 5, bottom: 5),
         width: 160.w,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.r),
