@@ -1,5 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/cupertino(1).dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:restaurent_kookbags/view/screens/mudule/inner_widgets/SplashDealsSlider/splash_deals_slider_container.dart';
 

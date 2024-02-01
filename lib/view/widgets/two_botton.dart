@@ -1,8 +1,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:restaurent_kookbags/routes/app_routes.dart';
 
 import '../../utils/app_colors.dart';
 import '../../utils/dimensions.dart';
