@@ -68,6 +68,7 @@ class AppConstants{
   static const String youHaveEarned  = "You have earned 4 points. It will add to you balance when the order is delivered";
   static const String tRACKORDER  = "TRACK ORDER NOW";
 
+
   //===================================> Add New Address Screen <=============================
 
   static const String addNewAddress  = "Add New Address";
@@ -83,7 +84,36 @@ class AppConstants{
   static const String floorNo  = "Floor (Optional)";
   static const String sAveAdd  = "SAVE ADDRESS";
 
+  //===================================> Order Details Screen <=============================
 
+  static const String orderDetails  = "Order Details";
+  static const String orderId  = "Order ID :";
+  static const String orderIdNum  = "AB01525";
+  static const String time  = "Time :";
+  static const String timeS  = "08 March 2023 09:31 PM";
+  static const String paymentMode  = "Payment Mode :";
+  static const String deliveryStatus  = "Delivery Status :";
+  static const String pending  = "Pending";
+  static const String eastDhanmondi  = "128/1 East Dhanmondi";
+  static const String details  = "Details";
+  static const String priceItem  = "Item price :";
+  static const String discount  = "Discount";
+  static const String vatTax  = "VAT/Tax";
+  static const String deliveryFee  = "Delivery Fee";
+  static const String total  = "Total";
+  static const String tRACKOrders  = "TRACK ORDER";
+  static const String cancelOrder  = "Cancel Order";
+  static const String nineFour  = "945.00 Tk";
+  static const String disCountPrise  = "10 %";
+  static const String totalPrise  = "\$5028.2";
+  static const String viewDetails  = "View Details";
+  static const String dlivered  = "Delivered";
+
+  //===================================> My Orders Screen <=============================
+  static const String myOrders  = "My Orders";
+  static const String running  = "Running";
+  static const String history  = "History";
+  static const String orderTrack  = "Track Order";
 
 
   ///--------------------home page------------------>

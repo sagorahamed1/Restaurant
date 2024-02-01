@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import '../../utils/app_colors.dart';
 import '../../utils/dimensions.dart';
 import 'custom_text.dart';
@@ -29,11 +27,11 @@ class TwoBotton extends StatelessWidget {
           border: Border.all(color: AppColors.red)),
       child: Center(
           child: CustomText(
-            text: "$text",
-            fontsize: Dimensions.fontSizeLarge.sp,
-            fontWeight: FontWeight.w600,
-            color: textColor,
-          )),
+        text: "$text",
+        fontsize: Dimensions.fontSizeLarge.sp,
+        fontWeight: FontWeight.w600,
+        color: textColor,
+      )),
     );
   }
 }

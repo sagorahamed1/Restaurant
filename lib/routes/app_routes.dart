@@ -11,6 +11,9 @@ import 'package:restaurent_kookbags/view/screens/select_language/select_language
 import 'package:restaurent_kookbags/view/screens/sign_up/sign_up_screen.dart';
 import '../view/screens/add_new_address/add_new_address.dart';
 import '../view/screens/bottom_nav_bar/bottom_nav_bar.dart';
+import '../view/screens/my_orders/history_screen.dart';
+import '../view/screens/my_orders/my_orders_screen.dart';
+import '../view/screens/order_details/order_details_screen.dart';
 import '../view/screens/order_succesfull/order_succesfull.dart';
 import '../view/screens/payment/payment_screen.dart';
 import '../view/screens/stores/stores_screen.dart';
@@ -34,6 +37,9 @@ class AppRoutes{
   static const String paymentScreen = "/payment_screen.dart";
   static const String orderSuccesfull = "/order_succesfull.dart";
   static const String addNewAddress = "/add_new_address.dart";
+  static const String orderDetailsScreen = "/order_details_screen.dart";
+  static const String myOrdersScreen = "/my_orders_screen.dart";
+  static const String historyScreen = "/history_screen.dart";
 
 
   static List <GetPage> routes = [
@@ -54,6 +60,9 @@ class AppRoutes{
     GetPage(name: paymentScreen, page: ()=> PaymentScreen()),
     GetPage(name: orderSuccesfull, page: ()=> OrderSuccesfull()),
     GetPage(name: addNewAddress, page: ()=> AddNewAddress()),
+    GetPage(name: orderDetailsScreen, page: ()=> OrderDetailsScreen()),
+    GetPage(name: myOrdersScreen, page: ()=> MyOrdersScreen()),
+    GetPage(name: historyScreen, page: ()=> HistoryScreen()),
 
   ];
 }
