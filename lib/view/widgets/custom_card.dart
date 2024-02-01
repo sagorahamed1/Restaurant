@@ -22,20 +22,20 @@ class CustomCard extends StatelessWidget {
         shadows: [
           BoxShadow(
             color: const Color(0x33000000),
-            blurRadius: 20.r,
+            blurRadius: 20.w,
             offset: const Offset(0, 4),
             spreadRadius: 0,
           )
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 12),
+        padding: EdgeInsets.symmetric(horizontal: 13.w, vertical: 10.h),
         child: Row(
           children: [
             svgImage,
-            SizedBox(width: 8.w),
+            SizedBox(width: 4.w),
             CustomText(
-                text: title, fontsize: 12.sp, fontWeight: FontWeight.w500),
+                text: title, fontsize: 11.w, fontWeight: FontWeight.w500),
           ],
         ),
       ),

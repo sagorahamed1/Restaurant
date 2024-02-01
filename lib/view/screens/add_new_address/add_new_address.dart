@@ -55,7 +55,8 @@ class AddNewAddress extends StatelessWidget {
                     title: AppConstants.home,
                     svgImage: SvgPicture.asset(
                       AppIcons.houseframe,
-                      height: 24.w,
+                      height: 24.h,
+                      width: 24.w,
                     ),
                   ),
                   SizedBox(width: 8.w),
@@ -63,7 +64,8 @@ class AddNewAddress extends StatelessWidget {
                     title: AppConstants.office,
                     svgImage: SvgPicture.asset(
                       AppIcons.office,
-                      height: 24.w,
+                      height: 24.h,
+                      width: 24.w,
                     ),
                   ),
                   SizedBox(width: 8.w),
@@ -71,7 +73,8 @@ class AddNewAddress extends StatelessWidget {
                     title: AppConstants.others,
                     svgImage: SvgPicture.asset(
                       AppIcons.splocation,
-                      height: 24.w,
+                      height: 24.h,
+                     width: 24.w,
                     ),
                   ),
                 ],

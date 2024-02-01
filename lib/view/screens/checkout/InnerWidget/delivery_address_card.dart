@@ -17,7 +17,7 @@ class DeliveryAddressCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 335.w,
-      height: 294.w,
+      height: 295.w,
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
@@ -42,7 +42,7 @@ class DeliveryAddressCard extends StatelessWidget {
                 CustomText(
                     text: AppConstants.deliveryAdd,
                     fontWeight: FontWeight.w600,
-                    fontsize: 14.sp),
+                    fontsize: 14.w),
                 const Spacer(),
                 Container(
                   width: 16.w,
@@ -64,6 +64,7 @@ class DeliveryAddressCard extends StatelessWidget {
                   svgImage: SvgPicture.asset(
                     AppIcons.houseframe,
                     width: 24.w,
+                    height: 24.h,
                   ),
                 ),
                 SizedBox(width: 8.w),
@@ -72,6 +73,7 @@ class DeliveryAddressCard extends StatelessWidget {
                   svgImage: SvgPicture.asset(
                     AppIcons.office,
                     width: 24.w,
+                    height: 24.h,
                   ),
                 ),
               ],
@@ -107,11 +109,11 @@ class DeliveryAddressCard extends StatelessWidget {
                       children: [
                         CustomText(
                             text: AppConstants.others,
-                            fontsize: 12.sp,
+                            fontsize: 12.w,
                             fontWeight: FontWeight.w400),
                         CustomText(
                             text: AppConstants.loactAdd,
-                            fontsize: 10.sp,
+                            fontsize: 10.w,
                             fontWeight: FontWeight.w400),
                       ],
                     ),
@@ -129,7 +131,7 @@ class DeliveryAddressCard extends StatelessWidget {
 
             Container(
                 width: 303.w,
-                height: 40.w,
+                height: 45.w,
                 decoration: ShapeDecoration(
                   color: const Color(0xFFEFECEC),
                   shape: RoundedRectangleBorder(
@@ -150,7 +152,7 @@ class DeliveryAddressCard extends StatelessWidget {
                     decoration: ShapeDecoration(
                       color: const Color(0xFFEFECEC),
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(4.r)),
+                          borderRadius: BorderRadius.circular(4.w)),
                     ),
                     child: const CustomInputField(
                       title: AppConstants.houseHint,

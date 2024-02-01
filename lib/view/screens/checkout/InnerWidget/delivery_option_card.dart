@@ -13,15 +13,15 @@ class DeliveryOptionCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 335.w,
-      height: 110.w,
+      width: 340.w,
+      height: 115.w,
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.r)),
         shadows: [
           BoxShadow(
             color: const Color(0x33000000),
-            blurRadius: 20.r,
+            blurRadius: 20.w,
             offset: const Offset(0, 4),
             spreadRadius: 0,
           )
@@ -29,51 +29,51 @@ class DeliveryOptionCard extends StatelessWidget {
       ),
       child: Padding(
         padding:
-            const EdgeInsets.only(left: 16, right: 15, top: 16, bottom: 12),
+        EdgeInsets.all(12.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomText(
                 text: AppConstants.deliveryOpt,
                 fontWeight: FontWeight.w600,
-                fontsize: 14.sp),
+                fontsize: 14.w),
             SizedBox(
-              height: 11.h,
+              height: 11.w,
             ),
             //====================================> Selection Card Section <============================================================================
 
             Row(
-              // mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  width: 148.w,
-                  height: 48.w,
+                  width: 152.w,
+                  height: 54.w,
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
                           width: 1.w, color: const Color(0xFFCD0608)),
-                      borderRadius: BorderRadius.circular(4.r),
+                      borderRadius: BorderRadius.circular(4.w),
                     ),
                     shadows: [
                       BoxShadow(
                         color: const Color(0x33000000),
-                        blurRadius: 20.r,
+                        blurRadius: 20.w,
                         offset: const Offset(0, 4),
                         spreadRadius: 0,
                       )
                     ],
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(
-                        left: 10, right: 10, top: 8, bottom: 3),
+                    padding: EdgeInsets.all(4.w),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        SvgPicture.asset(AppIcons.houseframe, height: 24.w),
+                        SvgPicture.asset(AppIcons.houseframe, height: 24.h,width: 24.w,),
                         SizedBox(
-                          width: 7.w,
+                          width: 5.w,
                         ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -81,9 +81,9 @@ class DeliveryOptionCard extends StatelessWidget {
                           children: [
                             CustomText(
                                 text: AppConstants.hOMEOpt,
-                                fontsize: 12.sp,
+                                fontsize: 12.w,
                                 fontWeight: FontWeight.w500),
-                            CustomText(text: '(\$5028)', fontsize: 12.sp),
+                            CustomText(text: '(\$5028)', fontsize: 12.w, fontWeight: FontWeight.w500),
                           ],
                         )
                       ],
@@ -94,8 +94,8 @@ class DeliveryOptionCard extends StatelessWidget {
                   width: 8.w,
                 ),
                 Container(
-                  width: 145.w,
-                  height: 48.w,
+                  width: 149.w,
+                  height: 54.w,
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -103,19 +103,18 @@ class DeliveryOptionCard extends StatelessWidget {
                     shadows: [
                       BoxShadow(
                         color: const Color(0x33000000),
-                        blurRadius: 20.r,
+                        blurRadius: 20.w,
                         offset: const Offset(0, 4),
                         spreadRadius: 0,
                       )
                     ],
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.only(
-                        left: 10, right: 10, top: 8, bottom: 4),
+                    padding: EdgeInsets.all(4.w),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        SvgPicture.asset(AppIcons.houseframe, height: 24.w),
+                        SvgPicture.asset(AppIcons.houseframe, height: 24.h, width: 24.w,),
                         SizedBox(
                           width: 7.w,
                         ),
@@ -123,15 +122,11 @@ class DeliveryOptionCard extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
-                              AppConstants.takeOpt,
-                              style: TextStyle(
-                                  fontSize: 12.sp, fontWeight: FontWeight.w500),
-                            ),
-                            Text(
-                              '(Free)',
-                              style: TextStyle(fontSize: 12.sp),
-                            )
+                            CustomText(text:AppConstants.takeOpt,
+                                  fontsize: 12.w, fontWeight: FontWeight.w500),
+                            CustomText(
+                             text: '(Free)',
+                              fontsize: 12.w)
                           ],
                         )
                       ],

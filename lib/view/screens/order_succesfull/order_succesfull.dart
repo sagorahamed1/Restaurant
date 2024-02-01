@@ -17,7 +17,7 @@ class OrderSuccesfull extends StatelessWidget {
             //==============================================> Order Success Section <==================================================
 
             Container(
-              height: 320.w,
+              height: 321.w,
               width: 532.w,
               decoration: const BoxDecoration(
                 image: DecorationImage(
@@ -28,7 +28,7 @@ class OrderSuccesfull extends StatelessWidget {
                   SizedBox(height: 120.h),
                   SizedBox(
                       width: 72.w,
-                      height: 83.6.h,
+                      height: 73.6.h,
                       child: Image.asset(AppImages.kookBag)),
                   SizedBox(height: 12.36.h),
                   Text(
@@ -74,9 +74,9 @@ class OrderSuccesfull extends StatelessWidget {
                 children: [
                   SizedBox(
                       width: 120.w,
-                      height: 122.h,
+                      height: 111.h,
                       child: Image.asset(AppImages.giftBox)),
-                  SizedBox(height: 12.w),
+                  SizedBox(height: 8.w),
                   SizedBox(
                     width: 292.w,
                     child: Text(
@@ -92,7 +92,7 @@ class OrderSuccesfull extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 63.w),
+                  SizedBox(height: 30.w),
                   CustomButtom(
                     onpress: () {},
                     title: AppConstants.tRACKORDER,
